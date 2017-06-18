@@ -1,0 +1,420 @@
+@CHARSET "UTF-8";
+body {
+	background: #f0f0f0 !important;
+}
+
+.panel {
+	margin: 10px;
+}
+
+.tab-pane {
+	margin-right: 40px;
+}
+
+.modal-header-text {
+	line-height: 20px;
+}
+
+.nav-icon {
+	position: relative;
+	float: right;
+	top: -32px;
+}
+
+.nav-icon span {
+	margin-right: 30px;
+}
+
+.hint {
+	background-image: url("hint.png");
+	display: -moz-inline-box;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+}
+
+.export {
+	background-image: url("export.png");
+	display: -moz-inline-box;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.config {
+	background-image: url("config.png");
+	display: -moz-inline-box;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.config-dialog {
+	width: 1000px;
+}
+
+.config-dialog .modal-body {
+	width: 1000px;
+	display: -moz-inline-box;
+	display: inline-block;
+}
+.explain-dialog{
+	width: 800px;
+}
+.explain-dialog .modal-body {
+	width: 800px;
+	display: -moz-inline-box;
+	display: inline-block;
+	padding: 0px;
+}
+
+.config-item-btn {
+	padding: 10px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.config-item-btn:HOVER {
+	text-decoration: none;
+}
+
+.config-item .active {
+	background: #eee;
+}
+
+
+
+.config-group {
+	margin-top: 20px;
+}
+
+.config-group-lable {
+	text-align: center;
+	border-radius: 5px;
+	background-color: rgb(22, 155, 213);
+	padding: 8px;
+	color: #fff;
+}
+
+.config-item {
+	line-height: 42px;
+	margin-top: 10px;
+}
+
+.config-preview {
+	position: absolute;
+	z-index: 1090;
+	height: 300px;
+}
+
+.panel .panelTitle {
+	background: #eee;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	position: relative;
+	line-height: 30px;
+	padding-left: 10px;
+	color: #333333;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.empty-tip {
+	display: none;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.clear0 {
+	clear: both;
+	zoom: 1;
+}
+
+.clear0:after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.satisfiedWrap {
+	margin: 0 auto;
+	margin-top: 10px;
+	background: #fff;
+	box-sizing: border-box;
+}
+
+.satisfiedWrap .tabPanel {
+	background: #eee;
+}
+
+.satisfiedWrap .nav {
+	width: 100% !important;
+	background: none;
+	border: none;
+	height: 47px;
+}
+
+.satisfiedWrap   .nav-pills>li>a {
+	color: #000;
+	background: #eee;
+	margin: 0 !important;
+	margin-right: 20px;
+	border: 0px;
+	border-radius: 0;
+}
+
+.satisfiedWrap  .nav-pills>li.active>a {
+	background: #eee;
+	color: #FF9900 !important;
+	font-weight: bold;
+	border-bottom: 2px solid #FF9900;
+}
+
+.chart {
+	width: 100%;
+	height: 340px;
+	box-sizing: border-box;
+	border: 1px solid #DCDCDC;
+	background-color: #FAFAFA !important;
+}
+
+.kpiContent {
+	height: 240px;
+	border: 1px solid #eee;
+	text-align: center;
+}
+
+.kpiContent .lable {
+	font-size: 14px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.kpiContent .kpi-item {
+	
+}
+
+.kpiContent .kpi-item .kpi-top {
+	font-size: 32px;
+	font-weight: 700;
+	margin-top: 15px;
+}
+
+.kpiContent .kpi-item .kpi-middle {
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 15px;
+}
+
+.kpiContent .kpi-item .kpi-bottom {
+	font-size: 14px;
+	font-weight: 400;
+	color: #A1A1A1;
+	margin-top: 15px;
+}
+
+.feedbackAndExplain {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+}
+
+.feedbackAndExplain .block {
+	width: 100px;
+	height: 40px;
+	margin-top: 3px;
+	padding-top: 10px;
+}
+
+.feedbackAndExplain .item-block {
+	width: 40px;
+	height: 40px;
+	align-items: center;
+	display: -webkit-flex;
+	display: flex;
+	background-color: #eee;
+}
+
+.feedbackAndExplain .text-block {
+	display: none;
+	width: 60px;
+	height: 40px;
+	line-height: 40px;
+	align-items: left;
+	background-color: #eee;
+}
+
+.feedbackAndExplain .block>div {
+	float: left;
+}
+
+.feedbackAndExplain .item-block .explain {
+	background-image: url("explain.png");
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	margin: 0 auto;
+}
+.explain {
+	background-image: url("explain.png");
+	display: -moz-inline-box;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	cursor: pointer;
+}
+.feedback {
+	background-image: url("feedback.png");
+	display: -moz-inline-box;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	cursor: pointer;
+}
+.feedbackAndExplain  .item-block .feedback {
+	background-image: url("feedback.png");
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	cursor: pointer;
+	margin: 0 auto;
+}
+/**
+  分析报告按钮组
+*/
+.reportBtnGroupBorder {
+	overflow:hidden;
+	height: 60px;
+	overflow-x: auto;
+	width: 100%;
+	
+}
+
+.reportBtnGroup {
+	display:table;
+	overflow:hidden;
+	height: 45px;
+	max-width: 100000px;
+}
+.reportBtnGroup  .active{
+	background-color: yellow;
+}
+.reportBtnGroup .report-btn {
+	float: left;
+	padding: 10px;
+	border: 1px solid black;
+	border-right: 0;
+	height: 40px;
+	cursor: pointer;
+}
+
+.reportBtnGroup .report-btn:last-child {
+	border-right: 1px solid black;
+}
+
+
+.detail-tree-panel{
+	background-color: #eee;
+}
+.detail-panel-title{
+	line-height: 22px;
+	height:22px;
+}
+.detail-panel-title span{
+	line-height: 22px;
+	font-size:18px;
+	font-weight:700;
+	vertical-align: top;
+}
+.detail-panel-title .detail-panel-title-icon{
+	width: 9px;
+	height:22px;
+	background-color: rgba(255, 153, 0, 1);;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.detail-panel-note{
+	color: blue; 
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.detail-panel-btns{
+ display: -webkit-flex;
+    display: flex;
+    margin-top: 10px;
+}
+.detail-panel-btns .detail-panel-btn-group {
+
+    display: inline-block;
+}
+.detail-panel-btns .detail-panel-btn-group:last-child {
+    margin-left: auto;
+    width: 140px;
+}
+
+.detail-panel-btns .detail-panel-btn-group >label {
+ padding-left:0;padding-right:0;
+ text-align: right;
+ height: 30px;
+ line-height: 30px;
+}
+.detail-panel-btns .detail-panel-btn-group >input {
+ padding-left:0;padding-right:0;
+ height: 30px;
+ line-height: 30px;
+}
+.detail-panel-btns .btn-group {
+      -webkit-flex: 1;
+    flex: 1;
+}
+
+.detail-panel-btns .detail-panel-btn{
+	padding: 5px;
+	float: left;
+	border: 1px solid black;
+	margin-right: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.detail-panel-btn-group .active{
+	background: #eee;
+}
+
+#detail-custom-note>textarea{
+	width: 100%;
+	resize:both;
+	min-width: 100%;
+	max-width: 100%;
+}
+#demo {
+     display: inline-block;
+}
+#demo *{
+     box-sizing:content-box;
+}
+#detail-panel-report-btn input, #detail-panel-report-btn label{
+float:left;
+
+}
+
+.modal-footer .btns{
+    position:inherit;
+
+}
+.modal-dialog {
+
+    z-index: 1050;
+}

@@ -1,0 +1,330 @@
+
+/*公共*/
+.zone .line {
+    height: 1px;
+    width: 100%;
+    background: #444;
+    overflow: hidden;
+}
+
+.zone .float {
+    float: left;
+}
+
+.zone .diff-10 {
+    background-color: #00B050
+}
+
+.zone .diff-5-10 {
+    background-color: #92D050
+}
+
+.zone .diff5-10 {
+    background-color: #FFC000;
+}
+
+.zone .diff10 {
+    background-color: #C00000;
+}
+
+.zone .topThree {
+    background-color: #4BACC6;
+}
+
+.zone .reciprocalThree {
+    background-color: #F79646;
+}
+
+.zone .pd-bottom20 {
+    padding-bottom: 20px;
+}
+/*公共*/
+
+/*敬满指数排名总览*/
+.indexRankingOverview .w800 {
+}
+
+.indexRankingOverview .chart1 {
+    height: 400px;
+}
+
+.indexRankingOverview .linePos1 {
+    position: absolute;
+    top: 0px;
+    left: 55%;
+}
+
+.indexRankingOverview .line {
+    width: 20px;
+    float: left;
+    height: 2px;
+    margin-top: 10px;
+    background: red;
+}
+
+.indexRankingOverview .title {
+    float: left;
+    font-size: 12px;
+    height: 23px;
+    line-height: 23px;
+}
+
+
+
+.indexRankingOverview .chart2 {
+    height: 400px;
+}
+
+.indexRankingOverview .linePos2 {
+    position: absolute;
+    top: 400px;
+    left: 55%;
+}
+
+.indexRankingOverview .line {
+    width: 20px;
+    float: left;
+    height: 2px;
+    margin-top: 10px;
+    background: red;
+}
+
+.indexRankingOverview .title {
+    float: left;
+    font-size: 12px;
+    height: 23px;
+    line-height: 23px;
+}
+
+
+.indexRankingOverview .linePosB {
+    position: absolute;
+    top: 94%;
+    left: 43%;
+}
+
+.indexRankingOverview .lineB li div:nth-child(1) {
+    width: 20px;
+    float: left;
+    height: 2px;
+    margin-top: 10px;
+}
+
+.indexRankingOverview .lineB li:nth-child(1) div:nth-child(1) {
+    background: #9BBB59;
+}
+
+.indexRankingOverview .lineB li:nth-child(2) div:nth-child(1) {
+    background: #A894BF;
+}
+
+.indexRankingOverview .lineB li:nth-child(3) div:nth-child(1) {
+    background: #83C6D8;
+}
+
+.indexRankingOverview .lineB li:nth-child(4) div:nth-child(1) {
+    background: #F79646;
+}
+
+.indexRankingOverview .lineB li div:nth-child(2) {
+    float: left;
+    font-size: 12px;
+    height: 23px;
+    line-height: 23px;
+}
+
+.indexRankingOverview .chart3 {
+    width: 750px;
+    height: 400px;
+}
+/*敬满指数排名总览*/
+
+/*敬满指数高低矩阵图*/
+.exponentialMatrix .w800 {
+    width: 750px;
+    margin:auto;
+}
+
+.exponentialMatrix .contentPos {
+    position: relative;
+    top: -410px;
+    left: 60px;
+}
+
+.exponentialMatrix .content {
+    width: 620px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.exponentialMatrix .content div {
+    height: 170px;
+    border: 1px solid #d3d3d3;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.exponentialMatrix .content div h4 {
+    color: #EEFF00;
+}
+
+.exponentialMatrix .content div:nth-child(1) {
+    background-color: #CC706E;
+}
+
+.exponentialMatrix .content div:nth-child(2) {
+    background-color: #9BBB51;
+}
+
+.exponentialMatrix .content div:nth-child(3) {
+    background-color: #4BACC6;
+}
+
+.exponentialMatrix .content div:nth-child(4) {
+    background-color: #954ECA;
+}
+
+.exponentialMatrix .content div ul li {
+    color: #fff;
+}
+
+.exponentialMatrix .chart3 {
+    width: 750px;
+    height: 400px;
+}
+/*敬满指数高低矩阵图*/
+
+/*敬满指数历史趋势*/
+.exponentialTrend .w800 {
+    /*width: 750px;*/
+}
+
+.exponentialTrend .chart1 {
+    /*width: 750px;*/
+    height: 400px;
+}
+/*敬满指数历史趋势*/
+
+/*与上一年历史对比（部门）*/
+.comparedPreviousYear .w800 {
+    width: 720px;
+    margin: auto;
+}
+
+.comparedPreviousYear .chart {
+    width: 600px;
+    height: 400px;
+}
+
+.comparedPreviousYear .list-inline {
+    text-align: right;
+}
+
+.comparedPreviousYear .list-group li {
+    height: 42px;
+}
+
+.comparedPreviousYear .list-inline li:nth-child(1) {
+    color: #4F81BD;
+}
+
+.comparedPreviousYear .list-inline li:nth-child(2) {
+    color: #C0504D;
+}
+
+.comparedPreviousYear .list-inline li:nth-child(3) {
+    color: #92D050;
+}
+
+.comparedPreviousYear .list-inline span:nth-child(2) {
+    color: #000;
+}
+
+
+.comparedPreviousYear .chaVal3 .list-group-item, .comparedPreviousYear .chaVal4 .list-group-item {
+    padding-bottom: 1px;
+    padding-top: 1px;
+    height: 21.5px;
+}
+/*与上一年历史对比（部门）*/
+
+/*与上一年历史对比（中心）*/
+.comparedPreviousYearCentre .w800 {
+    width: 720px;
+    margin:auto;
+}
+
+.comparedPreviousYearCentre .table > thead > tr > th {
+    border-bottom: 0px solid #dddddd;
+    text-align: center;
+}
+
+.comparedPreviousYearCentre table .th1 {
+    width: 150px;
+}
+
+.comparedPreviousYearCentre table td {
+    text-align: center;
+    height: 35px;
+}
+
+.comparedPreviousYearCentre table .dept {
+    text-align: left;
+}
+/*.comparedPreviousYearCentre ._tb2 {
+    width:750px;
+}*/
+.comparedPreviousYearCentre ._tb2, ._tb4 {
+    width: 1024px;
+}
+
+.comparedPreviousYearCentre .table-responsive {
+    margin-bottom: 20px;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.comparedPreviousYearCentre ._tb3, ._tb5 {
+    width: 1900px;
+}
+
+.comparedPreviousYearCentre .table > thead > tr > th {
+    vertical-align: middle;
+}
+
+.comparedPreviousYearCentre .chart3{
+    height:400px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+/*与上一年历史对比（中心）*/
+
+/*敬业度3S分析*/
+.threeSAnalysis .w800 {
+    /*width: 720px;*/
+    margin:auto;
+}
+.threeSAnalysis ._tb1 {
+    width: 1024px;
+}
+.threeSAnalysis table .th1 {
+    width: 150px;
+}
+.threeSAnalysis table td {
+    text-align: center;
+    height: 35px;
+}
+
+.threeSAnalysis .table > thead > tr > th {
+    border-bottom: 0px solid #dddddd;
+    text-align: center;
+}
+
+.threeSAnalysis table .dept {
+    text-align: left;
+}
+.threeSAnalysis .table > thead > tr > th {
+    vertical-align: middle;
+}
+/*敬业度3S分析*/
