@@ -106,38 +106,30 @@ $(function () {
                                     <tr class="_row1">
                                         <td>敬业度指标</td>
                                         <td>项目</td>
-                                        <td>111</td>
                                     </tr>
                                     <tr class="_row2">
                                         <td rowspan="2">Say(乐于宣传)</td>
                                         <td>我愿意推荐朋友加入这家公司</td>
-                                        <td>222</td>
                                     </tr>
                                     <tr class="_row3">
                                         <td>我愿意向公司以外的人员宣传在这里工作的好处</td>
-                                        <td>333</td>
                                     </tr>
                                     <tr class="_row4">
                                         <td rowspan="2">Stay(乐于留任)</td>
                                         <td>我不会轻易离开公司</td>
-                                        <td>4444</td>
                                     </tr>
                                     <tr class="_row5">
                                         <td>我很少考虚“跳槽”</td>
-                                        <td>555</td>
                                     </tr>
                                     <tr class="_row6">
                                         <td rowspan="2">Strive(乐于努力)</td>
                                         <td>公司能够激励我付出额外的努力，以帮助公司取得成功</td>
-                                        <td>666</td>
                                     </tr>
                                     <tr class="_row7">
                                         <td>公司能够激励我每天尽全力工作</td>
-                                        <td>777</td>
                                     </tr>
                                     <tr class="_row8">
                                         <td colspan="2">敬业度指数</td>
-                                        <td>888</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -158,10 +150,10 @@ $(function () {
                     cb({
                         "chartData3": {
                             "data": [
-                                { "name": "xx部门", "value": [70.5, 78, 69.2, 80] },
-                                { "name": "中心1", "value": [52.8, 79, 68.2, 76] },
-                                { "name": "中心2", "value": [63.0, 76.5, 82.0, 69.2] },
-                                { "name": "中心3", "value": [86.0, 78.5, 77.0, 76.2] }
+                                { "name": "xx部门", "value": [70.5, 78, 69.2, 10, 80.5, 78, 69.2] },
+                                { "name": "中心1", "value": [52.8, 79, 68.2, 26, 41, 34, 33] },
+                                { "name": "中心2", "value": [63.0, 76.5, 62.0, 39.2, 98, 88, 78] },
+                                { "name": "中心3", "value": [86.0, 78.5, 67.0, 46.2, 55, 44, 32] }
                             ]
                         }
                     });
@@ -172,55 +164,113 @@ $(function () {
                 var row2 = $zone.find('.threeSAnalysis table ._row2');
                 var row3 = $zone.find('.threeSAnalysis table ._row3');
                 var row4 = $zone.find('.threeSAnalysis table ._row4');
-
-                $.each(rs, function (index, item) {
-                    $.each(item, function (name, o) {
-                        row1.append("<td>" + name + "</td>");
-                        $.each(o, function (index2, v) {
-                            row2.appen2d("<td>" +v+"</td>");
-                        });
-                        row2.append();
-
-                    });
-                });
-
+                var row5 = $zone.find('.threeSAnalysis table ._row5');
+                var row6 = $zone.find('.threeSAnalysis table ._row6');
+                var row7 = $zone.find('.threeSAnalysis table ._row7');
+                var row8 = $zone.find('.threeSAnalysis table ._row8');
 
                 var decisionColNum = rs.chartData3.data.length;
                 var _data = rs.chartData3.data;
-                var decisionRowNum = _data[0].value.length;
+                var decisionRowNum = 8; // _data[0].value.length;
                 var arr1 = [], arr2 = [], arr3 = [], arr4 = [], arr5 = [], arr6 = [], arr7 = [], arr8 = [];
-
-                $.each(_data, function(i, o){
-                    var name = o.name;
-                    console.log(name);
-                });
-
-
-                var i = 0;
-                while (i < decisionRowNum) {
-                    var j = 0;
-                    var temp = [];
-                    while (j < decisionColNum) {
-                        var value = _data[j].value[i];
-                        temp.push(value);
-                        console.log(value);
-                        j++;
+                // var arrs;
+                // 必须满足： 每个对像的数据列+标题列 == 固定行数
+                if ((_data[0].value.length + 1) == decisionRowNum) {
+                    // 标题
+                    $.each( _data, function (i, o) {
+                        var name = o.name;
+                        arr1.push(name);
+                    });
+                    // arrs.push(arr1);
+                    var i = 0;
+                    while (i < decisionRowNum) {
+                        var j = 0;
+                        var temp = [];
+                        while (j < decisionColNum) {
+                            // 值
+                            var v = _data[j].value[i];
+                            temp.push(v);
+                            console.log(v);
+                            j++;
+                        }
+                        console.log(9999999999);
+                        switch (i) {
+                            case 0: arr2 = temp;
+                            case 1: arr3 = temp;
+                            case 2: arr4 = temp;
+                            case 3: arr5 = temp;
+                            case 4: arr6 = temp;
+                            case 5: arr7 = temp;
+                            case 6: arr8 = temp;
+                        }
+                        i++;
                     }
-                    console.log(9999999999);
-                    switch (i) {
-                        case 0: arr1 = temp;
-                        case 1: arr2 = temp;
-                        case 2: arr3 = temp;
-                        case 3: arr4 = temp;
-                        case 4: arr5 = temp;
-                        case 5: arr6 = temp;
-                        case 6: arr7 = temp;
-                        case 7: arr8 = temp;
+                    // arrs.push(arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8);
+                    console.log(arr1);
+
+                    for (var i = 0; i < decisionRowNum; i++) {
+                        if (i == 0) {
+                            var html = '';
+                            $.each(arr1, function (i, o) {
+                                html += "<td>" + o + "</td>";
+                            });
+                            row1.append(html);
+                        }
+                        if (i == 1) {
+                            var html = '';
+                            $.each(arr2, function (i, o) {
+                                html += "<td>" + o + "</td>";
+                            });
+                            row2.append(html);
+                        }
+                        if (i == 2) {
+                            var html = '';
+                            $.each(arr3, function (i, o) {
+                                html += "<td>" + o + "</td>";
+                            });
+                            row3.append(html);
+                        }
+                        if (i == 3) {
+                            var html = '';
+                            $.each(arr4, function (i, o) {
+                                html += "<td>" + o + "</td>";
+                            });
+                            row4.append(html);
+                        }
+                        if (i == 4) {
+                            var html = '';
+                            $.each(arr5, function (i, o) {
+                                html += "<td>" + o + "</td>";
+                            });
+                            row5.append(html);
+                        }
+                        if (i == 5) {
+                            var html = '';
+                            $.each(arr6, function (i, o) {
+                                html += "<td>" + o + "</td>";
+                            });
+                            row6.append(html);
+                        }
+                        if (i == 6) {
+                            var html = '';
+                            $.each(arr7, function (i, o) {
+                                html += "<td>" + o + "</td>";
+                            });
+                            row7.append(html);
+                        }
+                        if (i == 7) {
+                            var html = '';
+                            $.each(arr8, function (i, o) {
+                                html += "<td>" + o + "</td>";
+                            });
+                            row8.append(html);
+                        }
                     }
-                    i++;
                 }
-                console.log(arr1);
+
+
             });
+
 
 
 
