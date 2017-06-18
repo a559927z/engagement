@@ -205,9 +205,6 @@ $(function () {
                         }
                         i++;
                     }
-                    // arrs.push(arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8);
-                    console.log(arr1);
-
                     for (var i = 0; i < decisionRowNum; i++) {
                         if (i == 0) {
                             var html = '';
@@ -267,13 +264,7 @@ $(function () {
                         }
                     }
                 }
-
-
             });
-
-
-
-
         }
         //------------------------------------------------------------------------------- B
     }
