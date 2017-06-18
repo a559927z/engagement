@@ -173,22 +173,29 @@ $(function () {
                 var row3 = $zone.find('.threeSAnalysis table ._row3');
                 var row4 = $zone.find('.threeSAnalysis table ._row4');
 
-                // $.each(rs, function (index, item) {
-                //     $.each(item, function (name, o) {
-                //         row1.append("<td>" + name + "</td>");
-                //         $.each(o, function (index2, v) {
-                //             row2.appen2d("<td>" +v+"</td>");
-                //         });
-                //         row2.append();
+                $.each(rs, function (index, item) {
+                    $.each(item, function (name, o) {
+                        row1.append("<td>" + name + "</td>");
+                        $.each(o, function (index2, v) {
+                            row2.appen2d("<td>" +v+"</td>");
+                        });
+                        row2.append();
 
-                //     });
-                // });
+                    });
+                });
+
 
                 var decisionColNum = rs.chartData3.data.length;
                 var _data = rs.chartData3.data;
                 var decisionRowNum = _data[0].value.length;
                 var arr1 = [], arr2 = [], arr3 = [], arr4 = [], arr5 = [], arr6 = [], arr7 = [], arr8 = [];
- 
+
+                $.each(_data, function(i, o){
+                    var name = o.name;
+                    console.log(name);
+                });
+
+
                 var i = 0;
                 while (i < decisionRowNum) {
                     var j = 0;
