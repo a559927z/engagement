@@ -192,7 +192,7 @@ $(function () {
                             console.log(v);
                             j++;
                         }
-                        console.log(9999999999);
+                        console.log("!!!!!!!!!!!");
                         switch (i) {
                             case 0: arr2 = temp;
                             case 1: arr3 = temp;
