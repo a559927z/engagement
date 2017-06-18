@@ -181,7 +181,6 @@ $(function () {
                         var name = o.name;
                         arr1.push(name);
                     });
-                    // arrs.push(arr1);
                     var i = 0;
                     while (i < decisionRowNum) {
                         var j = 0;
