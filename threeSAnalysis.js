@@ -1,7 +1,8 @@
 $(function () {
     var webRoot = 'http://localhost:8080/code/';
     urls = {
-        query1: webRoot + '/json/敬满指数高低矩阵图.json'
+        query1: webRoot + '/json/敬业度3S分析.json',
+        query2: webRoot + '/json/敬业度3S分析2.json'
     }
     var threeSAnalysis = {
         //------------------------------------------------------------------------------- A
@@ -14,7 +15,7 @@ $(function () {
                     <div class="w800">
                         <div>
                             <div class="table-responsive">
-                                <table class="table table-bordered _tb1" >
+                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1" >
                                     <thead>
                                         <tr>
                                             <th class="th1">组织</th>
@@ -41,6 +42,21 @@ $(function () {
         reanderPageA: function (zone, params) {
             this.templateA(zone);
             this.getDataA(zone, params);
+        },
+        reanderStyleA: function (zone, colNum) {
+            var $tb1 = zone.find('.threeSAnalysis ._tb1');
+            var x0y = 150; // 第一行第一列
+            var xnyn = 100; // 其它列
+
+            $tb1.find('tr td').css({ "width": xnyn + "px" });
+            $tb1.find('tr:nth-child(1) td').css({ "height": "100px" });
+            $tb1.find('tr td:nth-child(1)').css({ "width": x0y + "px" });
+            $tb1.find('tbody > tr > td').css({ "vertical-align": "middle", "text-align": "center"});
+            $tb1.find('.dept').css({"text-align": "left" });
+            $tb1.find('thead > tr > th').css({ "vertical-align": "middle", "text-align": "center"});
+            // 计算表宽
+            var tableWidth = (colNum * xnyn) + x0y;
+            $tb1.width(tableWidth);
         },
         getDataA: function (zone, params) {
             var $zone = $(zone);
@@ -90,6 +106,7 @@ $(function () {
                     html += "</tr>";
                 });
                 $zone.find('.threeSAnalysis ._tb1').append(html);
+                threeSAnalysis.reanderStyleA(zone, 10);
             });
         },
         //------------------------------------------------------------------------------- A
@@ -101,35 +118,35 @@ $(function () {
                 <div class="threeSAnalysis">
                     <div class="w800">
                         <div>
-                            <table class="table table-bordered _tb2" >
+                            <table border="1" cellspacing="0" cellpadding="0" class="table  table-bordered _tb2" >
                                 <tbody>
-                                    <tr class="_row1">
+                                    <tr class="fontStyle">
                                         <td>敬业度指标</td>
                                         <td>项目</td>
                                     </tr>
-                                    <tr class="_row2">
-                                        <td rowspan="2">Say(乐于宣传)</td>
-                                        <td>我愿意推荐朋友加入这家公司</td>
+                                    <tr class="">
+                                        <td rowspan="2" class="fontStyle">Say(乐于宣传)</td>
+                                        <td class="fontStyle">我愿意推荐朋友加入这家公司</td>
                                     </tr>
-                                    <tr class="_row3">
-                                        <td>我愿意向公司以外的人员宣传在这里工作的好处</td>
+                                    <tr class="">
+                                        <td class="fontStyle">我愿意向公司以外的人员宣传在这里工作的好处</td>
                                     </tr>
-                                    <tr class="_row4">
-                                        <td rowspan="2">Stay(乐于留任)</td>
-                                        <td>我不会轻易离开公司</td>
+                                    <tr class="">
+                                        <td rowspan="2" class="fontStyle">Stay(乐于留任)</td>
+                                        <td class="fontStyle">我不会轻易离开公司</td>
                                     </tr>
-                                    <tr class="_row5">
-                                        <td>我很少考虚“跳槽”</td>
+                                    <tr class="">
+                                        <td class="fontStyle">我很少考虚“跳槽”</td>
                                     </tr>
-                                    <tr class="_row6">
-                                        <td rowspan="2">Strive(乐于努力)</td>
-                                        <td>公司能够激励我付出额外的努力，以帮助公司取得成功</td>
+                                    <tr class="">
+                                        <td rowspan="2" class="fontStyle">Strive(乐于努力)</td>
+                                        <td class="fontStyle">公司能够激励我付出额外的努力，以帮助公司取得成功</td>
                                     </tr>
-                                    <tr class="_row7">
-                                        <td>公司能够激励我每天尽全力工作</td>
+                                    <tr class="">
+                                        <td class="fontStyle">公司能够激励我每天尽全力工作</td>
                                     </tr>
-                                    <tr class="_row8">
-                                        <td colspan="2">敬业度指数</td>
+                                    <tr class="">
+                                        <td colspan="2" class="fontStyle">敬业度指数</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -142,6 +159,23 @@ $(function () {
         reanderPageB: function (zone, params) {
             this.templateB(zone);
             this.getDataB(zone, params);
+        },
+        reanderStyleB: function (zone, decisionColNum) {
+            var $tb2 = zone.find('.threeSAnalysis ._tb2');
+            var x0y = 150; // 第一行第一列
+            var x1y = 100; // 第一行第二列
+            var xnyn = 100; // 其它列
+
+            $tb2.find('tr td').css({ "width": xnyn + "px" });
+            $tb2.find('tr:nth-child(1) td').css({ "height": "100px" });
+            $tb2.find('tr td:nth-child(1)').css({ "width": x0y + "px" });
+            $tb2.find('tr td:nth-child(2)').css({ "width": x1y + "px" });
+            $tb2.find('tbody > tr > td').css({ "vertical-align": "middle", "text-align": "center" });
+            $tb2.find('thead > tr > td').css({ "vertical-align": "middle", "text-align": "center" });
+
+            // 计算表宽
+            var tableWidth = (decisionColNum * xnyn) + x0y + x1y;
+            zone.find('.fourSAnalysis ._tb2').width(tableWidth);
         },
         getDataB: function (zone, params) {
             var $zone = zone;
@@ -159,111 +193,65 @@ $(function () {
                     });
                 }, 500);
             }
-            fetchData(function (rs) {
-                var row1 = $zone.find('.threeSAnalysis table ._row1');
-                var row2 = $zone.find('.threeSAnalysis table ._row2');
-                var row3 = $zone.find('.threeSAnalysis table ._row3');
-                var row4 = $zone.find('.threeSAnalysis table ._row4');
-                var row5 = $zone.find('.threeSAnalysis table ._row5');
-                var row6 = $zone.find('.threeSAnalysis table ._row6');
-                var row7 = $zone.find('.threeSAnalysis table ._row7');
-                var row8 = $zone.find('.threeSAnalysis table ._row8');
 
+            fetchData(function (rs) {
                 var decisionColNum = rs.chartData3.data.length;
                 var _data = rs.chartData3.data;
                 var decisionRowNum = 8; // _data[0].value.length;
-                var arr1 = [], arr2 = [], arr3 = [], arr4 = [], arr5 = [], arr6 = [], arr7 = [], arr8 = [];
-                // var arrs;
+                // el行对像数组
+                var rows = [];
+                for (var i = 1; i < 9; i++) {
+                    var row = $zone.find('.threeSAnalysis ._tb2 tbody tr:nth-child(' + i + ') ');
+                    rows.push(row);
+                }
+                // 数据对像数组
+                var arrs = [];
+                for (var i = 1; i < 9; i++) {
+                    var arr = [];
+                    arrs.push(arr);
+                }
+                // 数据最小值和最大值
+                var minV = _data[0].value[0];
+                var maxV = _data[0].value[0];
                 // 必须满足： 每个对像的数据列+标题列 == 固定行数
                 if ((_data[0].value.length + 1) == decisionRowNum) {
                     // 标题
-                    $.each( _data, function (i, o) {
+                    $.each(_data, function (i, o) {
                         var name = o.name;
-                        arr1.push(name);
+                        arrs[0].push(name);
                     });
                     var i = 0;
+                    // 行转列
                     while (i < decisionRowNum) {
                         var j = 0;
                         var temp = [];
                         while (j < decisionColNum) {
                             // 值
                             var v = _data[j].value[i];
+                            minV = v < minV ? v : minV;
+                            maxV = v > maxV ? v : maxV;
                             temp.push(v);
-                            console.log(v);
                             j++;
                         }
-                        console.log("!!!!!!!!!!!");
-                        switch (i) {
-                            case 0: arr2 = temp;
-                            case 1: arr3 = temp;
-                            case 2: arr4 = temp;
-                            case 3: arr5 = temp;
-                            case 4: arr6 = temp;
-                            case 5: arr7 = temp;
-                            case 6: arr8 = temp;
-                        }
+                        // 下标0给了标题使用，数据值从1开始
+                        arrs[i + 1] = temp;
                         i++;
                     }
                     for (var i = 0; i < decisionRowNum; i++) {
-                        if (i == 0) {
-                            var html = '';
-                            $.each(arr1, function (i, o) {
-                                html += "<td>" + o + "</td>";
-                            });
-                            row1.append(html);
-                        }
-                        if (i == 1) {
-                            var html = '';
-                            $.each(arr2, function (i, o) {
-                                html += "<td>" + o + "</td>";
-                            });
-                            row2.append(html);
-                        }
-                        if (i == 2) {
-                            var html = '';
-                            $.each(arr3, function (i, o) {
-                                html += "<td>" + o + "</td>";
-                            });
-                            row3.append(html);
-                        }
-                        if (i == 3) {
-                            var html = '';
-                            $.each(arr4, function (i, o) {
-                                html += "<td>" + o + "</td>";
-                            });
-                            row4.append(html);
-                        }
-                        if (i == 4) {
-                            var html = '';
-                            $.each(arr5, function (i, o) {
-                                html += "<td>" + o + "</td>";
-                            });
-                            row5.append(html);
-                        }
-                        if (i == 5) {
-                            var html = '';
-                            $.each(arr6, function (i, o) {
-                                html += "<td>" + o + "</td>";
-                            });
-                            row6.append(html);
-                        }
-                        if (i == 6) {
-                            var html = '';
-                            $.each(arr7, function (i, o) {
-                                html += "<td>" + o + "</td>";
-                            });
-                            row7.append(html);
-                        }
-                        if (i == 7) {
-                            var html = '';
-                            $.each(arr8, function (i, o) {
-                                html += "<td>" + o + "</td>";
-                            });
-                            row8.append(html);
-                        }
+                        var html = "";
+                        $.each(arrs[i], function (i, o) {
+                            //  var gradient = new gradientColor('#63BE7B', '#C0504D', o);
+                            // console.log(gradient);
+                            // html += "<td style='background:" + gradient + "'>" + o + "</td>";
+                            var bgStyle = Tc.changeZeroToOne(o, maxV);
+                            html += "<td class='" + bgStyle + "'>" + o + "</td>";
+                        });
+                        rows[i].append(html);
                     }
                 }
+                threeSAnalysis.reanderStyleB(zone, decisionColNum);
             });
+
         }
         //------------------------------------------------------------------------------- B
     }

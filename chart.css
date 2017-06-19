@@ -10,6 +10,16 @@
 .zone .float {
     float: left;
 }
+.zone .fontStyle{
+    font-weight: bold;
+    font-size:16px;
+}
+.zone .w100{
+    width: 100px;
+}
+.zone .w150{
+    width: 150px;
+}
 
 .zone .diff-10 {
     background-color: #00B050
@@ -37,6 +47,40 @@
 
 .zone .pd-bottom20 {
     padding-bottom: 20px;
+}
+
+.zone .gradient0{
+    background:#63BE7B
+}
+.zone .gradient1{
+    background:#63BE7B
+}
+.zone .gradient2{
+    background:#6EBF7D;
+}
+.zone .gradient3{
+    background:#8DC57E;
+}
+.zone .gradient4{
+    background:#EBCC7C;
+}
+.zone .gradient5{
+    background:#FECC7E
+}
+.zone .gradient6{
+    background:#EBCC7C;
+}
+.zone .gradient7{
+    background:#EB9266;
+}
+.zone .gradient8{
+    background:#CE6454;
+}
+.zone .gradient9{
+    background:#BF4F4D;
+}
+.zone .gradient10{
+    background:#C0504D
 }
 /*公共*/
 
@@ -256,7 +300,6 @@
 }
 
 .comparedPreviousYearCentre .table > thead > tr > th {
-    border-bottom: 0px solid #dddddd;
     text-align: center;
 }
 
@@ -305,26 +348,19 @@
     /*width: 720px;*/
     margin:auto;
 }
-.threeSAnalysis ._tb1 {
+.threeSAnalysis ._tb1 td {
     width: 1024px;
 }
 .threeSAnalysis table .th1 {
     width: 150px;
 }
-.threeSAnalysis table td {
-    text-align: center;
-    height: 35px;
-}
-
-.threeSAnalysis .table > thead > tr > th {
-    border-bottom: 0px solid #dddddd;
-    text-align: center;
-}
-
-.threeSAnalysis table .dept {
-    text-align: left;
-}
-.threeSAnalysis .table > thead > tr > th {
-    vertical-align: middle;
-}
 /*敬业度3S分析*/
+
+/*满意度4S分析*/
+.fourSAnalysis .w800 {
+    width: 900px;
+    margin:auto;
+    overflow: auto;
+    overflow-y:hidden;
+}
+/*满意度4S分析*/
