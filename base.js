@@ -7,7 +7,15 @@
 
 
 	// 算数渐变
-	Tc.changeZeroToOne = function (minV, maxV) {
+	Tc.oneToTen = function (minV, maxV) {
+		if (typeof minV == 'number') {
+			var oneToTen = parseInt((minV / maxV).toFixed(1) * 10);
+			return oneToTen;
+		}
+		return null;
+	}
+
+	Tc.getGradient = function (minV, maxV) {
 		if (typeof minV == 'number') {
 			var oneToTen = parseInt((minV / maxV).toFixed(1) * 10);
 			switch (oneToTen) {
@@ -23,10 +31,9 @@
 				case 9: return "gradient9";
 				case 10: return "gradient10";
 			}
-		}else{
+		} else {
 			return '';
 		}
-
 	}
 
 	Tc.getDiffClass = function (v) {
@@ -46,9 +53,9 @@
 		}
 		return number;
 	}
-    /**
-     * 截取字符
-     */
+	/**
+	 * 截取字符
+	 */
 	Tc.limit = function (objString, num) {
 
 		var objLength = objString.length;

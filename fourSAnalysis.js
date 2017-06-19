@@ -240,6 +240,7 @@ $(function () {
             }
 
             fetchData(function (rs) {
+                var gradient = new gradientColor('#63BE7B', '#C0504D', 18);
                 var decisionColNum = rs.chartData3.data.length;
                 var _data = rs.chartData3.data;
                 var decisionRowNum = 18; // _data[0].value.length;
@@ -284,8 +285,13 @@ $(function () {
                     for (var i = 0; i < decisionRowNum; i++) {
                         var html = "";
                         $.each(arrs[i], function (i, o) {
-                            var bgStyle = Tc.changeZeroToOne(o, maxV);
+                            var bgStyle = Tc.getGradient(o, maxV);
                             html += "<td class='" + bgStyle + "'>" + o + "</td>";
+                            // var index = Tc.oneToTen(o, maxV);
+                            // var rgb = gradient[bgStyle];
+                            // console.log(gradient);
+                            // html += "<td style='background:" + rgb + ";'>" + o + "</td>";
+
                         });
                         rows[i].append(html);
                     }
