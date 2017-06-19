@@ -285,7 +285,7 @@ $(function () {
                     for (var i = 0; i < decisionRowNum; i++) {
                         var html = "";
                         $.each(arrs[i], function (i, o) {
-                            var bgStyle = Tc.getGradient(o, maxV);
+                            var bgStyle = Tc.getGradient(o, maxV, 18);
                             html += "<td class='" + bgStyle + "'>" + o + "</td>";
                             // var index = Tc.oneToTen(o, maxV);
                             // var rgb = gradient[bgStyle];

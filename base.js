@@ -15,7 +15,7 @@
 		return null;
 	}
 
-	Tc.getGradient = function (minV, maxV) {
+	Tc.getGradient2 = function (minV, maxV) {
 		if (typeof minV == 'number') {
 			var oneToTen = parseInt((minV / maxV).toFixed(1) * 10);
 			switch (oneToTen) {
@@ -34,6 +34,36 @@
 		} else {
 			return '';
 		}
+	}
+
+	/**
+	 *
+	 * minV在maxV里的等份数 (获得步数，对应下标)
+	 * by jxzhang on 2017-06-19
+	 */
+	Tc.getGradientIndex = function (minV, maxV, step) {
+		if (typeof minV == 'number') {
+			// 步数的十等份
+			var equalNumber = step / 10
+			// 0到1之间 = 最少/最大
+			// 提升单位 = zero2one *10
+			// 转换后等份数 = 转换后 * 步数的十等份
+			return parseInt(((minV / maxV) * 10) * equalNumber);
+		} else {
+			return null;
+		}
+	}
+	Tc.getGradient = function (minV, maxV, step) {
+		var index = Tc.getGradientIndex(minV, maxV, step);
+		if (null != index) {
+			var color = [
+				'gradient0', 'gradient1', 'gradient2', 'gradient3', 'gradient4',
+				'gradient5', 'gradient6', 'gradient7', 'gradient8', 'gradient9',
+				'gradient10', 'gradient11', 'gradient12', 'gradient13', 'gradient14',
+				'gradient15', 'gradient16', 'gradient17', 'gradient18'];
+			return color[index];
+		}
+		return '';
 	}
 
 	Tc.getDiffClass = function (v) {
