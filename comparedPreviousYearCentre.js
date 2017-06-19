@@ -9,7 +9,7 @@ $(function () {
                 <div class="comparedPreviousYearCentre">
                     <div class="w800">
                         <div class="table-responsive">
-                            <table class="table table-bordered _tb1" >
+                            <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1" >
                                 <thead>
                                     <tr>
                                         <th class="th1" rowspan="2" >组织</th>
@@ -27,7 +27,7 @@ $(function () {
                             </table>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-bordered _tb2" >
+                            <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2" >
                                 <thead>
                                     <tr>
                                         <th class="th1">组织</th>
@@ -46,7 +46,7 @@ $(function () {
                             </table>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-bordered _tb3" >
+                            <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb3" >
                                 <thead>
                                     <tr>
                                         <th class="th1">组织</th>
@@ -269,7 +269,7 @@ $(function () {
                         <div>
                             <div id="comparedPreviousYearCentreId" class="chart3 pd-bottom20"></div>
                             <div class="table-responsive ">
-                                <table class="table table-bordered _tb4" >
+                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb4" >
                                     <thead>
                                         <tr>
                                             <th class="th1">组织</th>
@@ -288,7 +288,7 @@ $(function () {
                                 </table>
                             </div>
                             <div class="table-responsive">
-                                <table class="table table-bordered _tb5" >
+                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb5" >
                                     <thead>
                                         <tr>
                                             <th class="th1">组织</th>
