@@ -19,7 +19,7 @@ function gradientColor(startColor, endColor, step) {
     sB = (endB - startB) / step;
     var colorArr = [];
     for (var i = 0; i < step; i++) {
-        //计算每一步的hex值 
+        //计算每一步的hex值
         var hex = this.colorHex('rgb(' + parseInt((sR * i + startR)) + ',' + parseInt((sG * i + startG)) + ',' + parseInt((sB * i + startB)) + ')');
         colorArr.push(hex);
     }
@@ -81,6 +81,6 @@ gradientColor.prototype.colorHex = function (rgb) {
         return _this;
     }
 }
-// var gradient = new gradientColor('#013548', '#554851', 10);
+// var gradient = new gradientColor('#63BE7B', '#C0504D', 18);
 // console.log(gradient);//控制台输出
 // alert(gradient);

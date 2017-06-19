@@ -284,7 +284,7 @@ $(function () {
                     for (var i = 0; i < decisionRowNum; i++) {
                         var html = "";
                         $.each(arrs[i], function (i, o) {
-                            var bgStyle = Tc.changeZeroToOne(o, maxV);
+                            var bgStyle = Tc.getGradient(o, maxV, 18);
                             html += "<td class='" + bgStyle + "'>" + o + "</td>";
                         });
                         rows[i].append(html);

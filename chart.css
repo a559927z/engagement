@@ -53,40 +53,71 @@
     background:#63BE7B
 }
 .zone .gradient1{
-    background:#63BE7B
+     background:#64BD7B;
 }
 .zone .gradient2{
-    background:#6EBF7D;
+    background:#6EBF7D ;
 }
 .zone .gradient3{
-    background:#8DC57E;
+     background:#71C07E;
 }
 .zone .gradient4{
-    background:#EBCC7C;
+     background:#7DC27F;
 }
 .zone .gradient5{
-    background:#FECC7E
+     background:#80C17D;
 }
 .zone .gradient6{
-    background:#EBCC7C;
+     background:#81C37C;
 }
 .zone .gradient7{
-    background:#EB9266;
+    background:#84C37D;
 }
 .zone .gradient8{
-    background:#CE6454;
+    background:#A0CA7E;
 }
 .zone .gradient9{
-    background:#BF4F4D;
+    background:#BFCD80;
 }
 .zone .gradient10{
-    background:#C0504D
+    background:#DACE7C;
 }
+.zone .gradient11{
+    background:#F1CD7F;
+}
+.zone .gradient12{
+    background:#FECA7E;
+}
+.zone .gradient13{
+    background:#FFBF78;
+}
+.zone .gradient14{
+    background:#F7B072;
+}
+.zone .gradient15{
+    background:#EC986A
+}
+.zone .gradient16{
+    background:#E28363
+}
+.zone .gradient17{
+    background:#D16A57
+}
+.zone .gradient18{
+    background:#C75D50
+}
+.zone .gradient19{
+    background:#C0504E
+}
+
+
+
+
+
+
 /*公共*/
 
 /*敬满指数排名总览*/
-.indexRankingOverview .w800 {
-}
 
 .indexRankingOverview .chart1 {
     height: 400px;
@@ -240,9 +271,6 @@
 /*敬满指数高低矩阵图*/
 
 /*敬满指数历史趋势*/
-.exponentialTrend .w800 {
-    /*width: 750px;*/
-}
 
 .exponentialTrend .chart1 {
     /*width: 750px;*/
@@ -358,7 +386,7 @@
 
 /*满意度4S分析*/
 .fourSAnalysis .w800 {
-    width: 900px;
+    /*width: 900px;*/
     margin:auto;
     overflow: auto;
     overflow-y:hidden;
