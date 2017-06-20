@@ -51,9 +51,9 @@ $(function () {
             $tb1.find('tr td').css({ "width": xnyn + "px" });
             $tb1.find('tr:nth-child(1) td').css({ "height": "100px" });
             $tb1.find('tr td:nth-child(1)').css({ "width": x0y + "px" });
-            $tb1.find('tbody > tr > td').css({ "vertical-align": "middle", "text-align": "center"});
-            $tb1.find('.dept').css({"text-align": "left" });
-            $tb1.find('thead > tr > th').css({ "vertical-align": "middle", "text-align": "center"});
+            $tb1.find('tbody > tr > td').css({ "vertical-align": "middle", "text-align": "center" });
+            $tb1.find('.dept').css({ "text-align": "left" });
+            $tb1.find('thead > tr > th').css({ "vertical-align": "middle", "text-align": "center" });
             // 计算表宽
             var tableWidth = (colNum * xnyn) + x0y;
             $tb1.width(tableWidth);
@@ -184,9 +184,9 @@ $(function () {
                     cb({
                         "chartData3": {
                             "data": [
-                                { "name": "xx部门", "value": [70.5, 78, 69.2, 10, 80.5, 78, 69.2] },
+                                { "name": "xx部门", "value": [30.5, 78, 69.2, 10, 80.5, 78, 69.2] },
                                 { "name": "中心1", "value": [52.8, 79, 68.2, 26, 41, 34, 33] },
-                                { "name": "中心2", "value": [63.0, 76.5, 62.0, 39.2, 98, 88, 78] },
+                                { "name": "中心2", "value": [63.0, 16.5, 62.0, 39.2, 8, 88, 78] },
                                 { "name": "中心3", "value": [86.0, 78.5, 67.0, 46.2, 55, 44, 32] }
                             ]
                         }
@@ -240,10 +240,7 @@ $(function () {
                     for (var i = 0; i < decisionRowNum; i++) {
                         var html = "";
                         $.each(arrs[i], function (i, o) {
-                            //  var gradient = new gradientColor('#63BE7B', '#C0504D', o);
-                            // console.log(gradient);
-                            // html += "<td style='background:" + gradient + "'>" + o + "</td>";
-                            var bgStyle = Tc.changeZeroToOne(o, maxV);
+                            var bgStyle = Tc.getGradient(o, maxV, 18);
                             html += "<td class='" + bgStyle + "'>" + o + "</td>";
                         });
                         rows[i].append(html);
