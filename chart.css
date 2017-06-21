@@ -275,7 +275,7 @@
 
 /*与上一年历史对比（部门）*/
 .comparedPreviousYear .w800 {
-    width: 720px;
+    width: 850px;
     margin: auto;
 }
 
@@ -287,9 +287,12 @@
 .comparedPreviousYear .list-inline {
     text-align: right;
 }
-
-.comparedPreviousYear .list-group li {
-    height: 42px;
+.comparedPreviousYear .rUl {
+    width:270px;
+    text-align: center;
+}
+.comparedPreviousYear .rUl li:nth-child(1) {
+    width: 130px;
 }
 
 .comparedPreviousYear .list-inline li:nth-child(1) {
@@ -312,7 +315,24 @@
 .comparedPreviousYear .chaVal3 .list-group-item, .comparedPreviousYear .chaVal4 .list-group-item {
     padding-bottom: 1px;
     padding-top: 1px;
+    margin-left:10px;
+    border:0;
     height: 21.5px;
+}
+
+.comparedPreviousYear .chaVal1 li , .comparedPreviousYear .chaVal2 li {
+    height: 31px;
+    border:0;
+    padding-bottom:5px;
+    padding-top:5px;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+.comparedPreviousYear .chaVal1, .chaVal3 {
+    margin-left:30px;
+}
+.comparedPreviousYear .chaVal2, .chaVal4 {
+    margin-left:60px;
 }
 /*与上一年历史对比（部门）*/
 

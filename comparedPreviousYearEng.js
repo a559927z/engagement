@@ -1,5 +1,5 @@
 $(function () {
-    var comparedPreviousYear = {
+    var comparedPreviousYearEng = {
         chartOptionA: {
             color: ['#4F81BD', '#C0504D', '#92D050'],
             tooltip: {
@@ -79,7 +79,7 @@ $(function () {
                                 </ul>
                             </div>
                             <div class="col-md-4">
-                                <ul class="list-inline rUl">
+                                <ul class="list-inline">
                                     <li><span></span><span class="_diffOrganName"></span></li>
                                     <li><span></span><span class="_diffYear"></span></li>
                                 </ul>
@@ -106,7 +106,7 @@ $(function () {
                                 </ul>
                             </div>
                             <div class="col-md-4">
-                                <ul class="list-inline rUl">
+                                <ul class="list-inline">
                                     <li><span></span><span class="_diffOrganName"></span></li>
                                     <li><span></span><span class="_diffYear"></span></li>
                                 </ul>
@@ -140,10 +140,6 @@ $(function () {
 
             this.getDataA(zone, chart1, chart2);
         },
-        // reanderStyleA:function(zone){
-        //      var txWh1 = $(zone).find('._tx1').text().length;
-        //     console.log(txWh1);
-        // },
         getDataA: function (zone, chart1, chart2) {
             function fetchData(cb) {
                 setTimeout(function () {
@@ -190,13 +186,11 @@ $(function () {
                 $.each(rs.chartData1.chaVal1.list1, function (index, item) {
                     var diff = Tc.getDiffClass(item);
                     html1 += '<li class="list-group-item '+diff+'">' + item + '</li>';
-                    // html1 += '<li class="list-group-item"><sapn class="'+diff+'">' + item + '</span></li>';
                 });
                 $(zone).find('.chaVal1').append(html1);
                 $.each(rs.chartData1.chaVal1.list2, function (index, item) {
                     var diff = Tc.getDiffClass(item);
                     html2 += '<li class="list-group-item '+diff+'">' + item + '</li>';
-                    //  html2 += '<li class="list-group-item"><sapn class="'+diff+'">' + item + '</span></li>';
                 });
                 $(zone).find('.chaVal2').append(html2);
 
@@ -222,7 +216,6 @@ $(function () {
                     html2 += '<li class="list-group-item '+diff+'">' + item + '</li>';
                 });
                 $(zone).find('.chaVal4').append(html2);
-                // comparedPreviousYear.reanderStyleA(zone);
             });
         }
     }
