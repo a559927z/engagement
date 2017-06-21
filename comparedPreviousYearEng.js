@@ -66,9 +66,9 @@ $(function () {
             ]
         },
         templateA: function (zone) {
-            $(zone).find('.comparedPreviousYear').remove();
+            $(zone).find('.comparedPreviousYearEng').remove();
             var html = `
-                <div class="comparedPreviousYear">
+                <div class="comparedPreviousYearEng">
                     <div class="w800">
                         <div class="row">
                             <div class="col-md-8">
@@ -79,7 +79,7 @@ $(function () {
                                 </ul>
                             </div>
                             <div class="col-md-4">
-                                <ul class="list-inline">
+                                <ul class="list-inline rUl">
                                     <li><span></span><span class="_diffOrganName"></span></li>
                                     <li><span></span><span class="_diffYear"></span></li>
                                 </ul>
@@ -87,7 +87,7 @@ $(function () {
                         </div>
                         <div class="line"></div>
                         <div>
-                            <div id="comparedPreviousYearId1" class="chart float"></div>
+                            <div id="comparedPreviousYearEngId1" class="chart float"></div>
                             <div class="float">
                                 <ul class="list-group chaVal1"></ul>
                             </div>
@@ -96,32 +96,25 @@ $(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="w800">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <ul class="list-inline">
-                                    <li><span>■</span> <span>赞成百分比</span></li>
-                                    <li><span>■</span> <span>中立百分比</span></li>
-                                    <li><span>■</span> <span>不赞成百分比</span></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <ul class="list-inline">
-                                    <li><span></span><span class="_diffOrganName"></span></li>
-                                    <li><span></span><span class="_diffYear"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="line"></div>
-                        <div>
-                            <div id="comparedPreviousYearId2" class="chart float"></div>
-                            <div class="float">
-                                <ul class="list-group chaVal3"></ul>
-                            </div>
-                            <div class="float">
-                                <ul class="list-group chaVal4"></ul>
-                            </div>
-                        </div>
+                    <div style = "clear: both;"></div>
+                    <div class="table-responsive">
+                        <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2" >
+                            <thead>
+                                <tr>
+                                    <th class="th1">组织</th>
+                                    <th class="th1">Say</th>
+                                    <th class="th1">我愿意推荐朋友加入这家公司</th>
+                                    <th class="th1">我愿意向公司以外的人员宣传在这里工作的好处</th>
+                                    <th class="th1">Stay</th>
+                                    <th class="th1">我不会轻易离开公司</th>
+                                    <th class="th1">我很少考虑“跳槽”</th>
+                                    <th class="th1">Strive</th>
+                                    <th class="th1">公司能够激励我付出额外的努力，以帮助公司取得成功</th>
+                                    <th class="th1">公司能够激励我每天尽力全力工作</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
                     </div>
                 </div>
             `;
@@ -130,17 +123,14 @@ $(function () {
         reanderPageA: function (zone, params) {
             this.templateA(zone);
 
-            var chart1 = echarts.init($(zone).find('#comparedPreviousYearId1').get(0));
+            var chart1 = echarts.init($(zone).find('#comparedPreviousYearEngId1').get(0));
             chart1.showLoading();
             chart1.setOption(this.chartOptionA);
 
-            var chart2 = echarts.init($(zone).find('#comparedPreviousYearId2').get(0));
-            chart2.showLoading();
-            chart2.setOption(this.chartOptionA);
-
-            this.getDataA(zone, chart1, chart2);
+            this.getDataA(zone, chart1);
         },
-        getDataA: function (zone, chart1, chart2) {
+        getDataA: function (zone, chart1) {
+            var $zone = $(zone);
             function fetchData(cb) {
                 setTimeout(function () {
                     cb({
@@ -152,18 +142,18 @@ $(function () {
                                 "list2": ["-0.2", "1", "-0.5", "-2.3", "-1", "-5.5", "-6.3", "-1", "-0.2"]
                             }
                         },
-                        "chartData2": {
-                            "yAxis": ["中干", "直接上级", "薪酬", "协作信任", "文化价值观", "上下沟通", "肯定", "客户导向", "晋升", "公司未来", "工作支持", "福利", "创新", "Job", "Great reward", "Great job", "Great company", "Great boss"],
-                            "list1": [300, 192, 271, 90, 200, 300, 200, 100, 420, 180, 298, 199, 400, 300, 200, 300, 400, 80],
-                            "list2": [180, 298, 199, 400, 300, 200, 300, 400, 80, 300, 192, 271, 90, 200, 300, 200, 100, 420],
-                            "list3": [20, 10, 30, 10, 0, 0, 0, 0, 0, 20, 10, 30, 10, 0, 0, 0, 0, 0],
-                            "chaVal2": {
-                                "list1": ["-0.2", "-15", "-5.5", "-6.3", "-1", "-0.2", "-0.5", "7.3", "-5.2", "-0.2", "13", "-0.5", "-2.3", "6", "-0.2", "-0.5", "-2.3", "-1"],
-                                "list2": ["-0.2", "1", "-0.5", "-2.3", "-1", "-0.2", "25", "-2.3", "-1", "-0.2", "1", "-0.5", "14", "-1", "-0.2", "-0.5", "-2.3", "1"]
-                            }
-                        },
                         "diffOrganName":"与xxBG差值",
-                        "diffYear":"与2017年差值"
+                        "diffYear":"与2017年差值",
+                        "chartData2": {
+                            "tableData":
+                            [
+                                [{ "name": "XX部门", "value": 999 }, { "name": "3", "value": 72.4 }, { "name": "2", "value": 1.9 }, { "name": "3", "value": 80.8 }, { "name": "3", "value": 68.0 }, { "name": "3", "value": 1.0 }, { "name": "2", "value": 72.7 }, { "name": "3", "value": 5.4 }, { "name": "3", "value": 70.5 }, { "name": "3", "value": 2.1 }],
+                                [{ "name": "中心1", "value": 9999 }, { "name": "1", "value": 80.8 }, { "name": "3", "value": -6.4 }, { "name": "3", "value": 80.8 }, { "name": "3", "value": 78.0 }, { "name": "3", "value": -10.6 }, { "name": "3", "value": 61.9 }, { "name": "3", "value": 1.4 }, { "name": "3", "value": 60.8 }, { "name": "3", "value": -0.1 }],
+                                [{ "name": "中心2", "value": 9999 }, { "name": "3", "value": 72.7 }, { "name": "2", "value": 68.0 }, { "name": "3", "value": 61.9 }, { "name": "3", "value": 1.0 }, { "name": "1", "value": 72.7 }, { "name": "3", "value": 5.4 }, { "name": "3", "value": 5.4 }, { "name": "3", "value": 70.5 }, { "name": "3", "value": 2.1 }],
+                                [{ "name": "中心3", "value": 9999 }, { "name": "1", "value": 61.9 }, { "name": "3", "value": 1.4 }, { "name": "3", "value": 72.7 }, { "name": "3", "value": 68.0 }, { "name": "3", "value": 68.0 }, { "name": "3", "value": 1.0 }, { "name": "3", "value": 60.8 }, { "name": "3", "value": -0.1 }, { "name": "1", "value": 70.5 }],
+                                [{ "name": "中心4", "value": 9999 }, { "name": "3", "value": 70.8 }, { "name": "2", "value": 61.9 }, { "name": "3", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "3", "value": 60.8 }, { "name": "1", "value": -0.1 }, { "name": "2", "value": 12.5 }, { "name": "1", "value": 69.4 }, { "name": "2", "value": 6.5 }]
+                            ]
+                        }
                     });
                 }, 1000);
             }
@@ -194,31 +184,32 @@ $(function () {
                 });
                 $(zone).find('.chaVal2').append(html2);
 
-                var html1 = '', html2 = '';
-                $(zone).find('.chaVal3').empty();
-                $(zone).find('.chaVal4').empty();
-                chart2.hideLoading();
-                chart2.setOption({
-                    yAxis: { data: rs.chartData2.yAxis },
-                    series: [
-                        { data: rs.chartData2.list1 },
-                        { data: rs.chartData2.list2 },
-                        { data: rs.chartData2.list3 }
-                    ]
+                // tb2
+                var html = '';
+                $.each(rs.chartData2.tableData, function (index, tr) {
+                    html += "<tr>";
+                    $.each(tr, function (index2, td) {
+                        // 其它列
+                        if (td.value != 999 && td.value != 9999) {
+                            var diff = '';
+                            var v = parseFloat(td.value);
+                            diff = Tc.getDiffClass(v);
+                            html += "<td class='" + diff + "'>" + v + "</td>";
+                        } else {
+                            // 部门
+                            if (td.value == 999 && td.value != 9999) {
+                                html += "<td class='dept'>" + td.name + "</td>";
+                                // 中心
+                            } else {
+                                html += "<td>" + td.name + "</td>";
+                            }
+                        }
+                    });
+                    html += "</tr>";
                 });
-                $.each(rs.chartData2.chaVal2.list1, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
-                    html1 += '<li class="list-group-item '+diff+'">' + item + '</li>';
-                });
-                $(zone).find('.chaVal3').append(html1);
-                $.each(rs.chartData2.chaVal2.list2, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
-                    html2 += '<li class="list-group-item '+diff+'">' + item + '</li>';
-                });
-                $(zone).find('.chaVal4').append(html2);
+                $zone.find('.comparedPreviousYearEng ._tb2').append(html);
             });
         }
     }
-
-    Tc.ComparedPreviousYear = jQuery.extend(true, {}, comparedPreviousYear);
+    Tc.ComparedPreviousYearEng = jQuery.extend(true, {}, comparedPreviousYearEng);
 });

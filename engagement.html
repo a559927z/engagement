@@ -32,6 +32,7 @@
     <script src="keyFactor.js"></script>
     <script src="indexEngagementOverview.js"></script>
     <script src="indexSatisfactionOverview.js"></script>
+    <script src="comparedPreviousYearEng.js"></script>
 
     <script>
         $(function () {
@@ -46,7 +47,7 @@
             var main = {
                 exe: function () {
                     var zone = $('.zone');
-                    Tc.ComparedPreviousYear.reanderPageA(zone, params);
+                    // Tc.ComparedPreviousYear.reanderPageA(zone, params);
                     // Tc.ComparedPreviousYearCentre.reanderPageA(zone, params);
                     // Tc.ComparedPreviousYearCentre.reanderPageB(zone, params);
                     // Tc.ExponentialMatrix.reanderPageA(zone, params);
@@ -65,6 +66,7 @@
 
                     // Tc.IndexSatisfactionOverview.reanderPageA(zone, params);
                     // Tc.IndexSatisfactionOverview.reanderPageB(zone, params);
+                    Tc.ComparedPreviousYearEng.reanderPageA(zone, params);
                 }
             }
             main.exe();

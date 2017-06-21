@@ -535,3 +535,84 @@
 }
 /*满意度指数总览*/
 
+/*敬业度-与上一年历史对比*/
+.comparedPreviousYearEng .w800 {
+    width: 850px;
+    margin: auto;
+}
+
+.comparedPreviousYearEng .chart {
+    width: 600px;
+    height: 400px;
+}
+
+.comparedPreviousYearEng .list-inline {
+    text-align: right;
+}
+.comparedPreviousYearEng .rUl {
+    width:270px;
+    text-align: center;
+}
+.comparedPreviousYearEng .rUl li:nth-child(1) {
+    width: 130px;
+}
+
+.comparedPreviousYearEng .list-inline li:nth-child(1) {
+    color: #4F81BD;
+}
+
+.comparedPreviousYearEng .list-inline li:nth-child(2) {
+    color: #C0504D;
+}
+
+.comparedPreviousYearEng .list-inline li:nth-child(3) {
+    color: #92D050;
+}
+
+.comparedPreviousYearEng .list-inline span:nth-child(2) {
+    color: #000;
+}
+
+
+
+.comparedPreviousYearEng .chaVal1 li , .comparedPreviousYearEng .chaVal2 li {
+    height: 31px;
+    border:0;
+    padding-bottom:5px;
+    padding-top:5px;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+.comparedPreviousYearEng .chaVal1 {
+    margin-left:30px;
+}
+.comparedPreviousYearEng .chaVal2 {
+    margin-left:60px;
+}
+.comparedPreviousYearEng .table > thead > tr > th {
+    text-align: center;
+}
+
+.comparedPreviousYearEng table .th1 {
+    width: 150px;
+}
+.comparedPreviousYearEng table td {
+    text-align: center;
+    height: 35px;
+}
+.comparedPreviousYearEng table .dept {
+    text-align: left;
+}
+.comparedPreviousYearEng ._tb2 {
+    width: 1024px;
+}
+.comparedPreviousYearEng .table-responsive {
+    margin-bottom: 20px;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.comparedPreviousYearEng .table > thead > tr > th {
+    vertical-align: middle;
+}
+/*敬业度-与上一年历史对比*/
