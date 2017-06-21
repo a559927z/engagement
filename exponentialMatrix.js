@@ -96,6 +96,7 @@ $(function () {
                 }, 500);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 var data = rs.chartData1;
                 if (data.list1.length > 0) {
                     var ul = $('.exponentialMatrix .content div:nth-child(1) ul');
@@ -298,6 +299,7 @@ $(function () {
                 }, 1000);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 chart3.hideLoading();
                 chart3.setOption({
                     series: [

@@ -4,20 +4,22 @@
 <head>
     <meta charset="utf-8">
     <title>ECharts</title>
-    <link rel="stylesheet" href="bootstrap-grid.css">
-    <link rel="stylesheet" href="bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="lib/bootstrap-grid.css">
+    <link rel="stylesheet" href="lib/bootstrap-glyphicons.css">
     <link rel="stylesheet" href="chart.css">
 
     <!--<link rel="stylesheet/less" type="text/css" href="styles.less" />
     <script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>-->
 
-    <script src="jquery-1.10.2.js"></script>
-    <script src="bootstrap.min.js"></script>
-    <script src="echarts3.js"></script>
-    <script src="base.js"></script>
-    <!--<script src="compUtils.js"></script>-->
+    <script src="lib/jquery-1.10.2.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/echarts3.js"></script>
+    <script src="lib/base.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/Gradient.js"></script>
+    <!--<script src="lib/compUtils.js"></script>-->
 
-    <script src="Gradient.js"></script>
+    
     <script src="indexRankingOverview.js"></script>
     <script src="exponentialMatrix.js"></script>
     <script src="exponentialTrend.js"></script>
@@ -27,6 +29,9 @@
     <script src="fourSAnalysis.js"></script>
     <script src="underlingTeamAnalysis.js"></script>
     <script src="bgQuestions.js"></script>
+    <script src="keyFactor.js"></script>
+    <script src="indexEngagementOverview.js"></script>
+    <script src="indexSatisfactionOverview.js"></script>
 
     <script>
         $(function () {
@@ -53,7 +58,12 @@
                     // Tc.FourSAnalysis.reanderPageA(zone, params);
                     // Tc.FourSAnalysis.reanderPageB(zone, params);
                     // Tc.UnderlingTeamAnalysis.reanderPageA(zone, params);
-                    Tc.BgQuestions.reanderPageA(zone, params);
+                    // Tc.BgQuestions.reanderPageA(zone, params);
+                    // Tc.KeyFactor.reanderPageA(zone, params);
+                    // Tc.IndexEngagementOverview.reanderPageA(zone, params);
+                    // Tc.IndexEngagementOverview.reanderPageB(zone, params);
+                    Tc.IndexSatisfactionOverview.reanderPageA(zone, params);
+                    // Tc.IndexSatisfactionOverview.reanderPageB(zone, params);
                 }
             }
             main.exe();
@@ -67,7 +77,6 @@
                 zone.empty();
                 Tc.IndexRankingOverview.reanderPageB(zone, params);
             });
-
         });
     </script>
 </head>

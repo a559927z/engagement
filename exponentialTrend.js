@@ -137,6 +137,7 @@ $(function () {
                 }, 500);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 chart1.hideLoading();
                 chart1.setOption({
                     xAxis: [{ data: rs.chartData1.xAxis }],

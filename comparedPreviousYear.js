@@ -168,6 +168,7 @@ $(function () {
                 }, 1000);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 chart1.hideLoading();
                 $(zone).find('._diffOrganName').text(rs.diffOrganName);
                 $(zone).find('._diffYear').text(rs.diffYear);

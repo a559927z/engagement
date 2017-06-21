@@ -1,5 +1,7 @@
-
 /*公共*/
+.zone .relative {
+    position: relative;
+}
 .zone .line {
     height: 1px;
     width: 100%;
@@ -162,13 +164,6 @@
     height: 2px;
     margin-top: 10px;
     background: red;
-}
-
-.indexRankingOverview .title {
-    float: left;
-    font-size: 12px;
-    height: 23px;
-    line-height: 23px;
 }
 
 
@@ -429,4 +424,94 @@
     color:#fff;
 }
 /*下属团队分析*/
+
+/*组织关键驱动问题*/
+.keyFactor .w800{
+    margin:auto;
+    overflow: auto;
+    overflow-y:hidden;
+}
+.keyFactor table .th1{
+    background-color:#C00000;
+    color:#fff;
+}
+/*组织关键驱动问题*/
+
+/*敬业度指数总览*/
+.indexEngagementOverview  .w800{
+    margin:auto;
+    overflow: auto;
+    overflow-y:hidden;
+}
+.indexEngagementOverview .chart1{
+    height:400px;
+}
+.indexEngagementOverview .linePos1 {
+    position: absolute;
+    top: 0px;
+    left: 55%;
+}
+
+.indexEngagementOverview .line {
+    width: 20px;
+    float: left;
+    height: 2px;
+    margin-top: 10px;
+    background: red;
+}
+
+.indexEngagementOverview .title {
+    float: left;
+    font-size: 12px;
+    height: 23px;
+    line-height: 23px;
+}
+.indexEngagementOverview .chart3{
+    height:400px;
+}
+.indexEngagementOverview .linePos3 {
+    position: absolute;
+    top: 0px;
+    left: 55%;
+}
+/*敬业度指数总览*/
+
+/*满意度指数总览*/
+.indexSatisfactionOverview  .w800{
+    margin:auto;
+    overflow: auto;
+    overflow-y:hidden;
+}
+.indexSatisfactionOverview .chart1{
+    height:400px;
+}
+.indexSatisfactionOverview .linePos1 {
+    position: absolute;
+    top: 0px;
+    left: 55%;
+}
+
+.indexSatisfactionOverview .line {
+    width: 20px;
+    float: left;
+    height: 2px;
+    margin-top: 10px;
+    background: red;
+}
+
+.indexSatisfactionOverview .title {
+    float: left;
+    font-size: 12px;
+    height: 23px;
+    line-height: 23px;
+}
+.indexSatisfactionOverview .chart3{
+    height:400px;
+}
+.indexSatisfactionOverview .linePos3 {
+    position: absolute;
+    top: 0px;
+    left: 55%;
+}
+/*满意度指数总览*/
 

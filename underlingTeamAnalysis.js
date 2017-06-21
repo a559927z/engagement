@@ -139,7 +139,7 @@ $(function () {
             function createTrtd(parent, childs, _tb, i) {
             };
             fetchData(function (rs) {
-                if (null == rs) { return };
+                if (_.isEmpty(rs)) { return };
                 var jyDataPa = rs.jyData.parent;
                 var jyDataCh = rs.jyData.childs;
                 var myDataPa = rs.myData.parent;

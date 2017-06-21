@@ -66,7 +66,7 @@ $(function () {
             var html = `
                 <div class="indexRankingOverview">
                     <div class="w800">
-                        <div>
+                        <div class="relative">
                             <div id="indexRankingOverviewId1" class="chart1"></div>
                             <div id="indexRankingOverviewLine1" class="linePos1"></div>
 
@@ -151,6 +151,7 @@ $(function () {
                 }, 1000);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 _self.reanderLineA(zone, rs.organName);
                 chart1.hideLoading();
                 chart1.setOption({
@@ -238,7 +239,7 @@ $(function () {
             var html = `
                 <div class="indexRankingOverview">
                     <div class="w800">
-                        <div>
+                        <div class="relative">
                             <div id="indexRankingOverviewId3" class="chart3"></div>
                             <div id="indexRankingOverviewLine3" class="linePosB"></div>
                         </div>
@@ -284,6 +285,7 @@ $(function () {
                 }, 1000);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 _self.reanderLineB(zone, rs.chartData3.organName);
                 chart3.hideLoading();
                 chart3.setOption({

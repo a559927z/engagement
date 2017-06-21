@@ -3,22 +3,26 @@ $(function () {
     var urls = {
         query1: webRoot + '/json/xxx.json'
     }
-    var bgQuestions = {
+    var keyFactor = {
         //------------------------------------------------------------------------------- A
         chartOptionA: {
         },
         templateA: function () {
             var html = `
-                <div class="bgQuestions">
+                <div class="keyFactor">
                     <div class="w800">
                         <div class="_content">
                             <div class="table-responsive">
                                 <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1">
                                     <thead>
                                         <tr>
-                                            <th class="th1">自定义问题</th>
-                                            <th class="th1">所属维度</th>
+                                            <th class="th1">关键驱动因素问题</th>
+                                            <th class="th1">所属纬度</th>
+                                            <th class="th1">关联系数</th>
                                             <th class="th1"></th>
+                                            <th class="th1">与BG差值</th>
+                                            <th class="th1"></th>
+                                            <th class="th1">最低分项目</th>
                                             <th class="th1"></th>
                                         </tr>
                                     </thead>
@@ -32,15 +36,15 @@ $(function () {
             return html;
         },
         reanderPageA: function (zone, params) {
-            $(zone).find('.bgQuestions').remove();
+            $(zone).find('.keyFactor').remove();
             var contentHtml = this.templateA();
             zone.append(contentHtml);
             this.getDataA(zone, params);
         },
         reanderStyleA: function (zone, colNum) {
-            var $tb1 = zone.find('.bgQuestions table');
-            var x0y = 550; // 第一行第一列
-            var xnyn = 80; // 其它列
+            var $tb1 = zone.find('.keyFactor table');
+            var x0y = 500; // 第一行第一列
+            var xnyn = 75; // 其它列
 
             $tb1.find('tr td').css({ "width": xnyn + "px" });
             $tb1.find('tr td:nth-child(1)').css({ "width": x0y + "px" });
@@ -52,43 +56,54 @@ $(function () {
         },
         getDataA: function (zone, params) {
             var $zone = $(zone);
-            function fetchData(cb) {
+            function fetchData(params, cb) {
                 setTimeout(function () {
                     cb({
                         "chartData1": {
-                            "name": "xxx部门", "year": 2016, "value": [
-                                ["我所在团队创建了良好的机制、流程或氛围以激发或支持员工不断创新", "创建-BG", "64.0", "0.9"],
-                                ["我对所在团队的未来发展有信心", "公司未来-BG", "64.8", "-4.4"],
-                                ["当进行业务、组织或核心人员调整时，我所在团队的管理者会与员工清晰地说明相应的背景及原因", "变革管理-BG", "67.4", "-2.3"],
-                                ["当我所在团队发生了调整或变化时，我能得到有效的支持和帮助去适应这种改变", "变革管理-BG", "66.4", "-3.7"],
-                                ["在过去的一年里，我所在的团队进行了有效的业务、组织或核心人员的调整，以提升整体战斗力及市场竞争力", "变革管理-BG", "64.7", "-2.9"],
-                            ]
+                            "name": "xxx部门",
+                            "year": 2016,
+                            "value": [
+                                ["我在公司得到了良好的个人成长与职业发展机会", "晋升",0.74,59.9,-2.2,2.6, "是", "是"],
+                                ["我的工作让我有成感", "job",0.72,53.6,-4.8,-1.6, "是", "是"],        
+                                ["对于我的工作成绩，我能够获得除薪酬以外的肯定（如绩效反馈、认可、即时激励等）", 0.72,66.0,-1.1,14.0,-4.5, "", "是"],                
+                                ["我所在的事业群、系统具有不断追求创新的动力和意愿", "创新", 0.7, 78.4, -2.1, -15.6, "", ""],
+                                ["我们部门能够保留住优秀人才", "人才管理", 0.65, 52.7, -0.8, 5.3, "是", "是"]
+                                ]
                         }
                     });
                 }, 500);
             }
-            fetchData(function (rs) {
+            fetchData({ params: params }, function (rs) {
                 if (_.isEmpty(rs)) { return };
                 var data = rs.chartData1.value;
                 var html = '';
                 var i = 0;
-                var $tb = $(zone).find('.bgQuestions ._content table');
-                $tb.find("tr th:nth-child(3)").text(rs.chartData1.name);
-                $tb.find("tr th:nth-child(4)").text('与' + rs.chartData1.year + "年差值");
+                var $tb = $(zone).find('.keyFactor ._content table');
+                $tb.find("tr th:nth-child(4)").text(params.year);
+                $tb.find("tr th:nth-child(6)").text('与' + rs.chartData1.year + "年差值");
+                $tb.find("tr th:nth-child(8)").text('是否' + rs.chartData1.year + "KDA");
                 while (i < data.length) {
                     var trtd = '<tr>';
-                    $.each(data[i], function (index, o) { trtd += '<td>' + o + '</td>'; });
+                    $.each(data[i], function (index, o) {
+                        if (typeof (o) == 'number' && (index == 4 || index == 5)) {
+                            var diff = '';
+                            var v = parseFloat(o);
+                            diff = Tc.getDiffClass(v);
+                            trtd += "<td class='" + diff + "'>" + v + "</td>";
+                        } else {
+                            trtd += '<td>' + o + '</td>';
+                        }
+                    });
                     trtd += '</tr>';
                     $tb.find("tbody").append(trtd);
                     i++;
                 }
-                bgQuestions.reanderStyleA(zone, 4);
-
+                keyFactor.reanderStyleA(zone, 8);
             });
         },
         //------------------------------------------------------------------------------- A
         //------------------------------------------------------------------------------- B
         //------------------------------------------------------------------------------- B
     }
-    Tc.BgQuestions = jQuery.extend(true, {}, bgQuestions);
+    Tc.KeyFactor = jQuery.extend(true, {}, keyFactor);
 });
