@@ -70,6 +70,7 @@ $(function () {
             var html = `
                 <div class="comparedPreviousYearSat">
                     <div class="w800">
+<div class="content">
                         <div class="row">
                             <div class="col-md-8">
                                 <ul class="list-inline">
@@ -95,6 +96,7 @@ $(function () {
                                 <ul class="list-group chaVal2"></ul>
                             </div>
                         </div>
+</div>
                     </div>
                     <div style = "clear: both;"></div>
                         <div class="table-responsive">

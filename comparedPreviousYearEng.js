@@ -70,31 +70,33 @@ $(function () {
             var html = `
                 <div class="comparedPreviousYearEng">
                     <div class="w800">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <ul class="list-inline">
-                                    <li><span>■</span> <span>赞成百分比</span></li>
-                                    <li><span>■</span> <span>中立百分比</span></li>
-                                    <li><span>■</span> <span>不赞成百分比</span></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <ul class="list-inline rUl">
-                                    <li><span></span><span class="_diffOrganName"></span></li>
-                                    <li><span></span><span class="_diffYear"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="line"></div>
-                        <div>
-                            <div id="comparedPreviousYearEngId1" class="chart float"></div>
-                            <div class="float">
-                                <ul class="list-group chaVal1"></ul>
-                            </div>
-                            <div class="float">
-                                <ul class="list-group chaVal2"></ul>
-                            </div>
-                        </div>
+						<div class="content">
+							<div class="row">
+								<div class="col-md-8">
+									<ul class="list-inline">
+										<li><span>■</span> <span>赞成百分比</span></li>
+										<li><span>■</span> <span>中立百分比</span></li>
+										<li><span>■</span> <span>不赞成百分比</span></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<ul class="list-inline rUl">
+										<li><span></span><span class="_diffOrganName"></span></li>
+										<li><span></span><span class="_diffYear"></span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="line"></div>
+							<div>
+								<div id="comparedPreviousYearEngId1" class="chart float"></div>
+								<div class="float">
+									<ul class="list-group chaVal1"></ul>
+								</div>
+								<div class="float">
+									<ul class="list-group chaVal2"></ul>
+								</div>
+							</div>
+						</div>
                     </div>
                     <div style = "clear: both;"></div>
                     <div class="table-responsive">
@@ -120,16 +122,21 @@ $(function () {
             `;
             zone.append(html);
         },
-        reanderPageA: function (zone, params) {
+        reanderPageA: function (zone, params, btn) {
             this.templateA(zone);
 
             var chart1 = echarts.init($(zone).find('#comparedPreviousYearEngId1').get(0));
             chart1.showLoading();
             chart1.setOption(this.chartOptionA);
 
-            this.getDataA(zone, chart1);
+            this.getDataA(zone, chart1, btn);
         },
-        getDataA: function (zone, chart1) {
+        reanderStyleA: function (zone, btn) {
+            if (btn == "btn1") {
+                $(zone).find(".comparedPreviousYearEng .w800").css({ "width": "auto", "overflow": "visible", "overflow-y": "visible" });
+            }
+        },
+        getDataA: function (zone, chart1, btn) {
             var $zone = $(zone);
             function fetchData(cb) {
                 setTimeout(function () {
@@ -138,12 +145,12 @@ $(function () {
                             "yAxis": ["公司能够激励我每天尽全力工作", "公司能够激励我付出额外的努力，以帮助公司取得成功", "Strive", "我很少考虑“跳槽”", "我不会轻易离开公司", "Stay", "我愿意向公司以外的人员宣传在这里工作的好处", "我愿意推荐朋友加入这家公司", "Say"],
                             "list1": [300, 192, 271, 90, 200, 300, 200, 100, 420], "list2": [180, 298, 199, 400, 300, 200, 300, 400, 80], "list3": [20, 10, 30, 10, 0, 0, 0, 0, 0],
                             "chaVal1": {
-                                "list1": ["-2.3", "-1", "7.3","-0.2", "1", "-0.5",  "-5.2", "-0.2", "13" ],
+                                "list1": ["-2.3", "-1", "7.3", "-0.2", "1", "-0.5", "-5.2", "-0.2", "13"],
                                 "list2": ["-0.2", "1", "-0.5", "-2.3", "-1", "-5.5", "-6.3", "-1", "-0.2"]
                             }
                         },
-                        "diffOrganName":"与xxBG差值",
-                        "diffYear":"与2017年差值",
+                        "diffOrganName": "与xxBG差值",
+                        "diffYear": "与2017年差值",
                         "chartData2": {
                             "tableData":
                             [
@@ -175,12 +182,12 @@ $(function () {
                 });
                 $.each(rs.chartData1.chaVal1.list1, function (index, item) {
                     var diff = Tc.getDiffClass(item);
-                    html1 += '<li class="list-group-item '+diff+'">' + item + '</li>';
+                    html1 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal1').append(html1);
                 $.each(rs.chartData1.chaVal1.list2, function (index, item) {
                     var diff = Tc.getDiffClass(item);
-                    html2 += '<li class="list-group-item '+diff+'">' + item + '</li>';
+                    html2 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal2').append(html2);
 
@@ -208,6 +215,7 @@ $(function () {
                     html += "</tr>";
                 });
                 $zone.find('.comparedPreviousYearEng ._tb2').append(html);
+                comparedPreviousYearEng.reanderStyleA(zone, btn);
             });
         }
     }

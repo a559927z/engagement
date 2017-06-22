@@ -34,6 +34,7 @@
     <script src="indexSatisfactionOverview.js"></script>
     <script src="comparedPreviousYearEng.js"></script>
     <script src="comparedPreviousYearSat.js"></script>
+    <script src="scoreTenQuestions.js"></script>
 
     <script>
         $(function () {
@@ -67,8 +68,10 @@
 
                     // Tc.IndexSatisfactionOverview.reanderPageA(zone, params);
                     // Tc.IndexSatisfactionOverview.reanderPageB(zone, params);
-                    // Tc.ComparedPreviousYearEng.reanderPageA(zone, params);
-                    Tc.ComparedPreviousYearSat.reanderPageA(zone, params);
+                    // Tc.ComparedPreviousYearEng.reanderPageA(zone, params, "btn1");
+                    // Tc.ComparedPreviousYearSat.reanderPageA(zone, params);
+
+                    Tc.ScoreTenQuestions.reanderPageA(zone, params);
                 }
             }
             main.exe();

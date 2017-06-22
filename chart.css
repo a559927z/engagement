@@ -2,6 +2,7 @@
 .zone .relative {
     position: relative;
 }
+
 .zone .line {
     height: 1px;
     width: 100%;
@@ -12,14 +13,17 @@
 .zone .float {
     float: left;
 }
-.zone .fontStyle{
+
+.zone .fontStyle {
     font-weight: bold;
-    font-size:16px;
+    font-size: 16px;
 }
-.zone .w100{
+
+.zone .w100 {
     width: 100px;
 }
-.zone .w150{
+
+.zone .w150 {
     width: 150px;
 }
 
@@ -51,65 +55,84 @@
     padding-bottom: 20px;
 }
 
-.zone .gradient0{
-    background:#63BE7B
+.zone .gradient0 {
+    background: #63BE7B
 }
-.zone .gradient1{
-     background:#64BD7B;
+
+.zone .gradient1 {
+    background: #64BD7B;
 }
-.zone .gradient2{
-    background:#6EBF7D ;
+
+.zone .gradient2 {
+    background: #6EBF7D;
 }
-.zone .gradient3{
-     background:#71C07E;
+
+.zone .gradient3 {
+    background: #71C07E;
 }
-.zone .gradient4{
-     background:#7DC27F;
+
+.zone .gradient4 {
+    background: #7DC27F;
 }
-.zone .gradient5{
-     background:#80C17D;
+
+.zone .gradient5 {
+    background: #80C17D;
 }
-.zone .gradient6{
-     background:#81C37C;
+
+.zone .gradient6 {
+    background: #81C37C;
 }
-.zone .gradient7{
-    background:#84C37D;
+
+.zone .gradient7 {
+    background: #84C37D;
 }
-.zone .gradient8{
-    background:#A0CA7E;
+
+.zone .gradient8 {
+    background: #A0CA7E;
 }
-.zone .gradient9{
-    background:#BFCD80;
+
+.zone .gradient9 {
+    background: #BFCD80;
 }
-.zone .gradient10{
-    background:#DACE7C;
+
+.zone .gradient10 {
+    background: #DACE7C;
 }
-.zone .gradient11{
-    background:#F1CD7F;
+
+.zone .gradient11 {
+    background: #F1CD7F;
 }
-.zone .gradient12{
-    background:#FECA7E;
+
+.zone .gradient12 {
+    background: #FECA7E;
 }
-.zone .gradient13{
-    background:#FFBF78;
+
+.zone .gradient13 {
+    background: #FFBF78;
 }
-.zone .gradient14{
-    background:#F7B072;
+
+.zone .gradient14 {
+    background: #F7B072;
 }
-.zone .gradient15{
-    background:#EC986A
+
+.zone .gradient15 {
+    background: #EC986A
 }
-.zone .gradient16{
-    background:#E28363
+
+.zone .gradient16 {
+    background: #E28363
 }
-.zone .gradient17{
-    background:#D16A57
+
+.zone .gradient17 {
+    background: #D16A57
 }
-.zone .gradient18{
-    background:#C75D50
+
+.zone .gradient18 {
+    background: #C75D50
 }
-.zone .gradient19{
-    background:#C0504E
+
+.zone .gradient19 {
+    background: #C0504E
 }
 /*公共*/
 
@@ -206,7 +229,7 @@
 /*敬满指数高低矩阵图*/
 .exponentialMatrix .w800 {
     width: 750px;
-    margin:auto;
+    margin: auto;
 }
 
 .exponentialMatrix .contentPos {
@@ -222,36 +245,36 @@
     left: 0px;
 }
 
-.exponentialMatrix .content div {
-    height: 170px;
-    border: 1px solid #d3d3d3;
-    overflow: auto;
-    overflow-x: hidden;
-}
+    .exponentialMatrix .content div {
+        height: 170px;
+        border: 1px solid #d3d3d3;
+        overflow: auto;
+        overflow-x: hidden;
+    }
 
-.exponentialMatrix .content div h4 {
-    color: #EEFF00;
-}
+        .exponentialMatrix .content div h4 {
+            color: #EEFF00;
+        }
 
-.exponentialMatrix .content div:nth-child(1) {
-    background-color: #CC706E;
-}
+        .exponentialMatrix .content div:nth-child(1) {
+            background-color: #CC706E;
+        }
 
-.exponentialMatrix .content div:nth-child(2) {
-    background-color: #9BBB51;
-}
+        .exponentialMatrix .content div:nth-child(2) {
+            background-color: #9BBB51;
+        }
 
-.exponentialMatrix .content div:nth-child(3) {
-    background-color: #4BACC6;
-}
+        .exponentialMatrix .content div:nth-child(3) {
+            background-color: #4BACC6;
+        }
 
-.exponentialMatrix .content div:nth-child(4) {
-    background-color: #954ECA;
-}
+        .exponentialMatrix .content div:nth-child(4) {
+            background-color: #954ECA;
+        }
 
-.exponentialMatrix .content div ul li {
-    color: #fff;
-}
+        .exponentialMatrix .content div ul li {
+            color: #fff;
+        }
 
 .exponentialMatrix .chart3 {
     width: 750px;
@@ -281,13 +304,15 @@
 .comparedPreviousYear .list-inline {
     text-align: right;
 }
+
 .comparedPreviousYear .rUl {
-    width:270px;
+    width: 270px;
     text-align: center;
 }
-.comparedPreviousYear .rUl li:nth-child(1) {
-    width: 130px;
-}
+
+    .comparedPreviousYear .rUl li:nth-child(1) {
+        width: 130px;
+    }
 
 .comparedPreviousYear .list-inline li:nth-child(1) {
     color: #4F81BD;
@@ -309,31 +334,33 @@
 .comparedPreviousYear .chaVal3 .list-group-item, .comparedPreviousYear .chaVal4 .list-group-item {
     padding-bottom: 1px;
     padding-top: 1px;
-    margin-left:10px;
-    border:0;
+    margin-left: 10px;
+    border: 0;
     height: 21.5px;
 }
 
-.comparedPreviousYear .chaVal1 li , .comparedPreviousYear .chaVal2 li {
+.comparedPreviousYear .chaVal1 li, .comparedPreviousYear .chaVal2 li {
     height: 31px;
-    border:0;
-    padding-bottom:5px;
-    padding-top:5px;
-    margin-bottom:10px;
-    margin-top:5px;
+    border: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
+
 .comparedPreviousYear .chaVal1, .chaVal3 {
-    margin-left:30px;
+    margin-left: 30px;
 }
+
 .comparedPreviousYear .chaVal2, .chaVal4 {
-    margin-left:60px;
+    margin-left: 60px;
 }
 /*与上一年历史对比（部门）*/
 
 /*与上一年历史对比（中心）*/
 .comparedPreviousYearCentre .w800 {
     width: 720px;
-    margin:auto;
+    margin: auto;
 }
 
 .comparedPreviousYearCentre .table > thead > tr > th {
@@ -373,8 +400,8 @@
     vertical-align: middle;
 }
 
-.comparedPreviousYearCentre .chart3{
-    height:400px;
+.comparedPreviousYearCentre .chart3 {
+    height: 400px;
     overflow: auto;
     overflow-x: hidden;
 }
@@ -383,11 +410,13 @@
 /*敬业度3S分析*/
 .threeSAnalysis .w800 {
     /*width: 720px;*/
-    margin:auto;
+    margin: auto;
 }
+
 .threeSAnalysis ._tb1 td {
     width: 1024px;
 }
+
 .threeSAnalysis table .th1 {
     width: 150px;
 }
@@ -396,70 +425,77 @@
 /*满意度4S分析*/
 .fourSAnalysis .w800 {
     /*width: 900px;*/
-    margin:auto;
+    margin: auto;
     overflow: auto;
-    overflow-y:hidden;
+    overflow-y: hidden;
 }
 /*满意度4S分析*/
 
 /*下属团队分析*/
 .underlingTeamAnalysis .w800 {
     /*width: 900px;*/
-    margin:auto;
+    margin: auto;
     overflow: auto;
-    overflow-y:hidden;
+    overflow-y: hidden;
 }
-.underlingTeamAnalysis .table{
-    margin-bottom:1px;
+
+.underlingTeamAnalysis .table {
+    margin-bottom: 1px;
 }
-.underlingTeamAnalysis .detail{
+
+.underlingTeamAnalysis .detail {
     border: 2px dashed #c2c2c2;
-    margin-bottom:20px;
-    height:50px;
-    line-height:50px;
-    background-color:#F2F2F2;
+    margin-bottom: 20px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #F2F2F2;
     padding-left: 20px;
 }
-.underlingTeamAnalysis table .th1{
-    background-color:#0070C0;
-    color:#fff;
+
+.underlingTeamAnalysis table .th1 {
+    background-color: #0070C0;
+    color: #fff;
 }
 /*下属团队分析*/
 
 /*下属团队分析*/
 .bgQuestions .w800 {
     /*width: 900px;*/
-    margin:auto;
+    margin: auto;
     overflow: auto;
-    overflow-y:hidden;
+    overflow-y: hidden;
 }
-.bgQuestions table .th1{
-    background-color:#0070C0;
-    color:#fff;
+
+.bgQuestions table .th1 {
+    background-color: #0070C0;
+    color: #fff;
 }
 /*下属团队分析*/
 
 /*组织关键驱动问题*/
-.keyFactor .w800{
-    margin:auto;
+.keyFactor .w800 {
+    margin: auto;
     overflow: auto;
-    overflow-y:hidden;
+    overflow-y: hidden;
 }
-.keyFactor table .th1{
-    background-color:#C00000;
-    color:#fff;
+
+.keyFactor table .th1 {
+    background-color: #C00000;
+    color: #fff;
 }
 /*组织关键驱动问题*/
 
 /*敬业度指数总览*/
-.indexEngagementOverview  .w800{
-    margin:auto;
+.indexEngagementOverview .w800 {
+    margin: auto;
     overflow: auto;
-    overflow-y:hidden;
+    overflow-y: hidden;
 }
-.indexEngagementOverview .chart1{
-    height:400px;
+
+.indexEngagementOverview .chart1 {
+    height: 400px;
 }
+
 .indexEngagementOverview .linePos1 {
     position: absolute;
     top: 0px;
@@ -480,9 +516,11 @@
     height: 23px;
     line-height: 23px;
 }
-.indexEngagementOverview .chart3{
-    height:400px;
+
+.indexEngagementOverview .chart3 {
+    height: 400px;
 }
+
 .indexEngagementOverview .linePos3 {
     position: absolute;
     top: 0px;
@@ -491,14 +529,16 @@
 /*敬业度指数总览*/
 
 /*满意度指数总览*/
-.indexSatisfactionOverview  .w800{
-    margin:auto;
+.indexSatisfactionOverview .w800 {
+    margin: auto;
     overflow: auto;
-    overflow-y:hidden;
+    overflow-y: hidden;
 }
-.indexSatisfactionOverview .chart1{
-    height:400px;
+
+.indexSatisfactionOverview .chart1 {
+    height: 400px;
 }
+
 .indexSatisfactionOverview .linePos1 {
     position: absolute;
     top: 0px;
@@ -519,9 +559,11 @@
     height: 23px;
     line-height: 23px;
 }
-.indexSatisfactionOverview .chart3{
-    height:400px;
+
+.indexSatisfactionOverview .chart3 {
+    height: 400px;
 }
+
 .indexSatisfactionOverview .linePos3 {
     position: absolute;
     top: 0px;
@@ -531,6 +573,12 @@
 
 /*敬业度-与上一年历史对比*/
 .comparedPreviousYearEng .w800 {
+    width: 720px;
+    margin: auto;
+    overflow:scroll;
+    overflow-y: hidden;
+}
+.comparedPreviousYearEng .content {
     width: 850px;
     margin: auto;
 }
@@ -543,13 +591,15 @@
 .comparedPreviousYearEng .list-inline {
     text-align: right;
 }
+
 .comparedPreviousYearEng .rUl {
-    width:270px;
+    width: 270px;
     text-align: center;
 }
-.comparedPreviousYearEng .rUl li:nth-child(1) {
-    width: 130px;
-}
+
+    .comparedPreviousYearEng .rUl li:nth-child(1) {
+        width: 130px;
+    }
 
 .comparedPreviousYearEng .list-inline li:nth-child(1) {
     color: #4F81BD;
@@ -566,20 +616,24 @@
 .comparedPreviousYearEng .list-inline span:nth-child(2) {
     color: #000;
 }
-.comparedPreviousYearEng .chaVal1 li , .comparedPreviousYearEng .chaVal2 li {
+
+.comparedPreviousYearEng .chaVal1 li, .comparedPreviousYearEng .chaVal2 li {
     height: 31px;
-    border:0;
-    padding-bottom:5px;
-    padding-top:5px;
-    margin-bottom:10px;
-    margin-top:5px;
+    border: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
+
 .comparedPreviousYearEng .chaVal1 {
-    margin-left:30px;
+    margin-left: 30px;
 }
+
 .comparedPreviousYearEng .chaVal2 {
-    margin-left:60px;
+    margin-left: 60px;
 }
+
 .comparedPreviousYearEng .table > thead > tr > th {
     text-align: center;
 }
@@ -587,16 +641,20 @@
 .comparedPreviousYearEng table .th1 {
     width: 150px;
 }
+
 .comparedPreviousYearEng table td {
     text-align: center;
     height: 35px;
 }
+
 .comparedPreviousYearEng table .dept {
     text-align: left;
 }
+
 .comparedPreviousYearEng ._tb2 {
     width: 1024px;
 }
+
 .comparedPreviousYearEng .table-responsive {
     margin-bottom: 20px;
     overflow: auto;
@@ -610,6 +668,12 @@
 
 /*满意度-与上一年历史对比*/
 .comparedPreviousYearSat .w800 {
+    width: 720px;
+    margin: auto;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+.comparedPreviousYearSat .content {
     width: 850px;
     margin: auto;
 }
@@ -622,13 +686,15 @@
 .comparedPreviousYearSat .list-inline {
     text-align: right;
 }
+
 .comparedPreviousYearSat .rUl {
-    width:270px;
+    width: 270px;
     text-align: center;
 }
-.comparedPreviousYearSat .rUl li:nth-child(1) {
-    width: 130px;
-}
+
+    .comparedPreviousYearSat .rUl li:nth-child(1) {
+        width: 130px;
+    }
 
 .comparedPreviousYearSat .list-inline li:nth-child(1) {
     color: #4F81BD;
@@ -649,17 +715,19 @@
 .comparedPreviousYearSat .chaVal1 .list-group-item, .comparedPreviousYearSat .chaVal2 .list-group-item {
     padding-bottom: 1px;
     padding-top: 1px;
-    margin-left:10px;
-    border:0;
+    margin-left: 10px;
+    border: 0;
     height: 21.5px;
 }
 
 .comparedPreviousYearSat .chaVal1 {
-    margin-left:30px;
+    margin-left: 30px;
 }
+
 .comparedPreviousYearSat .chaVal2 {
-    margin-left:60px;
+    margin-left: 60px;
 }
+
 .comparedPreviousYearSat .table > thead > tr > th {
     text-align: center;
 }
@@ -667,16 +735,20 @@
 .comparedPreviousYearSat table .th1 {
     width: 150px;
 }
+
 .comparedPreviousYearSat table td {
     text-align: center;
     height: 35px;
 }
+
 .comparedPreviousYearSat table .dept {
     text-align: left;
 }
+
 .comparedPreviousYearSat ._tb3 {
     width: 1900px;
 }
+
 .comparedPreviousYearSat .table-responsive {
     margin-bottom: 20px;
     overflow: auto;
@@ -687,3 +759,27 @@
     vertical-align: middle;
 }
 /*满意度-与上一年历史对比*/
+
+
+/*得分10道题*/
+.scoreTenQuestions .w800 {
+    margin: auto;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.scoreTenQuestions table .th1 {
+    /*background-color: #C00000;*/
+    color: #fff;
+}
+
+.scoreTenQuestions ._tb1 .th1 {
+    background-color: #C00000;
+    color: #fff;
+}
+
+.scoreTenQuestions ._tb2 .th1 {
+    background-color: #00B050;
+    color: #fff;
+}
+/*得分10道题*/
