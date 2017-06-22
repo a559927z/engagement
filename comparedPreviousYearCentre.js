@@ -282,58 +282,60 @@ $(function () {
             var html = `
                 <div class="comparedPreviousYearCentre">
                     <div class="">
-                        <div>
-                            <div id="comparedPreviousYearCentreId" class="chart3 pd-bottom20"></div>
-                            <div class="table-responsive ">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb4" >
-                                    <thead>
-                                        <tr>
-                                            <th class="th1">组织</th>
-                                            <th class="th1">Say</th>
-                                            <th class="th1">我愿意推荐朋友加入这家公司</th>
-                                            <th class="th1">我愿意向公司以外的人员宣传在这里工作的好处</th>
-                                            <th class="th1">Stay</th>
-                                            <th class="th1">我不会轻易离开公司</th>
-                                            <th class="th1">我很少考虑“跳槽”</th>
-                                            <th class="th1">Strive</th>
-                                            <th class="th1">公司能够激励我付出额外的努力，以帮助公司取得成功</th>
-                                            <th class="th1">公司能够激励我每天尽力全力工作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
-                            </div>
-                            <div class="table-responsive">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb5" >
-                                    <thead>
-                                        <tr>
-                                            <th class="th1">组织</th>
-                                            <th class="th1">Great boss</th>
-                                            <th class="th1">Great Company</th>
-                                            <th class="th1">Great job</th>
-                                            <th class="th1">Great reward</th>
-                                            <th class="th1">高管</th>
-                                            <th class="th1">中干</th>
-                                            <th class="th1">直接上级</th>
-                                            <th class="th1">Job</th>
-                                            <th class="th1">薪酬</th>
-                                            <th class="th1">肯定</th>
-                                            <th class="th1">晋升</th>
-                                            <th class="th1">福利</th>
-                                            <th class="th1">客户导向</th>
-                                            <th class="th1">创新</th>
-                                            <th class="th1">人才管理</th>
-                                            <th class="th1">上下沟通</th>
-                                            <th class="th1">协作信任</th>
-                                            <th class="th1">工作支持</th>
-                                            <th class="th1">公司未来</th>
-                                            <th class="th1">文化价值观</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
-                            </div>
-                        </div>
+						<div class="w800">
+							<div class="content">
+								<div id="comparedPreviousYearCentreId" class="chart3 pd-bottom20"></div>
+							</div>
+						</div>
+						<div class="table-responsive ">
+							<table border="1" cellspacing="0" cellpadding="0"  class="table table-bordered _tb4" >
+								<thead>
+									<tr>
+										<th class="th1">组织</th>
+										<th class="th1">Say</th>
+										<th class="th1">我愿意推荐朋友加入这家公司</th>
+										<th class="th1">我愿意向公司以外的人员宣传在这里工作的好处</th>
+										<th class="th1">Stay</th>
+										<th class="th1">我不会轻易离开公司</th>
+										<th class="th1">我很少考虑“跳槽”</th>
+										<th class="th1">Strive</th>
+										<th class="th1">公司能够激励我付出额外的努力，以帮助公司取得成功</th>
+										<th class="th1">公司能够激励我每天尽力全力工作</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+						<div class="table-responsive">
+							<table border="1" cellspacing="0" cellpadding="0"  class="table table-bordered _tb5" >
+								<thead>
+									<tr>
+										<th class="th1">组织</th>
+										<th class="th1">Great boss</th>
+										<th class="th1">Great Company</th>
+										<th class="th1">Great job</th>
+										<th class="th1">Great reward</th>
+										<th class="th1">高管</th>
+										<th class="th1">中干</th>
+										<th class="th1">直接上级</th>
+										<th class="th1">Job</th>
+										<th class="th1">薪酬</th>
+										<th class="th1">肯定</th>
+										<th class="th1">晋升</th>
+										<th class="th1">福利</th>
+										<th class="th1">客户导向</th>
+										<th class="th1">创新</th>
+										<th class="th1">人才管理</th>
+										<th class="th1">上下沟通</th>
+										<th class="th1">协作信任</th>
+										<th class="th1">工作支持</th>
+										<th class="th1">公司未来</th>
+										<th class="th1">文化价值观</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
                     </div>
                 </div>
             `;

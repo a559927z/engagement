@@ -70,6 +70,7 @@ $(function () {
             var html = `
                 <div class="comparedPreviousYear">
                     <div class="w800">
+<div class="content">
                         <div class="row">
                             <div class="col-md-8">
                                 <ul class="list-inline">
@@ -95,8 +96,10 @@ $(function () {
                                 <ul class="list-group chaVal2"></ul>
                             </div>
                         </div>
+</div>
                     </div>
                     <div class="w800">
+<div class="content">
                         <div class="row">
                             <div class="col-md-8">
                                 <ul class="list-inline">
@@ -123,11 +126,12 @@ $(function () {
                             </div>
                         </div>
                     </div>
+</div>
                 </div>
             `;
             zone.append(html);
         },
-        reanderPageA: function (zone, params) {
+        reanderPageA: function (zone, params, btn) {
             this.templateA(zone);
 
             var chart1 = echarts.init($(zone).find('#comparedPreviousYearId1').get(0));
@@ -139,13 +143,14 @@ $(function () {
             this.chartOptionA.color = ['#5EC8BE', '#F9CF87', '#DCDCDC'];
             chart2.setOption(this.chartOptionA);
 
-            this.getDataA(zone, chart1, chart2);
+            this.getDataA(zone, params, chart1, chart2,btn);
         },
-        // reanderStyleA:function(zone){
-        //      var txWh1 = $(zone).find('._tx1').text().length;
-        //     console.log(txWh1);
-        // },
-        getDataA: function (zone, chart1, chart2) {
+        reanderStyleA: function (zone, btn) {
+            if (btn == "btn1") {
+                $(zone).find(".comparedPreviousYear .w800").css({ "width": "auto", "overflow": "visible", "overflow-y": "visible" });
+            }
+        },
+        getDataA: function (zone, chart1, chart2, btn) {
             function fetchData(cb) {
                 setTimeout(function () {
                     cb({
@@ -223,7 +228,7 @@ $(function () {
                     html2 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal4').append(html2);
-                // comparedPreviousYear.reanderStyleA(zone);
+                comparedPreviousYear.reanderStyleA(zone, btn);
             });
         }
     }

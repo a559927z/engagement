@@ -1,7 +1,7 @@
 $(function () {
     var comparedPreviousYearEng = {
         chartOptionA: {
-            color: ['#4F81BD', '#C0504D', '#92D050'],
+            color: ['#6B94EC', '#DCDCDC', '#5EC8BE'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -67,7 +67,7 @@ $(function () {
         },
         templateA: function (zone) {
             $(zone).find('.comparedPreviousYearEng').remove();
-            var html = `
+             var html = `
                 <div class="comparedPreviousYearEng">
                     <div class="w800">
 						<div class="content">
@@ -129,14 +129,14 @@ $(function () {
             chart1.showLoading();
             chart1.setOption(this.chartOptionA);
 
-            this.getDataA(zone, chart1, btn);
+            this.getDataA(zone, params, chart1, btn);
         },
         reanderStyleA: function (zone, btn) {
             if (btn == "btn1") {
                 $(zone).find(".comparedPreviousYearEng .w800").css({ "width": "auto", "overflow": "visible", "overflow-y": "visible" });
             }
         },
-        getDataA: function (zone, chart1, btn) {
+        getDataA: function (zone, params, chart1, btn) {
             var $zone = $(zone);
             function fetchData(cb) {
                 setTimeout(function () {

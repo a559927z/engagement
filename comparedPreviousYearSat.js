@@ -67,7 +67,7 @@ $(function () {
         },
         templateA: function (zone) {
             $(zone).find('.comparedPreviousYearSat').remove();
-            var html = `
+             var html = `
                 <div class="comparedPreviousYearSat">
                     <div class="w800">
 <div class="content">
@@ -133,16 +133,21 @@ $(function () {
             `;
             zone.append(html);
         },
-        reanderPageA: function (zone, params) {
+        reanderPageA: function (zone, params, btn) {
             this.templateA(zone);
 
             var chart1 = echarts.init($(zone).find('#comparedPreviousYearSatId1').get(0));
             chart1.showLoading();
             chart1.setOption(this.chartOptionA);
 
-            this.getDataA(zone, chart1);
+            this.getDataA(zone, params, chart1, btn);
         },
-        getDataA: function (zone, chart1) {
+        reanderStyleA: function (zone, btn) {
+            if (btn == "btn1") {
+                $(zone).find(".comparedPreviousYearSat .w800").css({ "width": "auto", "overflow": "visible", "overflow-y": "visible" });
+            }
+        },
+        getDataA: function (zone, params, chart1, btn) {
             var $zone = $(zone);
             function fetchData(cb) {
                 setTimeout(function () {
@@ -227,6 +232,7 @@ $(function () {
                     html += "</tr>";
                 });
                 $zone.find('.comparedPreviousYearSat ._tb2').append(html);
+                comparedPreviousYearSat.reanderStyleA(zone, btn);
             });
         }
     }
