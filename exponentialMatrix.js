@@ -96,6 +96,7 @@ $(function () {
                 }, 500);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 var data = rs.chartData1;
                 if (data.list1.length > 0) {
                     var ul = $('.exponentialMatrix .content div:nth-child(1) ul');
@@ -154,7 +155,7 @@ $(function () {
         //------------------------------------------------------------------------------- A
         //------------------------------------------------------------------------------- B
         chartOptionB: {
-            color: ['#CC706E', '#9BBB51'],
+            color: ['#A4BBEF', '#FFB79F'],
             legend: {
                 data: ['低敬业度，低满意度人群', '高敬业度，高满意度人群'],
                 left: 'center'
@@ -267,7 +268,7 @@ $(function () {
                     cb({
                         chartData3: {
                             list1: [
-                                { name: '部门1', value: [161.2, 51.6] },
+                                { name: '部门A1', value: [161.2, 51.6] },
                                 { name: '部门2', value: [170.0, 59.0] },
                                 { name: '部门24', value: [172.5, 55.2] },
                                 { name: '部门4', value: [147.2, 49.8] },
@@ -298,6 +299,7 @@ $(function () {
                 }, 1000);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 chart3.hideLoading();
                 chart3.setOption({
                     series: [
@@ -307,7 +309,7 @@ $(function () {
                 });
             });
         },
-              
+
         //------------------------------------------------------------------------------- B
     }
 

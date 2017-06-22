@@ -6,7 +6,7 @@ $(function () {
     var exponentialTrend = {
         //------------------------------------------------------------------------------- A
         chartOptionA: {
-            color: ['#D9D9D9', '#ED7D31', '#5ACC8E', '#FFD65A'],
+            color: ['#DCDCDC', '#4879DF', '#5ACC8E', '#FFD65A'],
             legend: {
                 data: ['敬业度', '满意度', '上级组织敬业度', '上级组织满意度'],
                 bottom: 'bottom'
@@ -137,6 +137,7 @@ $(function () {
                 }, 500);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 chart1.hideLoading();
                 chart1.setOption({
                     xAxis: [{ data: rs.chartData1.xAxis }],

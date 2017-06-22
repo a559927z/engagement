@@ -1,21 +1,71 @@
 $(function () {
-    var webRoot = 'http://localhost:8080/code/';
-    urls = {
-        query1: webRoot + '/json/敬业度3S分析.json',
-        query2: webRoot + '/json/敬业度3S分析2.json'
-    }
-    var threeSAnalysis = {
-        //------------------------------------------------------------------------------- A
+    var indexEngagementOverview = {
+        // ---------------------------------------------------------------------A
         chartOptionA: {
+            color: ['#4978E0'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    crossStyle: {
+                        color: '#999'
+                    }
+                }
+            },
+            legend: {
+                data: [],
+                left: '38%'
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: [],
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    axisLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        rotate: 30
+                    },
+                    axisTick: false
+                }
+            ],
+            yAxis: [{ show: false, }],
+            series: [
+                {
+                    name: '',
+                    type: 'bar',
+                    data: [],
+                    label: { normal: { show: true, position: 'insideTop' } },
+                    markLine: {
+                        symbolSize: [0, 0],
+                        itemStyle: {
+                            normal: {
+                                color: '#FDDB93',
+                                lineStyle: {
+                                    type: 'solid'
+                                }
+                            }
+                        },
+                        data: [{
+                            yAxis: 0
+                        }]
+                    }
+                }
+            ]
         },
         templateA: function (zone) {
-            $(zone).find('.threeSAnalysis').remove();
+            $(zone).find('.indexEngagementOverview').remove();
             var html = `
-                <div class="threeSAnalysis">
+                <div class="indexEngagementOverview">
                     <div class="w800">
-                        <div>
+                        <div class="relative">
+                             <div id="indexEngagementOverviewId1" class="chart1"></div>
+                            <div id="indexEngagementOverviewLine1" class="linePos1"></div>
                             <div class="table-responsive">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1" >
+                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2" >
                                     <thead>
                                         <tr>
                                             <th class="th1">组织</th>
@@ -41,12 +91,20 @@ $(function () {
         },
         reanderPageA: function (zone, params) {
             this.templateA(zone);
-            this.getDataA(zone, params);
+            var chart1 = echarts.init($(zone).find('#indexEngagementOverviewId1').get(0));
+            chart1.showLoading();
+            chart1.setOption(this.chartOptionA);
+
+            this.getDataA(zone, params, chart1);
+        },
+        reanderLineA: function (zone, t) {
+            $(zone).find("#indexEngagementOverviewLine1").empty();
+            $(zone).find("#indexEngagementOverviewLine1").append("<div class='line'></div><div class='title'>" + t + "</div>");
         },
         reanderStyleA: function (zone, colNum) {
-            var $tb1 = zone.find('.threeSAnalysis ._tb1');
+            var $tb1 = zone.find('.indexEngagementOverview ._tb2');
             var x0y = 150; // 第一行第一列
-            var xnyn = 100; // 其它列
+            var xnyn = 90; // 其它列
 
             $tb1.find('tr td').css({ "width": xnyn + "px" });
             $tb1.find('tr:nth-child(1) td').css({ "height": "100px" });
@@ -58,12 +116,45 @@ $(function () {
             var tableWidth = (colNum * xnyn) + x0y;
             $tb1.width(tableWidth);
         },
-        getDataA: function (zone, params) {
+        getDataA: function (zone, params, chart1) {
             var $zone = $(zone);
             function fetchData(cb) {
                 setTimeout(function () {
                     cb({
                         "chartData1": {
+                            "legend": "2017敬业度",
+                            "xAxis": [
+                                "部门1",
+                                "部门2",
+                                "部门3",
+                                "部门4",
+                                "部门5",
+                                "部门6",
+                                "部门7",
+                                "部门8",
+                                "部门9",
+                                "部门10",
+                                "部门11",
+                                "部门12"
+                            ],
+                            "list1": [
+                                2.0,
+                                4.9,
+                                7.0,
+                                23.2,
+                                25.6,
+                                76.7,
+                                135.6,
+                                162.2,
+                                32.6,
+                                20.0,
+                                6.4,
+                                3.3
+                            ],
+                            "markLine": 74
+                        },
+                        "organName": "XXBG",
+                        "chartData2": {
                             "tableData":
                             [
                                 [{ "name": "XX部门", "value": 999 }, { "name": "3", "value": 72.4 }, { "name": "2", "value": 1.9 }, { "name": "3", "value": 80.8 }, { "name": "3", "value": 68.0 }, { "name": "3", "value": 1.0 }, { "name": "2", "value": 72.7 }, { "name": "3", "value": 5.4 }, { "name": "3", "value": 70.5 }, { "name": "3", "value": 2.1 }],
@@ -78,8 +169,23 @@ $(function () {
             }
             fetchData(function (rs) {
                 if (_.isEmpty(rs)) { return };
+                indexEngagementOverview.reanderLineA(zone, rs.organName);
+                chart1.hideLoading();
+                chart1.setOption({
+                    legend: { data: [rs.chartData1.legend] },
+                    xAxis: [{ data: rs.chartData1.xAxis }],
+                    series: [
+                        {
+                            name: rs.chartData1.legend,
+                            data: rs.chartData1.list1,
+                            markLine: { data: [{ yAxis: rs.chartData1.markLine }] }
+                        }
+                    ]
+                });
+
+                // tb2
                 var html = '';
-                $.each(rs.chartData1.tableData, function (index, tr) {
+                $.each(rs.chartData2.tableData, function (index, tr) {
                     var trcolor = 'single';
                     if (index % 2 == 1) {
                         trcolor = 'double';
@@ -110,20 +216,76 @@ $(function () {
                     });
                     html += "</tr>";
                 });
-                $zone.find('.threeSAnalysis ._tb1').append(html);
-                threeSAnalysis.reanderStyleA(zone, 10);
+                $zone.find('.indexEngagementOverview ._tb2').append(html);
+                indexEngagementOverview.reanderStyleA(zone, 10);
             });
         },
-        //------------------------------------------------------------------------------- A
-        //------------------------------------------------------------------------------- B
-        chartOptionB: {},
+        // ---------------------------------------------------------------------A
+        // ---------------------------------------------------------------------B
+        chartOptionB: {
+            color: ['#4978E0'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    crossStyle: {
+                        color: '#999'
+                    }
+                }
+            },
+            legend: {
+                data: [],
+                left: '38%'
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: [],
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    axisLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        rotate: 30
+                    },
+                    axisTick: false
+                }
+            ],
+            yAxis: [{ show: false, }],
+            series: [
+                {
+                    name: '',
+                    type: 'bar',
+                    data: [],
+                    label: { normal: { show: true, position: 'insideTop' } },
+                    markLine: {
+                        symbolSize: [0, 0],
+                        itemStyle: {
+                            normal: {
+                                color: '#FDDB93',
+                                lineStyle: {
+                                    type: 'solid'
+                                }
+                            }
+                        },
+                        data: [{
+                            yAxis: 0
+                        }]
+                    }
+                }
+            ]
+        },
         templateB: function (zone) {
-            $(zone).find('.threeSAnalysis').remove();
+            $(zone).find('.indexEngagementOverview').remove();
             var html = `
-                <div class="threeSAnalysis">
+                <div class="indexEngagementOverview">
                     <div class="w800">
-                        <div>
-                            <table border="1" cellspacing="0" cellpadding="0" class="table  table-bordered _tb2" >
+                        <div class="relative">
+                            <div id="indexEngagementOverviewId3" class="chart3"></div>
+                            <div id="indexEngagementOverviewLine3" class="linePos3"></div>
+                            <table border="1" cellspacing="0" cellpadding="0" class="table  table-bordered _tb3" >
                                 <tbody>
                                     <tr class="th1 fontStyle">
                                         <td>敬业度指标</td>
@@ -163,10 +325,17 @@ $(function () {
         },
         reanderPageB: function (zone, params) {
             this.templateB(zone);
-            this.getDataB(zone, params);
+            var chart3 = echarts.init($(zone).find('#indexEngagementOverviewId3').get(0));
+            chart3.showLoading();
+            chart3.setOption(this.chartOptionB);
+            this.getDataB(zone, params, chart3);
+        },
+        reanderLineB: function (zone, t) {
+            $(zone).find("#indexEngagementOverviewLine3").empty();
+            $(zone).find("#indexEngagementOverviewLine3").append("<div class='line'></div><div class='title'>" + t + "</div>");
         },
         reanderStyleB: function (zone, decisionColNum) {
-            var $tb2 = zone.find('.threeSAnalysis ._tb2');
+            var $tb2 = zone.find('.indexEngagementOverview ._tb3');
             var x0y = 150; // 第一行第一列
             var x1y = 100; // 第一行第二列
             var xnyn = 100; // 其它列
@@ -180,14 +349,48 @@ $(function () {
 
             // 计算表宽
             var tableWidth = (decisionColNum * xnyn) + x0y + x1y;
-            zone.find('.threeSAnalysis ._tb2').width(tableWidth);
+            zone.find('.fourSAnalysis ._tb2').width(tableWidth);
         },
-        getDataB: function (zone, params) {
-            var $zone = zone;
+        getDataB: function (zone, params, chart3) {
+            var _self = this;
+            $zone = $(zone);
             function fetchData(cb) {
                 setTimeout(function () {
                     cb({
                         "chartData3": {
+                            "legend": "2017敬业度",
+                            "xAxis": [
+                                "部门1",
+                                "部门2",
+                                "部门3",
+                                "部门4",
+                                "部门5",
+                                "部门6",
+                                "部门7",
+                                "部门8",
+                                "部门9",
+                                "部门10",
+                                "部门11",
+                                "部门12"
+                            ],
+                            "list1": [
+                                2.0,
+                                4.9,
+                                7.0,
+                                23.2,
+                                25.6,
+                                76.7,
+                                135.6,
+                                162.2,
+                                32.6,
+                                20.0,
+                                6.4,
+                                3.3
+                            ],
+                            "markLine": 74
+                        },
+                        "organName": "XXBG",
+                        "chartData4": {
                             "data": [
                                 { "name": "xx部门", "value": [30.5, 78, 69.2, 10, 80.5, 78, 69.2] },
                                 { "name": "中心1", "value": [52.8, 79, 68.2, 26, 41, 34, 33] },
@@ -198,16 +401,30 @@ $(function () {
                     });
                 }, 500);
             }
-
             fetchData(function (rs) {
                 if (_.isEmpty(rs)) { return };
-                var decisionColNum = rs.chartData3.data.length;
-                var _data = rs.chartData3.data;
+                indexEngagementOverview.reanderLineB(zone, rs.organName);
+                chart3.hideLoading();
+                chart3.setOption({
+                    legend: { data: [rs.chartData3.legend] },
+                    xAxis: [{ data: rs.chartData3.xAxis }],
+                    series: [
+                        {
+                            name: rs.chartData3.legend,
+                            data: rs.chartData3.list1,
+                            markLine: { data: [{ yAxis: rs.chartData3.markLine }] }
+                        }
+                    ]
+                });
+
+                // tb2
+                var decisionColNum = rs.chartData4.data.length;
+                var _data = rs.chartData4.data;
                 var decisionRowNum = 8; // _data[0].value.length;
                 // el行对像数组
                 var rows = [];
                 for (var i = 1; i < 9; i++) {
-                    var row = $zone.find('.threeSAnalysis ._tb2 tbody tr:nth-child(' + i + ') ');
+                    var row = $zone.find('.indexEngagementOverview ._tb3 tbody tr:nth-child(' + i + ') ');
                     rows.push(row);
                 }
                 // 数据对像数组
@@ -252,11 +469,11 @@ $(function () {
                         rows[i].append(html);
                     }
                 }
-                threeSAnalysis.reanderStyleB(zone, decisionColNum);
-            });
+                indexEngagementOverview.reanderStyleB(zone, decisionColNum);
 
+            });
         }
-        //------------------------------------------------------------------------------- B
+        // ---------------------------------------------------------------------B
     }
-    Tc.ThreeSAnalysis = jQuery.extend(true, {}, threeSAnalysis);
+    Tc.IndexEngagementOverview = jQuery.extend(true, {}, indexEngagementOverview);
 });

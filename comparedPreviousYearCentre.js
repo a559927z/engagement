@@ -111,11 +111,21 @@ $(function () {
                                 [{ "name": "中心4", "value": 9999 }, { "name": "3", "value": 70.8 }, { "name": "2", "value": 61.9 }, { "name": "3", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "3", "value": 60.8 }, { "name": "1", "value": -0.1 }, { "name": "2", "value": 12.5 }, { "name": "1", "value": 69.4 }, { "name": "2", "value": 6.5 }]
                             ]
                         },
-                        "chartData3":{"tableData":[[{"name":"XX部门","value":999},{"name":"","value":72.4},{"name":"","value":1.9},{"name":"","value":80.8},{"name":"","value":68.0},{"name":"","value":1.0},{"name":"","value":72.7},{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"","value":6.5},{"name":"","value":5.4},{"name":"","value":70.5},{"name":"","value":2.1}],[{"name":"中心1","value":9999},{"name":"","value":80.8},{"name":"","value":-6.4},{"name":"","value":80.8},{"name":"","value":78.0},{"name":"","value":-10.6},{"name":"","value":61.9},{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"","value":6.5},{"name":"","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1}],[{"name":"中心2","value":9999},{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"","value":6.5},{"name":"","value":72.7},{"name":"","value":68.0},{"name":"","value":61.9},{"name":"","value":1.0},{"name":"","value":72.7},{"name":"","value":5.4},{"name":"","value":5.4},{"name":"","value":70.5},{"name":"","value":2.1}],[{"name":"中心3","value":9999},{"name":"","value":61.9},{"name":"","value":1.4},{"name":"","value":72.7},{"name":"","value":68.0},{"name":"","value":68.0},{"name":"","value":1.0},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":70.5},{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"","value":6.5}],[{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"","value":6.5}]]},
+                        "chartData3": {
+                            "tableData":
+                            [
+                                [{ "name": "XX部门", "value": 999 }, { "name": "", "value": 72.4 }, { "name": "", "value": 1.9 }, { "name": "", "value": 80.8 }, { "name": "", "value": 68.0 }, { "name": "", "value": 1.0 }, { "name": "", "value": 72.7 }, { "name": "", "value": -6.8 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }, { "name": "", "value": 5.4 }, { "name": "", "value": 70.5 }, { "name": "", "value": 2.1 }],
+                                [{ "name": "中心1", "value": 9999 }, { "name": "", "value": 80.8 }, { "name": "", "value": -6.4 }, { "name": "", "value": 80.8 }, { "name": "", "value": 78.0 }, { "name": "", "value": -10.6 }, { "name": "", "value": 61.9 }, { "name": "", "value": 36 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }, { "name": "", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }],
+                                [{ "name": "中心2", "value": 9999 }, { "name": "", "value": 50.8 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }, { "name": "", "value": 72.7 }, { "name": "", "value": 68.0 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.0 }, { "name": "", "value": 72.7 }, { "name": "", "value": 5.4 }, { "name": "", "value": 5.4 }, { "name": "", "value": 70.5 }, { "name": "", "value": 2.1 }],
+                                [{ "name": "中心3", "value": 9999 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.4 }, { "name": "", "value": 72.7 }, { "name": "", "value": 68.0 }, { "name": "", "value": 68.0 }, { "name": "", "value": 1.0 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 70.5 }, { "name": "", "value": 51 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }],
+                                [{ "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }]
+                            ]
+                        }
                     });
                 }, 500);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 // 清空
                 $zone.find('.comparedPreviousYearCentre table tbody').empty();
                 // table title
@@ -126,7 +136,11 @@ $(function () {
                 // tb1
                 var html = '';
                 $.each(rs.chartData1.tableData, function (index, tr) {
-                    html += "<tr>";
+                    var trcolor = 'single';
+                    if (index % 2 == 1) {
+                        trcolor = 'double';
+                    };
+                    html += "<tr class='" + trcolor + "'>";
                     $.each(tr, function (index2, td) {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
@@ -155,20 +169,18 @@ $(function () {
                 // tb2
                 var html = '';
                 $.each(rs.chartData2.tableData, function (index, tr) {
-                    html += "<tr>";
+                    var trcolor = 'single';
+                    if (index % 2 == 1) {
+                        trcolor = 'double';
+                    };
+                    html += "<tr class='" + trcolor + "'>";
                     $.each(tr, function (index2, td) {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
+                            var diff = '';
                             var v = parseFloat(td.value);
-                            // 前三
-                            if (td.name == '1') {
-                                html += "<td class='topThree'>" + v + "</td>";
-                                // 后三
-                            } else if (td.name == '2') {
-                                html += "<td class='reciprocalThree'>" + v + "</td>";
-                            } else {
-                                html += "<td>" + v + "</td>";
-                            }
+                            diff = Tc.getDiffClass(v);
+                            html += "<td class='" + diff + "'>" + v + "</td>";
                         } else {
                             // 部门
                             if (td.value == 999 && td.value != 9999) {
@@ -185,7 +197,11 @@ $(function () {
                 // tb3
                 var html = '';
                 $.each(rs.chartData3.tableData, function (index, tr) {
-                    html += "<tr>";
+                    var trcolor = 'single';
+                    if (index % 2 == 1) {
+                        trcolor = 'double';
+                    };
+                    html += "<tr class='" + trcolor + "'>";
                     $.each(tr, function (index2, td) {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
@@ -211,7 +227,7 @@ $(function () {
         // ---------------------------------------------------------------------A
         // ---------------------------------------------------------------------B
         chartOptionB: {
-            color: ['#4F81BD', '#C0504D'],
+            color: ['#DCDCDC', '#6B94EC'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -266,58 +282,60 @@ $(function () {
             var html = `
                 <div class="comparedPreviousYearCentre">
                     <div class="">
-                        <div>
-                            <div id="comparedPreviousYearCentreId" class="chart3 pd-bottom20"></div>
-                            <div class="table-responsive ">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb4" >
-                                    <thead>
-                                        <tr>
-                                            <th class="th1">组织</th>
-                                            <th class="th1">Say</th>
-                                            <th class="th1">我愿意推荐朋友加入这家公司</th>
-                                            <th class="th1">我愿意向公司以外的人员宣传在这里工作的好处</th>
-                                            <th class="th1">Stay</th>
-                                            <th class="th1">我不会轻易离开公司</th>
-                                            <th class="th1">我很少考虑“跳槽”</th>
-                                            <th class="th1">Strive</th>
-                                            <th class="th1">公司能够激励我付出额外的努力，以帮助公司取得成功</th>
-                                            <th class="th1">公司能够激励我每天尽力全力工作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
-                            </div>
-                            <div class="table-responsive">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb5" >
-                                    <thead>
-                                        <tr>
-                                            <th class="th1">组织</th>
-                                            <th class="th1">Great boss</th>
-                                            <th class="th1">Great Company</th>
-                                            <th class="th1">Great job</th>
-                                            <th class="th1">Great reward</th>
-                                            <th class="th1">高管</th>
-                                            <th class="th1">中干</th>
-                                            <th class="th1">直接上级</th>
-                                            <th class="th1">Job</th>
-                                            <th class="th1">薪酬</th>
-                                            <th class="th1">肯定</th>
-                                            <th class="th1">晋升</th>
-                                            <th class="th1">福利</th>
-                                            <th class="th1">客户导向</th>
-                                            <th class="th1">创新</th>
-                                            <th class="th1">人才管理</th>
-                                            <th class="th1">上下沟通</th>
-                                            <th class="th1">协作信任</th>
-                                            <th class="th1">工作支持</th>
-                                            <th class="th1">公司未来</th>
-                                            <th class="th1">文化价值观</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
-                            </div>
-                        </div>
+						<div class="w800">
+							<div class="content">
+								<div id="comparedPreviousYearCentreId" class="chart3 pd-bottom20"></div>
+							</div>
+						</div>
+						<div class="table-responsive ">
+							<table border="1" cellspacing="0" cellpadding="0"  class="table table-bordered _tb4" >
+								<thead>
+									<tr>
+										<th class="th1">组织</th>
+										<th class="th1">Say</th>
+										<th class="th1">我愿意推荐朋友加入这家公司</th>
+										<th class="th1">我愿意向公司以外的人员宣传在这里工作的好处</th>
+										<th class="th1">Stay</th>
+										<th class="th1">我不会轻易离开公司</th>
+										<th class="th1">我很少考虑“跳槽”</th>
+										<th class="th1">Strive</th>
+										<th class="th1">公司能够激励我付出额外的努力，以帮助公司取得成功</th>
+										<th class="th1">公司能够激励我每天尽力全力工作</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+						<div class="table-responsive">
+							<table border="1" cellspacing="0" cellpadding="0"  class="table table-bordered _tb5" >
+								<thead>
+									<tr>
+										<th class="th1">组织</th>
+										<th class="th1">Great boss</th>
+										<th class="th1">Great Company</th>
+										<th class="th1">Great job</th>
+										<th class="th1">Great reward</th>
+										<th class="th1">高管</th>
+										<th class="th1">中干</th>
+										<th class="th1">直接上级</th>
+										<th class="th1">Job</th>
+										<th class="th1">薪酬</th>
+										<th class="th1">肯定</th>
+										<th class="th1">晋升</th>
+										<th class="th1">福利</th>
+										<th class="th1">客户导向</th>
+										<th class="th1">创新</th>
+										<th class="th1">人才管理</th>
+										<th class="th1">上下沟通</th>
+										<th class="th1">协作信任</th>
+										<th class="th1">工作支持</th>
+										<th class="th1">公司未来</th>
+										<th class="th1">文化价值观</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
                     </div>
                 </div>
             `;
@@ -342,11 +360,12 @@ $(function () {
                             "list1": [2.0, 4.9, 7.0, 23.2, -125.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
                         },
                         "chartData4": { "tableData": [[{ "name": "XX部门", "value": 999 }, { "name": "", "value": 72.4 }, { "name": "", "value": 1.9 }, { "name": "", "value": 80.8 }, { "name": "", "value": 68.0 }, { "name": "", "value": 1.0 }, { "name": "", "value": 72.7 }, { "name": "", "value": 5.4 }, { "name": "", "value": 70.5 }, { "name": "", "value": 2.1 }], [{ "name": "中心1", "value": 9999 }, { "name": "", "value": 80.8 }, { "name": "", "value": -6.4 }, { "name": "", "value": 80.8 }, { "name": "", "value": 78.0 }, { "name": "", "value": -10.6 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }], [{ "name": "中心2", "value": 9999 }, { "name": "", "value": 72.7 }, { "name": "", "value": 68.0 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.0 }, { "name": "", "value": 72.7 }, { "name": "", "value": 5.4 }, { "name": "", "value": 5.4 }, { "name": "", "value": 70.5 }, { "name": "", "value": 2.1 }], [{ "name": "中心3", "value": 9999 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.4 }, { "name": "", "value": 72.7 }, { "name": "", "value": 68.0 }, { "name": "", "value": 68.0 }, { "name": "", "value": 1.0 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 70.5 }], [{ "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }]] },
-                        "chartData5":{"tableData":[[{"name":"XX部门","value":999},{"name":"","value":72.4},{"name":"","value":1.9},{"name":"","value":80.8},{"name":"","value":68.0},{"name":"","value":1.0},{"name":"","value":72.7},{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"","value":6.5},{"name":"","value":5.4},{"name":"","value":70.5},{"name":"","value":2.1}],[{"name":"中心1","value":9999},{"name":"","value":80.8},{"name":"","value":-6.4},{"name":"","value":80.8},{"name":"","value":78.0},{"name":"","value":-10.6},{"name":"","value":61.9},{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"","value":6.5},{"name":"","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1}],[{"name":"中心2","value":9999},{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"","value":6.5},{"name":"","value":72.7},{"name":"","value":68.0},{"name":"","value":61.9},{"name":"","value":1.0},{"name":"","value":72.7},{"name":"","value":5.4},{"name":"","value":5.4},{"name":"","value":70.5},{"name":"","value":2.1}],[{"name":"中心3","value":9999},{"name":"","value":61.9},{"name":"","value":1.4},{"name":"","value":72.7},{"name":"","value":68.0},{"name":"","value":68.0},{"name":"","value":1.0},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":70.5},{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"","value":6.5}],[{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"中心4","value":9999},{"name":"","value":70.8},{"name":"","value":61.9},{"name":"","value":80.8},{"name":"v2","value":1.4},{"name":"","value":60.8},{"name":"","value":-0.1},{"name":"","value":12.5},{"name":"","value":69.4},{"name":"","value":6.5},{"name":"","value":6.5}]]},
+                        "chartData5": { "tableData": [[{ "name": "XX部门", "value": 999 }, { "name": "", "value": 72.4 }, { "name": "", "value": 1.9 }, { "name": "", "value": 80.8 }, { "name": "", "value": 68.0 }, { "name": "", "value": 1.0 }, { "name": "", "value": 72.7 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }, { "name": "", "value": 5.4 }, { "name": "", "value": 70.5 }, { "name": "", "value": 2.1 }], [{ "name": "中心1", "value": 9999 }, { "name": "", "value": 80.8 }, { "name": "", "value": -6.4 }, { "name": "", "value": 80.8 }, { "name": "", "value": 78.0 }, { "name": "", "value": -10.6 }, { "name": "", "value": 61.9 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }, { "name": "", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }], [{ "name": "中心2", "value": 9999 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }, { "name": "", "value": 72.7 }, { "name": "", "value": 68.0 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.0 }, { "name": "", "value": 72.7 }, { "name": "", "value": 5.4 }, { "name": "", "value": 5.4 }, { "name": "", "value": 70.5 }, { "name": "", "value": 2.1 }], [{ "name": "中心3", "value": 9999 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.4 }, { "name": "", "value": 72.7 }, { "name": "", "value": 68.0 }, { "name": "", "value": 68.0 }, { "name": "", "value": 1.0 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 70.5 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }], [{ "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }]] },
                     });
                 }, 500);
             }
             fetchData(function (rs) {
+                if (_.isEmpty(rs)) { return };
                 var _list1 = [];
                 $.each(rs.chartData3.list1, function (index, item) {
                     if (item < 0) {
