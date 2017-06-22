@@ -28,19 +28,19 @@
 }
 
 .zone .diff-10 {
-    background-color: #00B050
+    background-color: #79D0CA
 }
 
 .zone .diff-5-10 {
-    background-color: #92D050
+    background-color: #ADD8AD
 }
 
 .zone .diff5-10 {
-    background-color: #FFC000;
+    background-color: #F9C86C;
 }
 
 .zone .diff10 {
-    background-color: #C00000;
+    background-color: #FFB09B;
 }
 
 .zone .topThree {
@@ -134,6 +134,19 @@
 .zone .gradient19 {
     background: #C0504E
 }
+
+.zone .single{
+    background:#EAEEFA;
+}
+.zone .double{
+    background: #FCFBFF;
+}
+.zone .single2{
+    background:#EFF9F8;
+}
+.zone .double2{
+    background: #FBFCFE;
+}
 /*公共*/
 
 
@@ -153,8 +166,12 @@
     float: left;
     height: 2px;
     margin-top: 10px;
-    background: red;
+    background: #F9D77E;
 }
+.indexRankingOverview .line2 {
+    background: #92DFB3;
+}
+
 
 .indexRankingOverview .title {
     float: left;
@@ -173,14 +190,6 @@
     position: absolute;
     top: 400px;
     left: 55%;
-}
-
-.indexRankingOverview .line {
-    width: 20px;
-    float: left;
-    height: 2px;
-    margin-top: 10px;
-    background: red;
 }
 
 
@@ -245,36 +254,36 @@
     left: 0px;
 }
 
-    .exponentialMatrix .content div {
-        height: 170px;
-        border: 1px solid #d3d3d3;
-        overflow: auto;
-        overflow-x: hidden;
-    }
+.exponentialMatrix .content div {
+    height: 170px;
+    border: 1px solid #d3d3d3;
+    overflow: auto;
+    overflow-x: hidden;
+}
 
-        .exponentialMatrix .content div h4 {
-            color: #EEFF00;
-        }
+.exponentialMatrix .content div h4 {
+    color: #EEFF00;
+}
 
-        .exponentialMatrix .content div:nth-child(1) {
-            background-color: #CC706E;
-        }
+.exponentialMatrix .content div:nth-child(1) {
+    background-color: #AFE4DE;
+}
 
-        .exponentialMatrix .content div:nth-child(2) {
-            background-color: #9BBB51;
-        }
+.exponentialMatrix .content div:nth-child(2) {
+    background-color: #FFB79F;
+}
 
-        .exponentialMatrix .content div:nth-child(3) {
-            background-color: #4BACC6;
-        }
+.exponentialMatrix .content div:nth-child(3) {
+    background-color: #A4BBEF;
+}
 
-        .exponentialMatrix .content div:nth-child(4) {
-            background-color: #954ECA;
-        }
+.exponentialMatrix .content div:nth-child(4) {
+    background-color: #FCD7A2;
+}
 
-        .exponentialMatrix .content div ul li {
-            color: #fff;
-        }
+.exponentialMatrix .content div ul li {
+    color: #fff;
+}
 
 .exponentialMatrix .chart3 {
     width: 750px;
@@ -283,7 +292,6 @@
 /*敬满指数高低矩阵图*/
 
 /*敬满指数历史趋势*/
-
 .exponentialTrend .chart1 {
     /*width: 750px;*/
     height: 400px;
@@ -365,6 +373,8 @@
 
 .comparedPreviousYearCentre .table > thead > tr > th {
     text-align: center;
+    background-color:#457AE0;
+    color:#fff;
 }
 
 .comparedPreviousYearCentre table .th1 {
@@ -409,7 +419,6 @@
 
 /*敬业度3S分析*/
 .threeSAnalysis .w800 {
-    /*width: 720px;*/
     margin: auto;
 }
 
@@ -419,6 +428,8 @@
 
 .threeSAnalysis table .th1 {
     width: 150px;
+    background: #467ADF;
+    color:#fff;
 }
 /*敬业度3S分析*/
 
@@ -428,6 +439,14 @@
     margin: auto;
     overflow: auto;
     overflow-y: hidden;
+}
+.fourSAnalysis table thead tr{
+    background: #467ADF;
+    color:#fff;
+}
+.fourSAnalysis ._tb2 tbody tr:nth-child(1){
+    background: #467ADF;
+    color:#fff;
 }
 /*满意度4S分析*/
 
@@ -452,13 +471,17 @@
     padding-left: 20px;
 }
 
-.underlingTeamAnalysis table .th1 {
-    background-color: #0070C0;
+.underlingTeamAnalysis ._tb1 .th1 {
+    background-color: #4879DF;
+    color: #fff;
+}
+.underlingTeamAnalysis ._tb2 .th1 {
+    background-color: #5EC8BE;
     color: #fff;
 }
 /*下属团队分析*/
 
-/*下属团队分析*/
+/*自定义问题*/
 .bgQuestions .w800 {
     /*width: 900px;*/
     margin: auto;
@@ -467,10 +490,10 @@
 }
 
 .bgQuestions table .th1 {
-    background-color: #0070C0;
+    background-color: #4879DF;
     color: #fff;
 }
-/*下属团队分析*/
+/*自定义问题*/
 
 /*组织关键驱动问题*/
 .keyFactor .w800 {
@@ -480,7 +503,7 @@
 }
 
 .keyFactor table .th1 {
-    background-color: #C00000;
+    background-color: #4879DF;
     color: #fff;
 }
 /*组织关键驱动问题*/
@@ -491,6 +514,11 @@
     overflow: auto;
     overflow-y: hidden;
 }
+.indexEngagementOverview .th1 {
+    background-color: #4879DF;
+    color: #fff;
+}
+
 
 .indexEngagementOverview .chart1 {
     height: 400px;
@@ -507,7 +535,7 @@
     float: left;
     height: 2px;
     margin-top: 10px;
-    background: red;
+    background: #FDDB93;
 }
 
 .indexEngagementOverview .title {
@@ -534,23 +562,25 @@
     overflow: auto;
     overflow-y: hidden;
 }
+.indexSatisfactionOverview .th1{
+    background-color: #4879DF;
+    color: #fff;
+}
 
 .indexSatisfactionOverview .chart1 {
     height: 400px;
 }
-
 .indexSatisfactionOverview .linePos1 {
     position: absolute;
     top: 0px;
     left: 55%;
 }
-
 .indexSatisfactionOverview .line {
     width: 20px;
     float: left;
     height: 2px;
     margin-top: 10px;
-    background: red;
+    background: #FDDB93;
 }
 
 .indexSatisfactionOverview .title {
@@ -581,6 +611,11 @@
 .comparedPreviousYearEng .content {
     width: 850px;
     margin: auto;
+}
+
+.comparedPreviousYearEng .th1{
+    background-color: #4879DF;
+    color: #fff;
 }
 
 .comparedPreviousYearEng .chart {
@@ -677,6 +712,11 @@
     width: 850px;
     margin: auto;
 }
+.comparedPreviousYearSat .th1{
+    background-color: #4879DF;
+    color: #fff;
+}
+
 
 .comparedPreviousYearSat .chart {
     width: 600px;
@@ -769,17 +809,75 @@
 }
 
 .scoreTenQuestions table .th1 {
-    /*background-color: #C00000;*/
     color: #fff;
 }
 
 .scoreTenQuestions ._tb1 .th1 {
-    background-color: #C00000;
+    background-color: #4879DF;
     color: #fff;
 }
 
 .scoreTenQuestions ._tb2 .th1 {
-    background-color: #00B050;
+    background-color: #5EC8BE;
     color: #fff;
 }
 /*得分10道题*/
+
+
+
+
+
+
+
+
+/*得分与上年相比上升（下降）最快10道题*/
+.comparedTenQuestions .w800 {
+    width: 850px;
+    margin: auto;
+}
+.comparedTenQuestions .chart, .chart2 {
+    width: 600px;
+    height: 400px;
+}
+.comparedTenQuestions table tr:nth-child(1){
+    background-color: #B8B8B8;
+}
+.comparedTenQuestions table .c6{
+    background-color: #FEB49B;
+}
+.comparedTenQuestions table .c5{
+    background-color: #FEE2D7;
+}
+.comparedTenQuestions table .c4{
+    background-color: #FFFBF8;
+}
+.comparedTenQuestions table .c3{
+    background-color: #81CDC9;
+}
+.comparedTenQuestions table .c2{
+    background-color: #DAF0ED;
+}
+.comparedTenQuestions table .c1{
+    background-color: #DAF0ED;
+}
+.comparedTenQuestions .list-inline {
+    text-align: center;
+}
+.comparedTenQuestions .rUl {
+    text-align: center;
+}
+.comparedTenQuestions .chaVal1 li,
+.comparedTenQuestions .chaVal2 li {
+    height: 31px;
+    border: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.comparedTenQuestions .chaVal1,
+.comparedTenQuestions .chaVal2 {
+    margin-left: 30px;
+}
+
+/*得分与上年相比上升（下降）最快10道题*/

@@ -1,7 +1,7 @@
 $(function () {
     var comparedPreviousYearSat = {
         chartOptionA: {
-            color: ['#4F81BD', '#C0504D', '#92D050'],
+            color: ['#6B94EC', '#DCDCDC', '#5EC8BE'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -157,8 +157,8 @@ $(function () {
                                 "list2": ["-0.2", "1", "-0.5", "-2.3", "-1", "-0.2", "25", "-2.3", "-1", "-0.2", "1", "-0.5", "14", "-1", "-0.2", "-0.5", "-2.3", "1"]
                             }
                         },
-                        "diffOrganName":"与xxBG差值",
-                        "diffYear":"与2017年差值",
+                        "diffOrganName": "与xxBG差值",
+                        "diffYear": "与2017年差值",
                         "chartData2": {
                             "tableData":
                             [
@@ -190,19 +190,23 @@ $(function () {
                 });
                 $.each(rs.chartData1.chaVal1.list1, function (index, item) {
                     var diff = Tc.getDiffClass(item);
-                    html1 += '<li class="list-group-item '+diff+'">' + item + '</li>';
+                    html1 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal1').append(html1);
                 $.each(rs.chartData1.chaVal1.list2, function (index, item) {
                     var diff = Tc.getDiffClass(item);
-                    html2 += '<li class="list-group-item '+diff+'">' + item + '</li>';
+                    html2 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal2').append(html2);
 
                 // tb3
                 var html = '';
                 $.each(rs.chartData2.tableData, function (index, tr) {
-                    html += "<tr>";
+                    var trcolor = 'single';
+                    if (index % 2 == 1) {
+                        trcolor = 'double';
+                    }
+                    html += "<tr class='" + trcolor + "'>";
                     $.each(tr, function (index2, td) {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {

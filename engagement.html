@@ -35,6 +35,7 @@
     <script src="comparedPreviousYearEng.js"></script>
     <script src="comparedPreviousYearSat.js"></script>
     <script src="scoreTenQuestions.js"></script>
+    <script src="comparedTenQuestions.js"></script>
 
     <script>
         $(function () {
@@ -49,29 +50,45 @@
             var main = {
                 exe: function () {
                     var zone = $('.zone');
+                    //// 与上一年历史对比（部门）
                     // Tc.ComparedPreviousYear.reanderPageA(zone, params);
+                    //// 与上一年历史对比（中心）
                     // Tc.ComparedPreviousYearCentre.reanderPageA(zone, params);
                     // Tc.ComparedPreviousYearCentre.reanderPageB(zone, params);
+                    //// 敬满指数高低矩阵图
                     // Tc.ExponentialMatrix.reanderPageA(zone, params);
                     // Tc.ExponentialMatrix.reanderPageB(zone, params);
+                    // 敬满指数历史趋势
                     // Tc.ExponentialTrend.reanderPageA(zone, params);
-                    //  Tc.IndexRankingOverview.reanderPageA(zone, params);
+                    // 敬满指数排名总览2
+                    // Tc.IndexRankingOverview.reanderPageA(zone, params);
+                    // Tc.IndexRankingOverview.reanderPageB(zone, params);
+                    // 敬业度3S分析
                     // Tc.ThreeSAnalysis.reanderPageA(zone, params);
                     // Tc.ThreeSAnalysis.reanderPageB(zone, params);
+                    // 满意度4S分析
                     // Tc.FourSAnalysis.reanderPageA(zone, params);
                     // Tc.FourSAnalysis.reanderPageB(zone, params);
+                    // 下属团队分析
                     // Tc.UnderlingTeamAnalysis.reanderPageA(zone, params);
+                    // 自定义问题
                     // Tc.BgQuestions.reanderPageA(zone, params);
+                    // 组织关键驱动问题
                     // Tc.KeyFactor.reanderPageA(zone, params);
+                    // 敬业度指数总览
                     // Tc.IndexEngagementOverview.reanderPageA(zone, params);
                     // Tc.IndexEngagementOverview.reanderPageB(zone, params);
-
+                    // 满意度指数总览(组织满意度)
                     // Tc.IndexSatisfactionOverview.reanderPageA(zone, params);
                     // Tc.IndexSatisfactionOverview.reanderPageB(zone, params);
+                    // 敬业度 - 与上一年历史对比
                     // Tc.ComparedPreviousYearEng.reanderPageA(zone, params, "btn1");
+                    // 满意度-与上一年历史对比
                     // Tc.ComparedPreviousYearSat.reanderPageA(zone, params);
-
-                    Tc.ScoreTenQuestions.reanderPageA(zone, params);
+                    // 得分10道题
+                    // Tc.ScoreTenQuestions.reanderPageA(zone, params);
+                    // 得分与上年相比上升（下降）最快10道题
+                    Tc.ComparedTenQuestions.reanderPageA(zone, params);
                 }
             }
             main.exe();

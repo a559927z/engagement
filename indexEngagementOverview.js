@@ -2,7 +2,7 @@ $(function () {
     var indexEngagementOverview = {
         // ---------------------------------------------------------------------A
         chartOptionA: {
-            color: ['#4F81BD'],
+            color: ['#4978E0'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -43,7 +43,7 @@ $(function () {
                         symbolSize: [0, 0],
                         itemStyle: {
                             normal: {
-                                color: 'red',
+                                color: '#FDDB93',
                                 lineStyle: {
                                     type: 'solid'
                                 }
@@ -186,7 +186,11 @@ $(function () {
                 // tb2
                 var html = '';
                 $.each(rs.chartData2.tableData, function (index, tr) {
-                    html += "<tr>";
+                    var trcolor = 'single';
+                    if (index % 2 == 1) {
+                        trcolor = 'double';
+                    }
+                    html += "<tr class='" + trcolor + "'>";
                     $.each(tr, function (index2, td) {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
@@ -219,7 +223,7 @@ $(function () {
         // ---------------------------------------------------------------------A
         // ---------------------------------------------------------------------B
         chartOptionB: {
-            color: ['#4F81BD'],
+            color: ['#4978E0'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -260,7 +264,7 @@ $(function () {
                         symbolSize: [0, 0],
                         itemStyle: {
                             normal: {
-                                color: 'red',
+                                color: '#FDDB93',
                                 lineStyle: {
                                     type: 'solid'
                                 }
@@ -283,32 +287,32 @@ $(function () {
                             <div id="indexEngagementOverviewLine3" class="linePos3"></div>
                             <table border="1" cellspacing="0" cellpadding="0" class="table  table-bordered _tb3" >
                                 <tbody>
-                                    <tr class="fontStyle">
+                                    <tr class="th1 fontStyle">
                                         <td>敬业度指标</td>
                                         <td>项目</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td rowspan="2" class="fontStyle">Say(乐于宣传)</td>
                                         <td class="fontStyle">我愿意推荐朋友加入这家公司</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">我愿意向公司以外的人员宣传在这里工作的好处</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td rowspan="2" class="fontStyle">Stay(乐于留任)</td>
                                         <td class="fontStyle">我不会轻易离开公司</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">我很少考虚“跳槽”</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td rowspan="2" class="fontStyle">Strive(乐于努力)</td>
                                         <td class="fontStyle">公司能够激励我付出额外的努力，以帮助公司取得成功</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">公司能够激励我每天尽全力工作</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td colspan="2" class="fontStyle">敬业度指数</td>
                                     </tr>
                                 </tbody>
@@ -386,8 +390,8 @@ $(function () {
                             "markLine": 74
                         },
                         "organName": "XXBG",
-                        "chartData4": { 
-                             "data": [
+                        "chartData4": {
+                            "data": [
                                 { "name": "xx部门", "value": [30.5, 78, 69.2, 10, 80.5, 78, 69.2] },
                                 { "name": "中心1", "value": [52.8, 79, 68.2, 26, 41, 34, 33] },
                                 { "name": "中心2", "value": [63.0, 16.5, 62.0, 39.2, 8, 88, 78] },

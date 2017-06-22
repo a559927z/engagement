@@ -157,11 +157,16 @@ $(function () {
                     $zone.find(".flag_" + i + " ._d2").text('从满意度4G问题看，' + myDataCh[i].name + ":");
 
                     var $tb1 = $zone.find(".flag_" + i).find("._tb1 tbody");
-                    var trtd = '<tr>';
+                    var trcolor = 'single';
+                    var trtd = '<tr class="' + trcolor + '">';
+                    if (i % 2 == 1) {
+                        trcolor = 'double';
+                    }
+
                     $.each(jyDataPa.value, function (index, o) { if (index == 0) trtd += '<td>' + jyDataPa.name + '</td>'; trtd += '<td>' + o + '</td>'; });
                     trtd += '</tr><tr>';
                     $.each(jyDataCh[i].value, function (index, o) { if (index == 0) trtd += '<td>' + jyDataCh[i].name + '</td>'; trtd += '<td>' + o + '</td>'; });
-                    trtd += '</tr><tr>';
+                    trtd += '</tr><tr class="' + trcolor + '">';
                     $.each(jyDataPa.value, function (index, o) {
                         if (index == 0) trtd += '<td>VS部门差值</td>';
                         var dVlaue = o - jyDataCh[i].value[index];
@@ -175,11 +180,15 @@ $(function () {
                     trtd = '';
 
                     var $tb1 = $zone.find(".flag_" + i).find("._tb2 tbody");
-                    var trtd = '<tr>';
+                    var trcolor = 'single2';
+                    var trtd = '<tr class="' + trcolor + '">';
+                    if (i % 2 == 1) {
+                        trcolor = 'double2';
+                    }
                     $.each(myDataPa.value, function (index, o) { if (index == 0) trtd += '<td>' + myDataPa.name + '</td>'; trtd += '<td>' + o + '</td>'; });
                     trtd += '</tr><tr>';
                     $.each(myDataCh[i].value, function (index, o) { if (index == 0) trtd += '<td>' + myDataCh[i].name + '</td>'; trtd += '<td>' + o + '</td>'; });
-                    trtd += '</tr><tr>';
+                    trtd += '</tr><tr class="' + trcolor + '">';
                     $.each(myDataPa.value, function (index, o) {
                         if (index == 0) trtd += '<td>VS部门差值</td>';
                         var dVlaue = o - myDataCh[i].value[index];

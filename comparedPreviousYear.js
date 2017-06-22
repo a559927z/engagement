@@ -1,7 +1,7 @@
 $(function () {
     var comparedPreviousYear = {
         chartOptionA: {
-            color: ['#4F81BD', '#C0504D', '#92D050'],
+            color: ['#6B94EC', '#DCDCDC', '#5EC8BE'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -136,6 +136,7 @@ $(function () {
 
             var chart2 = echarts.init($(zone).find('#comparedPreviousYearId2').get(0));
             chart2.showLoading();
+            this.chartOptionA.color = ['#5EC8BE', '#F9CF87', '#DCDCDC'];
             chart2.setOption(this.chartOptionA);
 
             this.getDataA(zone, chart1, chart2);
@@ -152,7 +153,7 @@ $(function () {
                             "yAxis": ["公司能够激励我每天尽全力工作", "公司能够激励我付出额外的努力，以帮助公司取得成功", "Strive", "我很少考虑“跳槽”", "我不会轻易离开公司", "Stay", "我愿意向公司以外的人员宣传在这里工作的好处", "我愿意推荐朋友加入这家公司", "Say"],
                             "list1": [300, 192, 271, 90, 200, 300, 200, 100, 420], "list2": [180, 298, 199, 400, 300, 200, 300, 400, 80], "list3": [20, 10, 30, 10, 0, 0, 0, 0, 0],
                             "chaVal1": {
-                                "list1": ["-2.3", "-1", "7.3","-0.2", "1", "-0.5",  "-5.2", "-0.2", "13" ],
+                                "list1": ["-2.3", "-1", "7.3", "-0.2", "1", "-0.5", "-5.2", "-0.2", "13"],
                                 "list2": ["-0.2", "1", "-0.5", "-2.3", "-1", "-5.5", "-6.3", "-1", "-0.2"]
                             }
                         },
@@ -166,8 +167,8 @@ $(function () {
                                 "list2": ["-0.2", "1", "-0.5", "-2.3", "-1", "-0.2", "25", "-2.3", "-1", "-0.2", "1", "-0.5", "14", "-1", "-0.2", "-0.5", "-2.3", "1"]
                             }
                         },
-                        "diffOrganName":"与xxBG差值",
-                        "diffYear":"与2017年差值"
+                        "diffOrganName": "与xxBG差值",
+                        "diffYear": "与2017年差值"
                     });
                 }, 1000);
             }
@@ -189,13 +190,13 @@ $(function () {
                 });
                 $.each(rs.chartData1.chaVal1.list1, function (index, item) {
                     var diff = Tc.getDiffClass(item);
-                    html1 += '<li class="list-group-item '+diff+'">' + item + '</li>';
+                    html1 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                     // html1 += '<li class="list-group-item"><sapn class="'+diff+'">' + item + '</span></li>';
                 });
                 $(zone).find('.chaVal1').append(html1);
                 $.each(rs.chartData1.chaVal1.list2, function (index, item) {
                     var diff = Tc.getDiffClass(item);
-                    html2 += '<li class="list-group-item '+diff+'">' + item + '</li>';
+                    html2 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                     //  html2 += '<li class="list-group-item"><sapn class="'+diff+'">' + item + '</span></li>';
                 });
                 $(zone).find('.chaVal2').append(html2);
@@ -214,12 +215,12 @@ $(function () {
                 });
                 $.each(rs.chartData2.chaVal2.list1, function (index, item) {
                     var diff = Tc.getDiffClass(item);
-                    html1 += '<li class="list-group-item '+diff+'">' + item + '</li>';
+                    html1 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal3').append(html1);
                 $.each(rs.chartData2.chaVal2.list2, function (index, item) {
                     var diff = Tc.getDiffClass(item);
-                    html2 += '<li class="list-group-item '+diff+'">' + item + '</li>';
+                    html2 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal4').append(html2);
                 // comparedPreviousYear.reanderStyleA(zone);

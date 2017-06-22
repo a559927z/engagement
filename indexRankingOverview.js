@@ -7,7 +7,7 @@ $(function () {
     var indexRankingOverview = {
         //------------------------------------------------------------------------------- A
         chartOptionA: {
-            color: ['#4F81BD'],
+            color: ['#4879DF'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -48,7 +48,7 @@ $(function () {
                         symbolSize: [0, 0],
                         itemStyle: {
                             normal: {
-                                color: 'red',
+                                color: '#F9D77E',
                                 lineStyle: {
                                     type: 'solid'
                                 }
@@ -87,6 +87,7 @@ $(function () {
 
             var chart2 = echarts.init($(zone).find('#indexRankingOverviewId2').get(0));
             var copyOption2 = jQuery.extend(true, {}, this.chartOptionA);
+            copyOption2.series[0].markLine.itemStyle.normal.color = '#92DFB3';
             chart2.setOption(copyOption2);
 
 
@@ -97,39 +98,10 @@ $(function () {
             $(zone).find("#indexRankingOverviewLine1").empty();
             $(zone).find("#indexRankingOverviewLine2").empty();
             $(zone).find("#indexRankingOverviewLine1").append("<div class='line'></div><div class='title'>" + t + "</div>");
-            $(zone).find("#indexRankingOverviewLine2").html("<div class='line'></div><div class='title'>" + t + "</div>");
+            $(zone).find("#indexRankingOverviewLine2").html("<div class='line line2'></div><div class='title'>" + t + "</div>");
         },
         getDataA: function (zone, chart1, chart2) {
             var _self = this;
-            /*
-            $.get(urls.query1, function (rs) {
-                _self.reanderLineA(zone, rs.organName);
-                chart1.hideLoading();
-                chart1.setOption({
-                    legend: { data: [rs.chartData1.legend] },
-                    xAxis: [{ data: rs.chartData1.xAxis }],
-                    series: [
-                        {
-                            name: rs.chartData1.legend,
-                            data: rs.chartData1.list1,
-                            markLine: { data: [{ yAxis: rs.chartData1.markLine }] }
-                        }
-                    ]
-                });
-                chart2.hideLoading();
-                chart2.setOption({
-                    legend: { data: [rs.chartData2.legend] },
-                    xAxis: [{ data: rs.chartData2.xAxis }],
-                    series: [
-                        {
-                            name: rs.chartData2.legend,
-                            data: rs.chartData2.list1,
-                            markLine: { data: [{ yAxis: rs.chartData2.markLine }] }
-                        }
-                    ]
-                });
-            });
-            */
             function fetchData(cb) {
                 // 通过 setTimeout 模拟异步加载
                 setTimeout(function () {
@@ -182,7 +154,7 @@ $(function () {
         //------------------------------------------------------------------------------- A
         //------------------------------------------------------------------------------- B
         chartOptionB: {
-            color: ['#4F81BD', '#FF2626'],
+            color: ['#4879DF', '#FF2626'],
             legend: {
                 data: ['敬业度指数', '满意度指数'],
                 bottom: 'left',

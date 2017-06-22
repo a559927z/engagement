@@ -75,23 +75,23 @@ $(function () {
                             "name": "xxx部门",
                             "year": 2016,
                             "value": [
-                                ["我在公司得到了良好的个人成长与职业发展机会", "文化价值观",0.74,59.9,-2.3],
-                                ["我的工作让我有成感", "公司未来",0.72,53.6,-4.8],        
-                                ["对于我的工作成绩，我能够获得除薪酬以外", "文化价值观",0.72,5.6,14.0],                
+                                ["我在公司得到了良好的个人成长与职业发展机会", "文化价值观", 0.74, 59.9, -2.3],
+                                ["我的工作让我有成感", "公司未来", 0.72, 53.6, -4.8],
+                                ["对于我的工作成绩，我能够获得除薪酬以外", "文化价值观", 0.72, 5.6, 14.0],
                                 ["我所在的事业群、系统具有不断追求创新的动力和意愿", "文化价值观", 0.7, 78.4, -2.1],
                                 ["我们部门能够保留住优秀人才", "人才管理", 0.65, 52.7, -0.8]
-                                ]
+                            ]
                         },
                         "chartData2": {
                             "name": "xxx部门",
                             "year": 2016,
                             "value": [
-                                ["我在公司得到了良好的个人成长与职业发展机会", "文化价值观",74,-59.9,-2.3],
-                                ["我的工作让我有成感", "公司未来",59,-53.6,-4.8],        
-                                ["对于我的工作成绩，我能够获得除薪酬以外", "文化价值观",-62,5.6,14.0],                
+                                ["我在公司得到了良好的个人成长与职业发展机会", "文化价值观", 74, -59.9, -2.3],
+                                ["我的工作让我有成感", "公司未来", 59, -53.6, -4.8],
+                                ["对于我的工作成绩，我能够获得除薪酬以外", "文化价值观", -62, 5.6, 14.0],
                                 ["我所在的事业群、系统具有不断追求创新的动力和意愿", "文化价值观", 0.7, -78.4, -2.1],
                                 ["我们部门能够保留住优秀人才", "人才管理", -65, 52.7, -0.8]
-                                ]
+                            ]
                         }
                     });
                 }, 500);
@@ -105,7 +105,11 @@ $(function () {
                 $tb.find("tr th:nth-child(3)").text(params.year);
                 $tb.find("tr th:nth-child(5)").text('与' + rs.chartData1.year + "BG差值");
                 while (i < data.length) {
-                    var trtd = '<tr>';
+                    var trcolor = 'single';
+                    if (i % 2 == 1) {
+                        trcolor = 'double';
+                    }
+                    var trtd = '<tr class="' + trcolor + '">';
                     $.each(data[i], function (index, o) {
                         if (typeof (o) == 'number' && (index == 3 || index == 4)) {
                             var diff = '';
@@ -129,7 +133,11 @@ $(function () {
                 $tb2.find("tr th:nth-child(3)").text(params.year);
                 $tb2.find("tr th:nth-child(5)").text('与' + rs.chartData2.year + "BG差值");
                 while (i < data.length) {
-                    var trtd = '<tr>';
+                    var trcolor = 'single2';
+                    if (i % 2 == 1) {
+                        trcolor = 'double2';
+                    }
+                    var trtd = '<tr class="' + trcolor + '">';
                     $.each(data[i], function (index, o) {
                         if (typeof (o) == 'number' && (index == 3 || index == 4)) {
                             var diff = '';

@@ -136,7 +136,11 @@ $(function () {
                 // tb1
                 var html = '';
                 $.each(rs.chartData1.tableData, function (index, tr) {
-                    html += "<tr>";
+                    var trcolor = 'single';
+                    if (index % 2 == 1) {
+                        trcolor = 'double';
+                    };
+                    html += "<tr class='" + trcolor + "'>";
                     $.each(tr, function (index2, td) {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
@@ -165,7 +169,11 @@ $(function () {
                 // tb2
                 var html = '';
                 $.each(rs.chartData2.tableData, function (index, tr) {
-                    html += "<tr>";
+                    var trcolor = 'single';
+                    if (index % 2 == 1) {
+                        trcolor = 'double';
+                    };
+                    html += "<tr class='" + trcolor + "'>";
                     $.each(tr, function (index2, td) {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
@@ -189,7 +197,11 @@ $(function () {
                 // tb3
                 var html = '';
                 $.each(rs.chartData3.tableData, function (index, tr) {
-                    html += "<tr>";
+                    var trcolor = 'single';
+                    if (index % 2 == 1) {
+                        trcolor = 'double';
+                    };
+                    html += "<tr class='" + trcolor + "'>";
                     $.each(tr, function (index2, td) {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
@@ -215,7 +227,7 @@ $(function () {
         // ---------------------------------------------------------------------A
         // ---------------------------------------------------------------------B
         chartOptionB: {
-            color: ['#4F81BD', '#C0504D'],
+            color: ['#DCDCDC', '#6B94EC'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {

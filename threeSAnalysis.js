@@ -80,7 +80,11 @@ $(function () {
                 if (_.isEmpty(rs)) { return };
                 var html = '';
                 $.each(rs.chartData1.tableData, function (index, tr) {
-                    html += "<tr>";
+                    var trcolor = 'single';
+                    if (index % 2 == 1) {
+                        trcolor = 'double';
+                    }
+                    html += "<tr class='" + trcolor + "'>";
                     $.each(tr, function (index2, td) {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
@@ -121,32 +125,32 @@ $(function () {
                         <div>
                             <table border="1" cellspacing="0" cellpadding="0" class="table  table-bordered _tb2" >
                                 <tbody>
-                                    <tr class="fontStyle">
+                                    <tr class="th1 fontStyle">
                                         <td>敬业度指标</td>
                                         <td>项目</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td rowspan="2" class="fontStyle">Say(乐于宣传)</td>
                                         <td class="fontStyle">我愿意推荐朋友加入这家公司</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">我愿意向公司以外的人员宣传在这里工作的好处</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td rowspan="2" class="fontStyle">Stay(乐于留任)</td>
                                         <td class="fontStyle">我不会轻易离开公司</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">我很少考虚“跳槽”</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td rowspan="2" class="fontStyle">Strive(乐于努力)</td>
                                         <td class="fontStyle">公司能够激励我付出额外的努力，以帮助公司取得成功</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">公司能够激励我每天尽全力工作</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td colspan="2" class="fontStyle">敬业度指数</td>
                                     </tr>
                                 </tbody>
@@ -176,7 +180,7 @@ $(function () {
 
             // 计算表宽
             var tableWidth = (decisionColNum * xnyn) + x0y + x1y;
-            zone.find('.fourSAnalysis ._tb2').width(tableWidth);
+            zone.find('.threeSAnalysis ._tb2').width(tableWidth);
         },
         getDataB: function (zone, params) {
             var $zone = zone;

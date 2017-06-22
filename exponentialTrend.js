@@ -6,7 +6,7 @@ $(function () {
     var exponentialTrend = {
         //------------------------------------------------------------------------------- A
         chartOptionA: {
-            color: ['#D9D9D9', '#ED7D31', '#5ACC8E', '#FFD65A'],
+            color: ['#DCDCDC', '#4879DF', '#5ACC8E', '#FFD65A'],
             legend: {
                 data: ['敬业度', '满意度', '上级组织敬业度', '上级组织满意度'],
                 bottom: 'bottom'

@@ -89,7 +89,11 @@ $(function () {
                 if (_.isEmpty(rs)) { return };
                 var html = '';
                 $.each(rs.chartData1.tableData, function (index, tr) {
-                    html += "<tr>";
+                    var trcolor = 'single';
+                    if (index % 2 == 1) {
+                        trcolor = 'double';
+                    }
+                    html += "<tr class='" + trcolor + "'>";
                     $.each(tr, function (index2, td) {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
@@ -134,59 +138,59 @@ $(function () {
                                         <td>满意度指标</td>
                                         <td>项目</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td rowspan="3" class="fontStyle">Great boss</td>
                                         <td class="fontStyle">高管</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">中干</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">直接上级</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">Great job</td>
                                         <td class="fontStyle">Job</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td rowspan="4" class="fontStyle">Great reward</td>
                                         <td class="fontStyle">薪酬</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">肯定</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">晋升</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">福利</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td rowspan="8" class="fontStyle">Great Company</td>
                                         <td class="fontStyle">客户导向</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">创新</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">人才管理</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">上下沟通</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">协作信任</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">工作支持</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">公司未来</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td class="fontStyle">文化价值观</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="single">
                                         <td colspan="2" class="fontStyle">满意度指数</td>
                                     </tr>
                                 </tbody>

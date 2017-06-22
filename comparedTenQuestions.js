@@ -1,7 +1,7 @@
 $(function () {
-    var comparedPreviousYear = {
+    var comparedTenQuestions = {
         chartOptionA: {
-            color: ['#4F81BD', '#C0504D', '#92D050'],
+            color: ['#6B92ED'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -66,60 +66,75 @@ $(function () {
             ]
         },
         templateA: function (zone) {
-            $(zone).find('.comparedPreviousYear').remove();
+            $(zone).find('.comparedTenQuestions').remove();
             var html = `
-                <div class="comparedPreviousYear">
+                <div class="comparedTenQuestions">
                     <div class="w800">
-                        <div class="row">
+                        <div class="row _up">
+                            <div class="col-md-2">
+                                <div class="table-responsive">
+                                    <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1" >
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                             <div class="col-md-8">
                                 <ul class="list-inline">
-                                    <li><span>■</span> <span>赞成百分比</span></li>
-                                    <li><span>■</span> <span>中立百分比</span></li>
-                                    <li><span>■</span> <span>不赞成百分比</span></li>
+                                    <li><span class="_tit1"></span></li>
                                 </ul>
+                                <div id="comparedTenQuestionsId1" class="chart float"></div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-2">
                                 <ul class="list-inline rUl">
-                                    <li><span></span><span class="_diffOrganName"></span></li>
-                                    <li><span></span><span class="_diffYear"></span></li>
+                                    <li><span class="_tit2"></span></li>
                                 </ul>
-                            </div>
-                        </div>
-                        <div class="line"></div>
-                        <div>
-                            <div id="comparedPreviousYearId1" class="chart float"></div>
-                            <div class="float">
+                                <div class="float">
                                 <ul class="list-group chaVal1"></ul>
                             </div>
-                            <div class="float">
-                                <ul class="list-group chaVal2"></ul>
-                            </div>
                         </div>
-                    </div>
-                    <div class="w800">
-                        <div class="row">
+                        <div style="clear:both"></div>
+                        <div class="row _down">
+                            <div class="col-md-2">
+                                <div class="table-responsive">
+                                    <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2" >
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                             <div class="col-md-8">
                                 <ul class="list-inline">
-                                    <li><span>■</span> <span>赞成百分比</span></li>
-                                    <li><span>■</span> <span>中立百分比</span></li>
-                                    <li><span>■</span> <span>不赞成百分比</span></li>
+                                    <li><span class="_tit1"></span></li>
                                 </ul>
+                                <div id="comparedTenQuestionsId2" class="chart2 float"></div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-2">
                                 <ul class="list-inline rUl">
-                                    <li><span></span><span class="_diffOrganName"></span></li>
-                                    <li><span></span><span class="_diffYear"></span></li>
+                                    <li><span class="_tit2"></span></li>
                                 </ul>
-                            </div>
-                        </div>
-                        <div class="line"></div>
-                        <div>
-                            <div id="comparedPreviousYearId2" class="chart float"></div>
-                            <div class="float">
-                                <ul class="list-group chaVal3"></ul>
-                            </div>
-                            <div class="float">
-                                <ul class="list-group chaVal4"></ul>
+                                <div class="float">
+                                <ul class="list-group chaVal2"></ul>
                             </div>
                         </div>
                     </div>
@@ -130,101 +145,79 @@ $(function () {
         reanderPageA: function (zone, params) {
             this.templateA(zone);
 
-            var chart1 = echarts.init($(zone).find('#comparedPreviousYearId1').get(0));
+            var chart1 = echarts.init($(zone).find('#comparedTenQuestionsId1').get(0));
             chart1.showLoading();
             chart1.setOption(this.chartOptionA);
 
-            var chart2 = echarts.init($(zone).find('#comparedPreviousYearId2').get(0));
+            var chart2 = echarts.init($(zone).find('#comparedTenQuestionsId2').get(0));
             chart2.showLoading();
             chart2.setOption(this.chartOptionA);
 
-            this.getDataA(zone, chart1, chart2);
+            this.getDataA(zone,params, chart1, chart2);
         },
-        // reanderStyleA:function(zone){
-        //      var txWh1 = $(zone).find('._tx1').text().length;
-        //     console.log(txWh1);
-        // },
-        getDataA: function (zone, chart1, chart2) {
-            function fetchData(cb) {
+        reanderStyleA:function(zone){
+
+        },
+        getDataA: function (zone,params, chart1, chart2) {
+            function fetchData(params, cb) {
                 setTimeout(function () {
                     cb({
                         "chartData1": {
                             "yAxis": ["公司能够激励我每天尽全力工作", "公司能够激励我付出额外的努力，以帮助公司取得成功", "Strive", "我很少考虑“跳槽”", "我不会轻易离开公司", "Stay", "我愿意向公司以外的人员宣传在这里工作的好处", "我愿意推荐朋友加入这家公司", "Say"],
-                            "list1": [300, 192, 271, 90, 200, 300, 200, 100, 420], "list2": [180, 298, 199, 400, 300, 200, 300, 400, 80], "list3": [20, 10, 30, 10, 0, 0, 0, 0, 0],
+                            "list1": [300, 192, 271, 90, 200, 300, 200, 100, 420],
                             "chaVal1": {
-                                "list1": ["-2.3", "-1", "7.3","-0.2", "1", "-0.5",  "-5.2", "-0.2", "13" ],
-                                "list2": ["-0.2", "1", "-0.5", "-2.3", "-1", "-5.5", "-6.3", "-1", "-0.2"]
+                                "list1": ["-2.3", "-1", "7.3", "-0.2", "1", "-0.5", "-5.2", "-0.2", "13"]
                             }
                         },
                         "chartData2": {
-                            "yAxis": ["中干", "直接上级", "薪酬", "协作信任", "文化价值观", "上下沟通", "肯定", "客户导向", "晋升", "公司未来", "工作支持", "福利", "创新", "Job", "Great reward", "Great job", "Great company", "Great boss"],
-                            "list1": [300, 192, 271, 90, 200, 300, 200, 100, 420, 180, 298, 199, 400, 300, 200, 300, 400, 80],
-                            "list2": [180, 298, 199, 400, 300, 200, 300, 400, 80, 300, 192, 271, 90, 200, 300, 200, 100, 420],
-                            "list3": [20, 10, 30, 10, 0, 0, 0, 0, 0, 20, 10, 30, 10, 0, 0, 0, 0, 0],
+                          "yAxis": ["公司能够激励我每天尽全力工作", "公司能够激励我付出额外的努力，以帮助公司取得成功", "Strive", "我很少考虑“跳槽”", "我不会轻易离开公司", "Stay", "我愿意向公司以外的人员宣传在这里工作的好处", "我愿意推荐朋友加入这家公司", "Say"],
+                            "list1": [300, 192, 271, 90, 200, 300, 200, 100, 420],
                             "chaVal2": {
-                                "list1": ["-0.2", "-15", "-5.5", "-6.3", "-1", "-0.2", "-0.5", "7.3", "-5.2", "-0.2", "13", "-0.5", "-2.3", "6", "-0.2", "-0.5", "-2.3", "-1"],
-                                "list2": ["-0.2", "1", "-0.5", "-2.3", "-1", "-0.2", "25", "-2.3", "-1", "-0.2", "1", "-0.5", "14", "-1", "-0.2", "-0.5", "-2.3", "1"]
+                                "list1": ["-2.3", "-1", "7.3", "-0.2", "1", "-0.5", "-5.2", "-0.2", "13"]
                             }
                         },
-                        "diffOrganName":"与xxBG差值",
-                        "diffYear":"与2017年差值"
+                        "diffYear": 2016
                     });
                 }, 1000);
             }
-            fetchData(function (rs) {
+            fetchData({params:params},function (rs) {
                 if (_.isEmpty(rs)) { return };
                 chart1.hideLoading();
-                $(zone).find('._diffOrganName').text(rs.diffOrganName);
-                $(zone).find('._diffYear').text(rs.diffYear);
+                chart2.hideLoading();
+                $(zone).find('.comparedTenQuestions ._up ._tit1').text("与"+rs.diffYear+"年相比上升最快的10道题");
+                $(zone).find('.comparedTenQuestions ._up ._tit2').text("与"+rs.diffYear+"年差值");
                 var html1 = '', html2 = '';
                 $(zone).find('.chaVal1').empty();
-                $(zone).find('.chaVal2').empty();
                 chart1.setOption({
                     yAxis: { data: rs.chartData1.yAxis },
                     series: [
-                        { data: rs.chartData1.list1 },
-                        { data: rs.chartData1.list2 },
-                        { data: rs.chartData1.list3 }
+                        { data: rs.chartData1.list1 }
                     ]
                 });
                 $.each(rs.chartData1.chaVal1.list1, function (index, item) {
                     var diff = Tc.getDiffClass(item);
-                    html1 += '<li class="list-group-item '+diff+'">' + item + '</li>';
-                    // html1 += '<li class="list-group-item"><sapn class="'+diff+'">' + item + '</span></li>';
+                    html1 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal1').append(html1);
-                $.each(rs.chartData1.chaVal1.list2, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
-                    html2 += '<li class="list-group-item '+diff+'">' + item + '</li>';
-                    //  html2 += '<li class="list-group-item"><sapn class="'+diff+'">' + item + '</span></li>';
-                });
-                $(zone).find('.chaVal2').append(html2);
 
-                var html1 = '', html2 = '';
-                $(zone).find('.chaVal3').empty();
-                $(zone).find('.chaVal4').empty();
-                chart2.hideLoading();
+                $(zone).find('.comparedTenQuestions .down ._tit1').text("与"+rs.diffYear+"年相比下降最快的10道题");
+                $(zone).find('.comparedTenQuestions .down ._tit2').text("与"+rs.diffYear+"年差值");
+                $(zone).find('.chaVal2').empty();
                 chart2.setOption({
                     yAxis: { data: rs.chartData2.yAxis },
                     series: [
-                        { data: rs.chartData2.list1 },
-                        { data: rs.chartData2.list2 },
-                        { data: rs.chartData2.list3 }
+                        { data: rs.chartData2.list1 }
                     ]
                 });
                 $.each(rs.chartData2.chaVal2.list1, function (index, item) {
                     var diff = Tc.getDiffClass(item);
-                    html1 += '<li class="list-group-item '+diff+'">' + item + '</li>';
+                    html2 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
-                $(zone).find('.chaVal3').append(html1);
-                $.each(rs.chartData2.chaVal2.list2, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
-                    html2 += '<li class="list-group-item '+diff+'">' + item + '</li>';
-                });
-                $(zone).find('.chaVal4').append(html2);
-                // comparedPreviousYear.reanderStyleA(zone);
+                $(zone).find('.chaVal2').append(html2);
+
             });
+            comparedTenQuestions.reanderStyleA(zone);
         }
     }
-    Tc.ComparedPreviousYear = jQuery.extend(true, {}, comparedPreviousYear);
+    Tc.ComparedTenQuestions = jQuery.extend(true, {}, comparedTenQuestions);
 });

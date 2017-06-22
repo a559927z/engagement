@@ -76,7 +76,12 @@ $(function () {
                 $tb.find("tr th:nth-child(3)").text(rs.chartData1.name);
                 $tb.find("tr th:nth-child(4)").text('与' + rs.chartData1.year + "年差值");
                 while (i < data.length) {
-                    var trtd = '<tr>';
+                    var trcolor = 'single';
+                    if (i % 2 == 1) {
+                        trcolor = 'double';
+                    }
+                    var trtd = '<tr class="' + trcolor + '">';
+
                     $.each(data[i], function (index, o) { trtd += '<td>' + o + '</td>'; });
                     trtd += '</tr>';
                     $tb.find("tbody").append(trtd);
