@@ -136,6 +136,7 @@ $(function () {
 
             var chart1 = echarts.init($(zone).find('#comparedPreviousYearId1').get(0));
             chart1.showLoading();
+            this.chartOptionA.color = ['#6B94EC', '#DCDCDC', '#5EC8BE'];
             chart1.setOption(this.chartOptionA);
 
             var chart2 = echarts.init($(zone).find('#comparedPreviousYearId2').get(0));
@@ -143,14 +144,14 @@ $(function () {
             this.chartOptionA.color = ['#5EC8BE', '#F9CF87', '#DCDCDC'];
             chart2.setOption(this.chartOptionA);
 
-            this.getDataA(zone, params, chart1, chart2,btn);
+            this.getDataA(zone, params, chart1, chart2, btn);
         },
         reanderStyleA: function (zone, btn) {
             if (btn == "btn1") {
                 $(zone).find(".comparedPreviousYear .w800").css({ "width": "auto", "overflow": "visible", "overflow-y": "visible" });
             }
         },
-        getDataA: function (zone, chart1, chart2, btn) {
+        getDataA: function (zone, params, chart1, chart2, btn) {
             function fetchData(cb) {
                 setTimeout(function () {
                     cb({
