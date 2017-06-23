@@ -357,7 +357,8 @@ $(function () {
                         "chartData3": {
                             "legend": ["敬业度与2016年差值", "满意度与2016年差值"],
                             "xAxis": ["部门1", "部门2", "部门3", "部门4", "部门5", "部门6", "部门7", "部门8", "部门9", "部门10", "部门11", "部门12"],
-                            "list1": [2.0, 4.9, 7.0, 23.2, -125.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+                            "list1": [32.0, 4.9, 7.0, 23.2, -125.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+                            "list2": [57.0, 4.9, 7.0, 162.2, 32.6, 23.2, -125.6, 76.7, 20.0, 6.4, 135.6],
                         },
                         "chartData4": { "tableData": [[{ "name": "XX部门", "value": 999 }, { "name": "", "value": 72.4 }, { "name": "", "value": 1.9 }, { "name": "", "value": 80.8 }, { "name": "", "value": 68.0 }, { "name": "", "value": 1.0 }, { "name": "", "value": 72.7 }, { "name": "", "value": 5.4 }, { "name": "", "value": 70.5 }, { "name": "", "value": 2.1 }], [{ "name": "中心1", "value": 9999 }, { "name": "", "value": 80.8 }, { "name": "", "value": -6.4 }, { "name": "", "value": 80.8 }, { "name": "", "value": 78.0 }, { "name": "", "value": -10.6 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }], [{ "name": "中心2", "value": 9999 }, { "name": "", "value": 72.7 }, { "name": "", "value": 68.0 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.0 }, { "name": "", "value": 72.7 }, { "name": "", "value": 5.4 }, { "name": "", "value": 5.4 }, { "name": "", "value": 70.5 }, { "name": "", "value": 2.1 }], [{ "name": "中心3", "value": 9999 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.4 }, { "name": "", "value": 72.7 }, { "name": "", "value": 68.0 }, { "name": "", "value": 68.0 }, { "name": "", "value": 1.0 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 70.5 }], [{ "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }]] },
                         "chartData5": { "tableData": [[{ "name": "XX部门", "value": 999 }, { "name": "", "value": 72.4 }, { "name": "", "value": 1.9 }, { "name": "", "value": 80.8 }, { "name": "", "value": 68.0 }, { "name": "", "value": 1.0 }, { "name": "", "value": 72.7 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }, { "name": "", "value": 5.4 }, { "name": "", "value": 70.5 }, { "name": "", "value": 2.1 }], [{ "name": "中心1", "value": 9999 }, { "name": "", "value": 80.8 }, { "name": "", "value": -6.4 }, { "name": "", "value": 80.8 }, { "name": "", "value": 78.0 }, { "name": "", "value": -10.6 }, { "name": "", "value": 61.9 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }, { "name": "", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }], [{ "name": "中心2", "value": 9999 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }, { "name": "", "value": 72.7 }, { "name": "", "value": 68.0 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.0 }, { "name": "", "value": 72.7 }, { "name": "", "value": 5.4 }, { "name": "", "value": 5.4 }, { "name": "", "value": 70.5 }, { "name": "", "value": 2.1 }], [{ "name": "中心3", "value": 9999 }, { "name": "", "value": 61.9 }, { "name": "", "value": 1.4 }, { "name": "", "value": 72.7 }, { "name": "", "value": 68.0 }, { "name": "", "value": 68.0 }, { "name": "", "value": 1.0 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 70.5 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }], [{ "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "中心4", "value": 9999 }, { "name": "", "value": 70.8 }, { "name": "", "value": 61.9 }, { "name": "", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "", "value": 60.8 }, { "name": "", "value": -0.1 }, { "name": "", "value": 12.5 }, { "name": "", "value": 69.4 }, { "name": "", "value": 6.5 }, { "name": "", "value": 6.5 }]] },
@@ -367,13 +368,24 @@ $(function () {
             fetchData(function (rs) {
                 if (_.isEmpty(rs)) { return };
                 var _list1 = [];
-                $.each(rs.chartData3.list1, function (index, item) {
+                var _list2 = [];
+                var list1 = rs.chartData3.list1;
+                var list2 = rs.chartData3.list2;
+                $.each(list1, function (index, item) {
                     if (item < 0) {
                         var o = { 'value': item, label: { normal: { position: 'bottom' } } };
                     } else {
                         var o = { 'value': item, label: { normal: { position: 'top' } } };
                     }
                     _list1.push(o);
+                });
+                $.each(list2, function (index, item) {
+                    if (item < 0) {
+                        var o = { 'value': item, label: { normal: { position: 'bottom' } } };
+                    } else {
+                        var o = { 'value': item, label: { normal: { position: 'top' } } };
+                    }
+                    _list2.push(o);
                 });
                 chart3.hideLoading();
                 chart3.setOption({
@@ -385,7 +397,7 @@ $(function () {
                             data: _list1
                         }, {
                             name: rs.chartData3.legend[1],
-                            data: _list1
+                            data: _list2
                         }
                     ]
                 });
