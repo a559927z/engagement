@@ -101,7 +101,7 @@ $(function () {
                                     <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2" >
                                         <tr>
                                             <td>下降最快的维度</td>
-                                            <td>与2015年差值</td>
+                                            <td>与上年差值</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -150,7 +150,7 @@ $(function () {
                             "chaVal1": {
                                 "list1": ["-2.3", "-1", "7.3", "-0.2", "1", "-0.5", "-5.2", "-0.2", "13"]
                             },
-                            "table1": [{ name: '肯定', value: 14.0 }, { name: '薪酬', value: 7.0 }, { name: '创新', value: 6.5 }, { name: '晋升', value: 4.7 }]
+                            "table1": [{ "name": "肯定", "value": 14.0 }, { "name": "薪酬", "value": 7.0 }, { "name": "创新", "value": 6.5 }, { "name": "晋升", "value": 4.7 }]
                         },
                         "chartData2": {
                             "yAxis": ["公司能够激励我每天尽全力工作", "公司能够激励我付出额外的努力，以帮助公司取得成功", "Strive", "我很少考虑“跳槽”", "我不会轻易离开公司", "Stay", "我愿意向公司以外的人员宣传在这里工作的好处", "我愿意推荐朋友加入这家公司", "Say"],
@@ -158,7 +158,7 @@ $(function () {
                             "chaVal2": {
                                 "list1": ["-2.3", "-1", "7.3", "-0.2", "1", "-0.5", "-5.2", "-0.2", "13"]
                             },
-                            "table2": [{ name: '客户导向', value: -13.7 }, { name: '中干', value: -9.3 }, { name: '工作支持', value: -3.5 }, { name: '文化价值观', value: -2.2 }]
+                            "table2": [{ "name": "客户导向", "value": -13.7 }, { "name": "中干", "value": -9.3 }, { "name": "工作支持", "value": -3.5 }, { "name": "文化价值观", "value": -2.2 }]
                         },
                         "diffYear": 2016
                     });
