@@ -862,9 +862,16 @@
 
 /*得分与上年相比上升（下降）最快10道题*/
 .comparedTenQuestions .w800 {
+    /*width:1200px;*/
+    margin: auto;
+    overflow:scroll;
+    overflow-y:hidden;
+}
+.comparedTenQuestions .content {
     width:1200px;
     margin: auto;
 }
+
 
 .comparedTenQuestions .chart, .comparedTenQuestions .chart2 {
     width: 600px;

@@ -70,6 +70,7 @@ $(function () {
             var html = `
                 <div class="comparedTenQuestions">
                     <div class="w800">
+<div class="content">
                         <div class="row _up">
                             <div class="col-md-3">
                                 <div class="table-responsive">
@@ -119,6 +120,7 @@ $(function () {
                                 <ul class="list-group chaVal2"></ul>
                             </div>
                         </div>
+</div>
                     </div>
                 </div>
             `;
