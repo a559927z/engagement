@@ -345,18 +345,6 @@
         width: 130px;
     }
 
-.comparedPreviousYear .list-inline li:nth-child(1) {
-    color: #4F81BD;
-}
-
-.comparedPreviousYear .list-inline li:nth-child(2) {
-    color: #C0504D;
-}
-
-.comparedPreviousYear .list-inline li:nth-child(3) {
-    color: #92D050;
-}
-
 .comparedPreviousYear .list-inline span:nth-child(2) {
     color: #000;
 }

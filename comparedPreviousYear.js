@@ -73,11 +73,7 @@ $(function () {
 <div class="content">
                         <div class="row">
                             <div class="col-md-8">
-                                <ul class="list-inline">
-                                    <li><span>■</span> <span>赞成百分比</span></li>
-                                    <li><span>■</span> <span>中立百分比</span></li>
-                                    <li><span>■</span> <span>不赞成百分比</span></li>
-                                </ul>
+
                             </div>
                             <div class="col-md-4">
                                 <ul class="list-inline rUl">
@@ -102,11 +98,6 @@ $(function () {
 <div class="content">
                         <div class="row">
                             <div class="col-md-8">
-                                <ul class="list-inline">
-                                    <li><span>■</span> <span>赞成百分比</span></li>
-                                    <li><span>■</span> <span>中立百分比</span></li>
-                                    <li><span>■</span> <span>不赞成百分比</span></li>
-                                </ul>
                             </div>
                             <div class="col-md-4">
                                 <ul class="list-inline rUl">
