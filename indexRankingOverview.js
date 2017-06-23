@@ -61,24 +61,28 @@ $(function () {
                 }
             ]
         },
-        templateA: function (zone) {
+          templateA: function (zone) {
             $(zone).find('.indexRankingOverview').remove();
             var html = `
                 <div class="indexRankingOverview">
                     <div class="w800">
-                        <div class="relative">
-                            <div id="indexRankingOverviewId1" class="chart1"></div>
-                            <div id="indexRankingOverviewLine1" class="linePos1"></div>
+                        <div class="content">
+                            <div class="relative">
+                                <div id="indexRankingOverviewId1" class="chart1"></div>
+                                <div id="indexRankingOverviewLine1" class="linePos1"></div>
 
-                            <div id="indexRankingOverviewId2" class="chart2"></div>
-                            <div id="indexRankingOverviewLine2" class="linePos2"></div>
+                                <div id="indexRankingOverviewId2" class="chart2"></div>
+                                <div id="indexRankingOverviewLine2" class="linePos2"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             `;
             zone.append(html);
         },
-        reanderPageA: function (zone) {
+        reanderPageA: function (zone, params, btn) {
+            // TODO 请求参数
+            console.log(params);
             this.templateA(zone);
             var chart1 = echarts.init($(zone).find('#indexRankingOverviewId1').get(0));
             chart1.showLoading();
@@ -87,20 +91,24 @@ $(function () {
 
             var chart2 = echarts.init($(zone).find('#indexRankingOverviewId2').get(0));
             var copyOption2 = jQuery.extend(true, {}, this.chartOptionA);
-            copyOption2.series[0].markLine.itemStyle.normal.color = '#92DFB3';
             chart2.setOption(copyOption2);
 
 
-            this.getDataA(zone, chart1, chart2);
+            this.getDataA(zone, params, chart1, chart2, btn);
         },
         reanderLineA: function (zone, t) {
 
             $(zone).find("#indexRankingOverviewLine1").empty();
             $(zone).find("#indexRankingOverviewLine2").empty();
             $(zone).find("#indexRankingOverviewLine1").append("<div class='line'></div><div class='title'>" + t + "</div>");
-            $(zone).find("#indexRankingOverviewLine2").html("<div class='line line2'></div><div class='title'>" + t + "</div>");
+            $(zone).find("#indexRankingOverviewLine2").html("<div class='line'></div><div class='title'>" + t + "</div>");
         },
-        getDataA: function (zone, chart1, chart2) {
+        reanderStyleA: function (zone, btn) {
+            if (btn == "btn1") {
+                $(zone).find(".indexRankingOverview .w800").css({ "width": "auto", "overflow": "visible", "overflow-y": "visible" });
+            }
+        },
+        getDataA: function (zone,params, chart1, chart2) {
             var _self = this;
             function fetchData(cb) {
                 // 通过 setTimeout 模拟异步加载

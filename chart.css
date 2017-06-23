@@ -878,7 +878,7 @@
     margin: auto;
 }
 
-.comparedTenQuestions .chart, .chart2 {
+.comparedTenQuestions .chart, .comparedTenQuestions .chart2 {
     width: 600px;
     height: 400px;
 }
@@ -951,13 +951,15 @@
     width:1024px;
     text-align:center;
 }
-.keyProblemAnalysis table th{
-   vertical-align:middle !important;
-    text-align: center;
-}
+    .keyProblemAnalysis table th {
+        vertical-align: middle !important;
+        text-align: center;
+        background-color: #4879DF;
+        color: #fff;
+    }
 .keyProblemAnalysis .chartPanel-left {
     color: #fff;
-    background-color: #FF0000;
+    background-color: #FD835E;
     padding: 3px;
     width: 100px;
     text-align: center
@@ -1021,20 +1023,22 @@
 	cursor: pointer;
 }*/
 .file-upload  .file-form .add-pic {
-   
+
     font-size: 20px;
-   
+
 }
    .file-upload .file-form .add-pic .add-pic-file {
-      
+
         width: 86px;
         height: 36px;
-       
+
     }
 .file-upload .file-upload-file {
     border-bottom: 1px solid #EFEFEF;
 }
 
+.file-upload .file-upload-files {
+}
 
     .file-upload .file-upload-files :last-child {
         border-bottom: 0;
