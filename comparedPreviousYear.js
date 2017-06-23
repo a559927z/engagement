@@ -73,7 +73,6 @@ $(function () {
 <div class="content">
                         <div class="row">
                             <div class="col-md-8">
-
                             </div>
                             <div class="col-md-4">
                                 <ul class="list-inline rUl">
@@ -83,13 +82,17 @@ $(function () {
                             </div>
                         </div>
                         <div class="line"></div>
-                        <div>
-                            <div id="comparedPreviousYearId1" class="chart float"></div>
-                            <div class="float">
-                                <ul class="list-group chaVal1"></ul>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="comparedPreviousYearId1" class="chart float"></div>
                             </div>
-                            <div class="float">
-                                <ul class="list-group chaVal2"></ul>
+                            <div class="col-md-4">
+                                <div class="float">
+                                    <ul class="list-group chaVal1"></ul>
+                                </div>
+                                <div class="float">
+                                    <ul class="list-group chaVal2"></ul>
+                                </div>
                             </div>
                         </div>
 </div>
@@ -107,13 +110,17 @@ $(function () {
                             </div>
                         </div>
                         <div class="line"></div>
-                        <div>
-                            <div id="comparedPreviousYearId2" class="chart float"></div>
-                            <div class="float">
-                                <ul class="list-group chaVal3"></ul>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="comparedPreviousYearId2" class="chart float"></div>
                             </div>
-                            <div class="float">
-                                <ul class="list-group chaVal4"></ul>
+                            <div class="col-md-4">
+                                 <div class="float">
+                                    <ul class="list-group chaVal3"></ul>
+                                </div>
+                                <div class="float">
+                                    <ul class="list-group chaVal4"></ul>
+                                </div>
                             </div>
                         </div>
                     </div>

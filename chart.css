@@ -367,8 +367,8 @@
     margin-top: 5px;
 }
 
-.comparedPreviousYear .chaVal1, .chaVal3 {
-    margin-left: 30px;
+.comparedPreviousYear .chaVal1, .comparedPreviousYear .chaVal3 {
+    margin-left: 46px;
 }
 
 .comparedPreviousYear .chaVal2, .chaVal4 {
