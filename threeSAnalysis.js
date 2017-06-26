@@ -140,35 +140,29 @@ $(function () {
                     return num;
                 });
                 console.log(n);
-                var top1 = n[0];
-                var top2 = n[1];
-                var top3 = n[2];
-                var reciprocal1 = n[n.length-1];
-                var reciprocal2 = n[n.length-2];
-                var reciprocal3 = n[n.length-3];
+                var top1 = n[n.length - 1];
+                var top2 = n[n.length - 2];
+                var top3 = n[n.length - 3];
+                var reciprocal1 = n[0];
+                var reciprocal2 = n[1];
+                var reciprocal3 = n[2];
 
                 for (var index = 0; index < arr.length; index++) {
-                    if(arr[index]==top1 || arr[index]==top2 || arr[index]==top3){
-                         $tb.find('tr:nth-child(' + index + ') td:nth-child(' + i + ')').css({'background-color':'#4BACC6'});
-                    }
-                    if(arr[index]==reciprocal1 || arr[index]==reciprocal2 || arr[index]==reciprocal3){
-                         $tb.find('tr:nth-child(' + index + ') td:nth-child(' + i + ')').css({'background-color':'#F79646'});
+                    var y = index + 1;
+                    if (arr[index] == top1 || arr[index] == top2 || arr[index] == top3) {
+                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').css({ 'background-color': '#4BACC6' });
+                    } else if (arr[index] == reciprocal1 || arr[index] == reciprocal2 || arr[index] == reciprocal3) {
+                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').css({ 'background-color': '#F79646' });
+                    }else{
+
                     }
                 }
-
                 i++;
             }
-            // var xy = $tb.find('tr:nth-child(1) td:nth-child(2)').text();
-            // var xy1 = $tb.find('tr:nth-child(2) td:nth-child(2)').text();
-        },
-        getThree: function (arr) {
-            arr[0]
-
         },
         getMaxAndMin: function (arr) {
             var max = arr[0]; min = arr[0];
             for (var i = 0; i < arr.length; i++) {
-                // console.log(arr[i])
                 if (arr[i] > max) {
                     max = arr[i];
                 }
