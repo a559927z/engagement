@@ -70,7 +70,9 @@ $(function () {
                                 [{ "name": "中心1", "value": 9999 }, { "name": "1", "value": 80.8 }, { "name": "3", "value": -6.4 }, { "name": "3", "value": 80.8 }, { "name": "3", "value": 78.0 }, { "name": "3", "value": -10.6 }, { "name": "3", "value": 61.9 }, { "name": "3", "value": 1.4 }, { "name": "3", "value": 60.8 }, { "name": "3", "value": -0.1 }],
                                 [{ "name": "中心2", "value": 9999 }, { "name": "3", "value": 72.7 }, { "name": "2", "value": 68.0 }, { "name": "3", "value": 61.9 }, { "name": "3", "value": 1.0 }, { "name": "1", "value": 72.7 }, { "name": "3", "value": 5.4 }, { "name": "3", "value": 5.4 }, { "name": "3", "value": 70.5 }, { "name": "3", "value": 2.1 }],
                                 [{ "name": "中心3", "value": 9999 }, { "name": "1", "value": 61.9 }, { "name": "3", "value": 1.4 }, { "name": "3", "value": 72.7 }, { "name": "3", "value": 68.0 }, { "name": "3", "value": 68.0 }, { "name": "3", "value": 1.0 }, { "name": "3", "value": 60.8 }, { "name": "3", "value": -0.1 }, { "name": "1", "value": 70.5 }],
-                                [{ "name": "中心4", "value": 9999 }, { "name": "3", "value": 70.8 }, { "name": "2", "value": 61.9 }, { "name": "3", "value": 80.8 }, { "name": "v2", "value": 1.4 }, { "name": "3", "value": 60.8 }, { "name": "1", "value": -0.1 }, { "name": "2", "value": 12.5 }, { "name": "1", "value": 69.4 }, { "name": "2", "value": 6.5 }]
+                                [{ "name": "中心4", "value": 9999 }, { "name": "3", "value": 77.8 }, { "name": "2", "value": 61.9 }, { "name": "3", "value": 9.8 }, { "name": "v2", "value": 1.4 }, { "name": "3", "value": 60.8 }, { "name": "1", "value": -0.1 }, { "name": "2", "value": 12.5 }, { "name": "1", "value": 69.4 }, { "name": "2", "value": 6.5 }],
+                                [{ "name": "中心5", "value": 9999 }, { "name": "3", "value": 40.8 }, { "name": "2", "value": 8.39 }, { "name": "3", "value": 56.8 }, { "name": "v2", "value": 1.4 }, { "name": "3", "value": 60.8 }, { "name": "1", "value": -0.1 }, { "name": "2", "value": 12.5 }, { "name": "1", "value": 69.4 }, { "name": "2", "value": 6.5 }],
+                                [{ "name": "中心6", "value": 9999 }, { "name": "3", "value": 70.0 }, { "name": "2", "value": 61.9 }, { "name": "3", "value": 3.8 }, { "name": "v2", "value": 1.4 }, { "name": "3", "value": 60.8 }, { "name": "1", "value": -0.1 }, { "name": "2", "value": 12.5 }, { "name": "1", "value": 69.4 }, { "name": "2", "value": 6.5 }]
                             ]
                         }
                     });
@@ -89,15 +91,16 @@ $(function () {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
                             var v = parseFloat(td.value);
-                            // 前三
-                            if (td.name == '1') {
-                                html += "<td class='topThree'>" + v + "</td>";
-                                // 后三
-                            } else if (td.name == '2') {
-                                html += "<td class='reciprocalThree'>" + v + "</td>";
-                            } else {
-                                html += "<td>" + v + "</td>";
-                            }
+                            // // 前三
+                            // if (td.name == '1') {
+                            //     html += "<td class='topThree'>" + v + "</td>";
+                            //     // 后三
+                            // } else if (td.name == '2') {
+                            //     html += "<td class='reciprocalThree'>" + v + "</td>";
+                            // } else {
+                            //     html += "<td>" + v + "</td>";
+                            // }
+                            html += "<td>" + v + "</td>";
                         } else {
                             // 部门
                             if (td.value == 999 && td.value != 9999) {
@@ -112,8 +115,71 @@ $(function () {
                 });
                 $zone.find('.threeSAnalysis ._tb1').append(html);
                 threeSAnalysis.reanderStyleA(zone, 10);
+                threeSAnalysis.caleThreeMain(zone, rs.chartData1.tableData);
             });
         },
+        caleThreeMain: function (zone, data) {
+            console.log(data);
+            var $tb = $(zone).find('.threeSAnalysis ._tb1');
+
+            var declRowNum = data.length;
+            var declColNum = data[0].length;
+            var i = 2;
+            while (i < declColNum + 1) {
+                var arr = [];
+                var j = 1;
+
+                while (j < declRowNum + 1) {
+                    var v = $tb.find('tr:nth-child(' + j + ') td:nth-child(' + i + ')').text();
+                    arr.push(v);
+                    j++;
+                }
+                // console.log(arr);
+                // this.getMaxAndMin(arr);
+                var n = _.sortBy(arr, function (num) {
+                    return num;
+                });
+                console.log(n);
+                var top1 = n[0];
+                var top2 = n[1];
+                var top3 = n[2];
+                var reciprocal1 = n[n.length-1];
+                var reciprocal2 = n[n.length-2];
+                var reciprocal3 = n[n.length-3];
+
+                for (var index = 0; index < arr.length; index++) {
+                    if(arr[index]==top1 || arr[index]==top2 || arr[index]==top3){
+                         $tb.find('tr:nth-child(' + index + ') td:nth-child(' + i + ')').css({'background-color':'#4BACC6'});
+                    }
+                    if(arr[index]==reciprocal1 || arr[index]==reciprocal2 || arr[index]==reciprocal3){
+                         $tb.find('tr:nth-child(' + index + ') td:nth-child(' + i + ')').css({'background-color':'#F79646'});
+                    }
+                }
+
+                i++;
+            }
+            // var xy = $tb.find('tr:nth-child(1) td:nth-child(2)').text();
+            // var xy1 = $tb.find('tr:nth-child(2) td:nth-child(2)').text();
+        },
+        getThree: function (arr) {
+            arr[0]
+
+        },
+        getMaxAndMin: function (arr) {
+            var max = arr[0]; min = arr[0];
+            for (var i = 0; i < arr.length; i++) {
+                // console.log(arr[i])
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            console.log(max, min);
+        },
+
+
         //------------------------------------------------------------------------------- A
         //------------------------------------------------------------------------------- B
         chartOptionB: {},
