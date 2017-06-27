@@ -16,6 +16,23 @@ $(function () {
                 data: [],
                 left: '38%'
             },
+            grid: {
+                top: 10,
+                bottom: 140
+            },
+            dataZoom: [{
+                show: true,
+                realtime: true,
+                startValue: 0,
+                endValue: 10,
+                showDetail: false,
+                bottom: 0,
+            }, {
+                type: 'inside',
+                realtime: true,
+                endValue: 0,
+                endValue: 10,
+            }],
             xAxis: [
                 {
                     type: 'category',
@@ -27,7 +44,8 @@ $(function () {
                         show: false
                     },
                     axisLabel: {
-                        rotate: 30
+                        rotate: 45,
+                        interval: 0
                     },
                     axisTick: false
                 }
@@ -229,7 +247,62 @@ $(function () {
                 });
                 $zone.find('.indexSatisfactionOverview ._tb1').append(html);
                 indexSatisfactionOverview.reanderStyleA(zone, 21);
+                indexSatisfactionOverview.caleThreeMain(zone, rs.chartData2.tableData);
             });
+        },
+         caleThreeMain: function (zone, data) {
+            console.log(data);
+            var $tb = $(zone).find('.indexSatisfactionOverview ._tb1');
+
+            var declRowNum = data.length;
+            var declColNum = data[0].length;
+            var i = 2;
+            while (i < declColNum + 1) {
+                var arr = [];
+                var j = 1;
+
+                while (j < declRowNum + 1) {
+                    var v = $tb.find('tr:nth-child(' + j + ') td:nth-child(' + i + ')').text();
+                    arr.push(v);
+                    j++;
+                }
+                // console.log(arr);
+                // this.getMaxAndMin(arr);
+                var n = _.sortBy(arr, function (num) {
+                    return num;
+                });
+                
+                var top1 = n[n.length - 1];
+                var top2 = n[n.length - 2];
+                var top3 = n[n.length - 3];
+                var reciprocal1 = n[0];
+                var reciprocal2 = n[1];
+                var reciprocal3 = n[2];
+
+                for (var index = 0; index < arr.length; index++) {
+                    var y = index + 1;
+                    if (arr[index] == top1 || arr[index] == top2 || arr[index] == top3) {
+                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').css({ 'background-color': '#4BACC6' });
+                    } else if (arr[index] == reciprocal1 || arr[index] == reciprocal2 || arr[index] == reciprocal3) {
+                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').css({ 'background-color': '#F79646' });
+                    } else {
+
+                    }
+                }
+                i++;
+            }
+        },
+        getMaxAndMin: function (arr) {
+            var max = arr[0]; min = arr[0];
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            console.log(max, min);
         },
         // ---------------------------------------------------------------------A
         // ---------------------------------------------------------------------B
@@ -248,6 +321,23 @@ $(function () {
                 data: [],
                 left: '38%'
             },
+            grid: {
+                top: 10,
+                bottom: 140
+            },
+            dataZoom: [{
+                show: true,
+                realtime: true,
+                startValue: 0,
+                endValue: 10,
+                showDetail: false,
+                bottom: 0,
+            }, {
+                type: 'inside',
+                realtime: true,
+                endValue: 0,
+                endValue: 10,
+            }],
             xAxis: [
                 {
                     type: 'category',
@@ -259,7 +349,8 @@ $(function () {
                         show: false
                     },
                     axisLabel: {
-                        rotate: 30
+                        rotate: 45,
+                        interval: 0
                     },
                     axisTick: false
                 }
