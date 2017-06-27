@@ -153,8 +153,8 @@ $(function () {
                         $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').css({ 'background-color': '#4BACC6' });
                     } else if (arr[index] == reciprocal1 || arr[index] == reciprocal2 || arr[index] == reciprocal3) {
                         $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').css({ 'background-color': '#F79646' });
-                    }else{
-
+                    } else {
+                        // 不是前3，也不是后3。所以不用加背色
                     }
                 }
                 i++;
@@ -172,7 +172,6 @@ $(function () {
             }
             console.log(max, min);
         },
-
 
         //------------------------------------------------------------------------------- A
         //------------------------------------------------------------------------------- B
