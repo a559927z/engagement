@@ -74,7 +74,7 @@ $(function () {
                         <div class="row _up">
                             <div class="col-md-3">
                                 <div class="table-responsive">
-                                    <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1" >
+                                    <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb1" >
                                         <tr>
                                             <td>上升最快的维度</td>
                                             <td>与上年差值</td>
@@ -99,7 +99,7 @@ $(function () {
                         <div class="row _down">
                             <div class="col-md-3">
                                 <div class="table-responsive">
-                                    <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2" >
+                                    <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb2" >
                                         <tr>
                                             <td>下降最快的维度</td>
                                             <td>与上年差值</td>
@@ -182,13 +182,13 @@ $(function () {
                     ]
                 });
                 $.each(rs.chartData1.chaVal1.list1, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
+                    var diff = Tc.getDiffClassB(item);
                     html1 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal1').append(html1);
                 var trHtml = '';
                 $.each(rs.chartData1.table1, function (i, o) {
-                    var diff = Tc.getDiffClass(o.value);
+                    var diff = Tc.getDiffClassB(o.value);
                     trHtml += '<tr><td>' + o.name + '</td><td class="'+diff+'">' + o.value + '</td></tr>';
                 });
                 $(zone).find(".comparedTenQuestions ._tb1").append(trHtml);
@@ -204,13 +204,13 @@ $(function () {
                     ]
                 });
                 $.each(rs.chartData2.chaVal2.list1, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
+                    var diff = Tc.getDiffClassB(item);
                     html2 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal2').append(html2);
                 var trHtml = '';
                 $.each(rs.chartData2.table2, function (i, o) {
-                    var diff = Tc.getDiffClass(o.value);
+                    var diff = Tc.getDiffClassB(o.value);
                     trHtml += '<tr><td>' + o.name + '</td><td class="'+diff+'">' + o.value + '</td></tr>';
                 });
                 $(zone).find(".comparedTenQuestions ._tb2").append(trHtml);

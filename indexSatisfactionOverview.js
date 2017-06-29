@@ -2,7 +2,7 @@ $(function () {
     var indexSatisfactionOverview = {
         // ---------------------------------------------------------------------A
         chartOptionA: {
-            color: ['#4978E0'],
+            color: [Tc.chartObj.myBgColor],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -56,7 +56,7 @@ $(function () {
                     name: '',
                     type: 'bar',
                     data: [],
-                    label: { normal: { show: true, position: 'insideTop' } },
+                    label: { normal: { show: true, position:Tc.chartObj.labelPos, textStyle:{color:Tc.chartObj.myColor} } },
                     markLine: {
                         symbolSize: [0, 0],
                         itemStyle: {
@@ -78,12 +78,13 @@ $(function () {
             $(zone).find('.indexSatisfactionOverview').remove();
             var html = `
                 <div class="indexSatisfactionOverview">
-                    <div class="w800">
+                    <div class="w800">`+Tc.tipRank+`
                         <div class="relative">
                             <div id="indexSatisfactionOverviewId1" class="chart1"></div>
                             <div id="indexSatisfactionOverviewLine1" class="linePos1"></div>
+                            <div class="lineBetween50"></div>
                             <div class="table-responsive">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1" >
+                                <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb1" >
                                     <thead>
                                         <tr>
                                             <th class="th1">组织</th>
@@ -224,15 +225,16 @@ $(function () {
                         // 其它列
                         if (td.value != 999 && td.value != 9999) {
                             var v = parseFloat(td.value);
-                            // 前三
-                            if (td.name == '1') {
-                                html += "<td class='topThree'>" + v + "</td>";
-                                // 后三
-                            } else if (td.name == '2') {
-                                html += "<td class='reciprocalThree'>" + v + "</td>";
-                            } else {
-                                html += "<td>" + v + "</td>";
-                            }
+                            // // 前三
+                            // if (td.name == '1') {
+                            //     html += "<td class='topThreeB'>" + v + "</td>";
+                            //     // 后三
+                            // } else if (td.name == '2') {
+                            //     html += "<td class='reciprocalThreeB'>" + v + "</td>";
+                            // } else {
+                            //     html += "<td>" + v + "</td>";
+                            // }
+                            html += "<td>" + v + "</td>";
                         } else {
                             // 部门
                             if (td.value == 999 && td.value != 9999) {
@@ -282,9 +284,9 @@ $(function () {
                 for (var index = 0; index < arr.length; index++) {
                     var y = index + 1;
                     if (arr[index] == top1 || arr[index] == top2 || arr[index] == top3) {
-                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').css({ 'background-color': '#4BACC6' });
+                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').addClass("topThreeB");
                     } else if (arr[index] == reciprocal1 || arr[index] == reciprocal2 || arr[index] == reciprocal3) {
-                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').css({ 'background-color': '#F79646' });
+                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').addClass("reciprocalThreeB");
                     } else {
 
                     }
@@ -307,7 +309,7 @@ $(function () {
         // ---------------------------------------------------------------------A
         // ---------------------------------------------------------------------B
         chartOptionB: {
-            color: ['#4978E0'],
+            color: [Tc.chartObj.myBgColor],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -361,7 +363,7 @@ $(function () {
                     name: '',
                     type: 'bar',
                     data: [],
-                    label: { normal: { show: true, position: 'insideTop' } },
+                    label: { normal: { show: true, position:Tc.chartObj.labelPos, textStyle:{color:Tc.chartObj.myColor} } },
                     markLine: {
                         symbolSize: [0, 0],
                         itemStyle: {
@@ -388,7 +390,7 @@ $(function () {
                             <div id="indexSatisfactionOverviewId3" class="chart3"></div>
                             <div id="indexSatisfactionOverviewLine3" class="linePos3"></div>
                             <div class="table-responsive">
-                            <table  border="1" cellspacing="0" cellpadding="0"  class="table table-bordered _tb3" >
+                            <table  border="0" cellspacing="1" cellpadding="0"  class="table table-bordered _tb3" >
                                 <tbody>
                                     <tr class="th1 fontStyle">
                                         <td>满意度指标</td>

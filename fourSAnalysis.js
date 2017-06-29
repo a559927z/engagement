@@ -11,10 +11,10 @@ $(function () {
             $(zone).find('.fourSAnalysis').remove();
             var html = `
                 <div class="fourSAnalysis">
-                    <div class="w800">
+                    <div class="w800">`+Tc.tipRank+`
                         <div>
                             <div class="table-responsive">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1" >
+                                <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb1" >
                                     <thead>
                                         <tr>
                                             <th class="th1">组织</th>
@@ -100,10 +100,10 @@ $(function () {
                             var v = parseFloat(td.value);
                             // 前三
                             if (td.name == '1') {
-                                html += "<td class='topThree'>" + v + "</td>";
+                                html += "<td class='topThreeB'>" + v + "</td>";
                                 // 后三
                             } else if (td.name == '2') {
-                                html += "<td class='reciprocalThree'>" + v + "</td>";
+                                html += "<td class='reciprocalThreeB'>" + v + "</td>";
                             } else {
                                 html += "<td>" + v + "</td>";
                             }
@@ -132,7 +132,7 @@ $(function () {
                 <div class="fourSAnalysis">
                     <div class="w800">
                         <div>
-                            <table  border="1" cellspacing="0" cellpadding="0"  class="table table-bordered _tb2" >
+                            <table  border="0" cellspacing="1" cellpadding="0"  class="table table-bordered _tb2" >
                                 <tbody>
                                     <tr class="fontStyle">
                                         <td>满意度指标</td>

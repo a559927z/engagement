@@ -10,10 +10,10 @@ $(function () {
         templateA: function () {
             var html = `
                 <div class="scoreTenQuestions">
-                    <div class="w800">
+                    <div class="w800">`+Tc.tipDiffB+`
                         <div class="_content">
                             <div class="table-responsive">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1">
+                                <table border="01" cellspacing="1" cellpadding="0" class="table table-bordered _tb1">
                                     <thead>
                                         <tr>
                                             <th class="th1">最高分问题</th>
@@ -28,7 +28,7 @@ $(function () {
                             </div>
 
                             <div class="table-responsive">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2">
+                                <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb2">
                                     <thead>
                                         <tr>
                                             <th class="th1">最低分问题</th>
@@ -114,7 +114,7 @@ $(function () {
                         if (typeof (o) == 'number' && (index == 3 || index == 4)) {
                             var diff = '';
                             var v = parseFloat(o);
-                            diff = Tc.getDiffClass(v);
+                            diff = Tc.getDiffClassB(v);
                             trtd += "<td class='" + diff + "'>" + v + "</td>";
                         } else {
                             trtd += '<td>' + o + '</td>';
@@ -142,7 +142,7 @@ $(function () {
                         if (typeof (o) == 'number' && (index == 3 || index == 4)) {
                             var diff = '';
                             var v = parseFloat(o);
-                            diff = Tc.getDiffClass(v);
+                            diff = Tc.getDiffClassB(v);
                             trtd += "<td class='" + diff + "'>" + v + "</td>";
                         } else {
                             trtd += '<td>' + o + '</td>';

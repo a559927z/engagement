@@ -7,7 +7,7 @@ $(function () {
     var indexRankingOverview = {
         //------------------------------------------------------------------------------- A
         chartOptionA: {
-            color: ['#4879DF'],
+            color: [Tc.chartObj.jyBgColor],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -43,7 +43,7 @@ $(function () {
                     name: '',
                     type: 'bar',
                     data: [],
-                    label: { normal: { show: true, position: 'insideTop' } },
+                    label: { normal: { show: true, position: Tc.chartObj.labelPos, textStyle:{color:Tc.chartObj.jyColor} } },
                     markLine: {
                         symbolSize: [0, 0],
                         itemStyle: {
@@ -91,6 +91,8 @@ $(function () {
 
             var chart2 = echarts.init($(zone).find('#indexRankingOverviewId2').get(0));
             var copyOption2 = jQuery.extend(true, {}, this.chartOptionA);
+            copyOption2.color[0] = Tc.chartObj.myBgColor;
+            copyOption2.series[0].label.normal.textStyle.color = Tc.chartObj.myColor;
             chart2.setOption(copyOption2);
 
 
@@ -165,7 +167,6 @@ $(function () {
             color: ['#4879DF', '#FF2626'],
             legend: {
                 data: ['敬业度指数', '满意度指数'],
-                bottom: 'left',
                 left: '10%'
             },
             xAxis: [
@@ -179,7 +180,7 @@ $(function () {
                         show: false
                     },
                     axisLabel: {
-                        rotate: 30
+                        rotate: 45
                     },
                     axisTick: false
                 }

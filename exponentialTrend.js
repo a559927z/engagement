@@ -9,7 +9,7 @@ $(function () {
             color: ['#DCDCDC', '#4879DF', '#5ACC8E', '#FFD65A'],
             legend: {
                 data: ['敬业度', '满意度', '上级组织敬业度', '上级组织满意度'],
-                bottom: 'bottom'
+                left:'100'
             },
             xAxis: [
                 {

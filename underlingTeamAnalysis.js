@@ -10,7 +10,7 @@ $(function () {
         templateA: function () {
             var html = `
                 <div class="underlingTeamAnalysis">
-                    <div class="w800">
+                    <div class="w800">`+Tc.tipRank+`
                         <div class="_content">
                         </div>
                     </div>
@@ -22,7 +22,7 @@ $(function () {
             var html =
                 `
             <div class="table-responsive `+ flag + `">
-                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1">
+                <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb1">
                     <thead>
                         <tr>
                             <th rowspan="2" class="th1"></th>
@@ -44,7 +44,7 @@ $(function () {
                 <div class="detail _d1"></div>
             </div>
             <div class="table-responsive `+ flag + `">
-                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2" >
+                <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb2" >
                     <thead>
                         <tr>
                             <th rowspan="2" class="th1"></th>
@@ -171,8 +171,8 @@ $(function () {
                         if (index == 0) trtd += '<td>VS部门差值</td>';
                         var dVlaue = o - jyDataCh[i].value[index];
                         var color = '';
-                        if (dVlaue < -5) { color = "diff-10"; }
-                        if (dVlaue > 5) { color = "diff10"; }
+                        if (dVlaue < -5) { color = "diff-10B"; }
+                        if (dVlaue > 5) { color = "diff10B"; }
                         trtd += '<td class="' + color + '">' + dVlaue + '</td>';
                     });
                     trtd += '</tr>';
@@ -193,8 +193,8 @@ $(function () {
                         if (index == 0) trtd += '<td>VS部门差值</td>';
                         var dVlaue = o - myDataCh[i].value[index];
                         var color = '';
-                        if (dVlaue < -5) { color = "diff-10"; }
-                        if (dVlaue > 5) { color = "diff10"; }
+                        if (dVlaue < -5) { color = "diff-10B"; }
+                        if (dVlaue > 5) { color = "diff10B"; }
                         trtd += '<td class="' + color + '">' + dVlaue + '</td>';
                     });
                     trtd += '</tr>';

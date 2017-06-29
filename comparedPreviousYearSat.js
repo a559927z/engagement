@@ -69,7 +69,7 @@ $(function () {
             $(zone).find('.comparedPreviousYearSat').remove();
              var html = `
                 <div class="comparedPreviousYearSat">
-                    <div class="w800">
+                    <div class="w800">`+Tc.tipDiff+`
 <div class="content">
                         <div class="row">
                             <div class="col-md-8">
@@ -100,7 +100,7 @@ $(function () {
                     </div>
                     <div style = "clear: both;"></div>
                         <div class="table-responsive">
-                            <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2" >
+                            <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb2" >
                                 <thead>
                                     <tr>
                                         <th class="th1">组织</th>
@@ -194,12 +194,12 @@ $(function () {
                     ]
                 });
                 $.each(rs.chartData1.chaVal1.list1, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
+                    var diff = Tc.getDiffClassB(item);
                     html1 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal1').append(html1);
                 $.each(rs.chartData1.chaVal1.list2, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
+                    var diff = Tc.getDiffClassB(item);
                     html2 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal2').append(html2);
@@ -217,7 +217,7 @@ $(function () {
                         if (td.value != 999 && td.value != 9999) {
                             var diff = '';
                             var v = parseFloat(td.value);
-                            diff = Tc.getDiffClass(v);
+                            diff = Tc.getDiffClassB(v);
                             html += "<td class='" + diff + "'>" + v + "</td>";
                         } else {
                             // 部门

@@ -12,10 +12,10 @@ $(function () {
             $(zone).find('.threeSAnalysis').remove();
             var html = `
                 <div class="threeSAnalysis">
-                    <div class="w800">
+                    <div class="w800">`+Tc.tipRank+`
                         <div>
                             <div class="table-responsive">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1" >
+                                <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb1" >
                                     <thead>
                                         <tr>
                                             <th class="th1">组织</th>
@@ -49,7 +49,6 @@ $(function () {
             var xnyn = 100; // 其它列
 
             $tb1.find('tr td').css({ "width": xnyn + "px" });
-            $tb1.find('tr:nth-child(1) td').css({ "height": "100px" });
             $tb1.find('tr td:nth-child(1)').css({ "width": x0y + "px" });
             $tb1.find('tbody > tr > td').css({ "vertical-align": "middle", "text-align": "center" });
             $tb1.find('.dept').css({ "text-align": "left" });
@@ -150,9 +149,9 @@ $(function () {
                 for (var index = 0; index < arr.length; index++) {
                     var y = index + 1;
                     if (arr[index] == top1 || arr[index] == top2 || arr[index] == top3) {
-                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').css({ 'background-color': '#4BACC6' });
+                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').addClass('topThreeB');
                     } else if (arr[index] == reciprocal1 || arr[index] == reciprocal2 || arr[index] == reciprocal3) {
-                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').css({ 'background-color': '#F79646' });
+                        $tb.find('tr:nth-child(' + y + ') td:nth-child(' + i + ')').addClass('reciprocalThreeB');
                     } else {
                         // 不是前3，也不是后3。所以不用加背色
                     }
@@ -182,7 +181,7 @@ $(function () {
                 <div class="threeSAnalysis">
                     <div class="w800">
                         <div>
-                            <table border="1" cellspacing="0" cellpadding="0" class="table  table-bordered _tb2" >
+                            <table border="0" cellspacing="1" cellpadding="0" class="table  table-bordered _tb2" >
                                 <tbody>
                                     <tr class="th1 fontStyle">
                                         <td>敬业度指标</td>

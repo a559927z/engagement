@@ -69,7 +69,7 @@ $(function () {
             $(zone).find('.comparedPreviousYear').remove();
             var html = `
                 <div class="comparedPreviousYear">
-                    <div class="w800">
+                    <div class="w800">`+Tc.tipDiffB+`
 <div class="content">
                         <div class="row">
                             <div class="col-md-8">
@@ -193,13 +193,13 @@ $(function () {
                     ]
                 });
                 $.each(rs.chartData1.chaVal1.list1, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
+                    var diff = Tc.getDiffClassB(item);
                     html1 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                     // html1 += '<li class="list-group-item"><sapn class="'+diff+'">' + item + '</span></li>';
                 });
                 $(zone).find('.chaVal1').append(html1);
                 $.each(rs.chartData1.chaVal1.list2, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
+                    var diff = Tc.getDiffClassB(item);
                     html2 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                     //  html2 += '<li class="list-group-item"><sapn class="'+diff+'">' + item + '</span></li>';
                 });
@@ -218,12 +218,12 @@ $(function () {
                     ]
                 });
                 $.each(rs.chartData2.chaVal2.list1, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
+                    var diff = Tc.getDiffClassB(item);
                     html1 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal3').append(html1);
                 $.each(rs.chartData2.chaVal2.list2, function (index, item) {
-                    var diff = Tc.getDiffClass(item);
+                    var diff = Tc.getDiffClassB(item);
                     html2 += '<li class="list-group-item ' + diff + '">' + item + '</li>';
                 });
                 $(zone).find('.chaVal4').append(html2);

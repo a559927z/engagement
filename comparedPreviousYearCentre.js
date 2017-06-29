@@ -7,9 +7,9 @@ $(function () {
             $(zone).find('.comparedPreviousYearCentre').remove();
             var html = `
                 <div class="comparedPreviousYearCentre">
-                    <div class="w800">
+                    <div class="w800">`+Tc.tipDiffB+`
                         <div class="table-responsive">
-                            <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1" >
+                            <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb1" >
                                 <thead>
                                     <tr>
                                         <th class="th1" rowspan="2" >组织</th>
@@ -27,7 +27,7 @@ $(function () {
                             </table>
                         </div>
                         <div class="table-responsive">
-                            <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2" >
+                            <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb2" >
                                 <thead>
                                     <tr>
                                         <th class="th1">组织</th>
@@ -46,7 +46,7 @@ $(function () {
                             </table>
                         </div>
                         <div class="table-responsive">
-                            <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb3" >
+                            <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb3" >
                                 <thead>
                                     <tr>
                                         <th class="th1">组织</th>
@@ -148,7 +148,7 @@ $(function () {
                             var v = parseFloat(td.value);
                             // 差值列
                             if (td.name == 'v2' || td.name == 'v4') {
-                                diff = Tc.getDiffClass(v);
+                                diff = Tc.getDiffClassB(v);
                                 html += "<td class='" + diff + "'>" + v + "</td>";
                             } else {
                                 html += "<td>" + v + "</td>";
@@ -179,7 +179,7 @@ $(function () {
                         if (td.value != 999 && td.value != 9999) {
                             var diff = '';
                             var v = parseFloat(td.value);
-                            diff = Tc.getDiffClass(v);
+                            diff = Tc.getDiffClassB(v);
                             html += "<td class='" + diff + "'>" + v + "</td>";
                         } else {
                             // 部门
@@ -207,7 +207,7 @@ $(function () {
                         if (td.value != 999 && td.value != 9999) {
                             var diff = '';
                             var v = parseFloat(td.value);
-                            diff = Tc.getDiffClass(v);
+                            diff = Tc.getDiffClassB(v);
                             html += "<td class='" + diff + "'>" + v + "</td>";
                         } else {
                             // 部门
@@ -239,8 +239,8 @@ $(function () {
             },
             legend: {
                 data: [],
-                // left: '38%'
-                bottom: true
+                left: 'auto'
+                // bottom: true
             },
             xAxis: [
                 {
@@ -282,13 +282,13 @@ $(function () {
             var html = `
                 <div class="comparedPreviousYearCentre">
                     <div class="">
-						<div class="w800">
+						<div class="w800"> `+Tc.tipDiffB+`
 							<div class="content">
 								<div id="comparedPreviousYearCentreId" class="chart3 pd-bottom20"></div>
 							</div>
 						</div>
 						<div class="table-responsive ">
-							<table border="1" cellspacing="0" cellpadding="0"  class="table table-bordered _tb4" >
+							<table border="0" cellspacing="1" cellpadding="0"  class="table table-bordered _tb4" >
 								<thead>
 									<tr>
 										<th class="th1">组织</th>
@@ -307,7 +307,7 @@ $(function () {
 							</table>
 						</div>
 						<div class="table-responsive">
-							<table border="1" cellspacing="0" cellpadding="0"  class="table table-bordered _tb5" >
+							<table border="0" cellspacing="1" cellpadding="0"  class="table table-bordered _tb5" >
 								<thead>
 									<tr>
 										<th class="th1">组织</th>
@@ -410,7 +410,7 @@ $(function () {
                         if (td.value != 999 && td.value != 9999) {
                             var diff = '';
                             var v = parseFloat(td.value);
-                            diff = Tc.getDiffClass(v);
+                            diff = Tc.getDiffClassB(v);
                             html += "<td class='" + diff + "'>" + v + "</td>";
                         } else {
                             // 部门
@@ -434,7 +434,7 @@ $(function () {
                         if (td.value != 999 && td.value != 9999) {
                             var diff = '';
                             var v = parseFloat(td.value);
-                            diff = Tc.getDiffClass(v);
+                            diff = Tc.getDiffClassB(v);
                             html += "<td class='" + diff + "'>" + v + "</td>";
                         } else {
                             // 部门

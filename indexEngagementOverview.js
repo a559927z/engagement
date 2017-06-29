@@ -2,7 +2,7 @@ $(function () {
     var indexEngagementOverview = {
         // ---------------------------------------------------------------------A
         chartOptionA: {
-            color: ['#4978E0'],
+            color: [Tc.chartObj.jyBgColor],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -38,7 +38,7 @@ $(function () {
                     name: '',
                     type: 'bar',
                     data: [],
-                    label: { normal: { show: true, position: 'insideTop' } },
+                    label: { normal: { show: true, position: Tc.chartObj.labelPos, textStyle:{color:Tc.chartObj.jyColor}} },
                     markLine: {
                         symbolSize: [0, 0],
                         itemStyle: {
@@ -64,8 +64,9 @@ $(function () {
                         <div class="relative">
                              <div id="indexEngagementOverviewId1" class="chart1"></div>
                             <div id="indexEngagementOverviewLine1" class="linePos1"></div>
+                            `+Tc.tipRank+`
                             <div class="table-responsive">
-                                <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb2" >
+                                <table border="0" cellspacing="1" cellpadding="0" class="table table-bordered _tb2" >
                                     <thead>
                                         <tr>
                                             <th class="th1">组织</th>
@@ -197,10 +198,10 @@ $(function () {
                             var v = parseFloat(td.value);
                             // 前三
                             if (td.name == '1') {
-                                html += "<td class='topThree'>" + v + "</td>";
+                                html += "<td class='topThreeB'>" + v + "</td>";
                                 // 后三
                             } else if (td.name == '2') {
-                                html += "<td class='reciprocalThree'>" + v + "</td>";
+                                html += "<td class='reciprocalThreeB'>" + v + "</td>";
                             } else {
                                 html += "<td>" + v + "</td>";
                             }
@@ -223,7 +224,7 @@ $(function () {
         // ---------------------------------------------------------------------A
         // ---------------------------------------------------------------------B
         chartOptionB: {
-            color: ['#4978E0'],
+            color: [Tc.chartObj.jyBgColor],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -259,7 +260,7 @@ $(function () {
                     name: '',
                     type: 'bar',
                     data: [],
-                    label: { normal: { show: true, position: 'insideTop' } },
+                    label: { normal: { show: true, position: Tc.chartObj.labelPos , textStyle:{color:[Tc.chartObj.jyColor]}} },
                     markLine: {
                         symbolSize: [0, 0],
                         itemStyle: {
@@ -285,7 +286,7 @@ $(function () {
                         <div class="relative">
                             <div id="indexEngagementOverviewId3" class="chart3"></div>
                             <div id="indexEngagementOverviewLine3" class="linePos3"></div>
-                            <table border="1" cellspacing="0" cellpadding="0" class="table  table-bordered _tb3" >
+                            <table border="0" cellspacing="1" cellpadding="0" class="table  table-bordered _tb3" >
                                 <tbody>
                                     <tr class="th1 fontStyle">
                                         <td>敬业度指标</td>

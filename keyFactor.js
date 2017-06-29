@@ -10,7 +10,7 @@ $(function () {
         templateA: function () {
             var html = `
                 <div class="keyFactor">
-                    <div class="w800">
+                    <div class="w800">`+Tc.tipDiffB+`
                         <div class="_content">
                             <div class="table-responsive">
                                 <table border="1" cellspacing="0" cellpadding="0" class="table table-bordered _tb1">
@@ -92,7 +92,7 @@ $(function () {
                         if (typeof (o) == 'number' && (index == 4 || index == 5)) {
                             var diff = '';
                             var v = parseFloat(o);
-                            diff = Tc.getDiffClass(v);
+                            diff = Tc.getDiffClassB(v);
                             trtd += "<td class='" + diff + "'>" + v + "</td>";
                         } else {
                             trtd += '<td>' + o + '</td>';
