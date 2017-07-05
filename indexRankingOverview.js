@@ -17,6 +17,10 @@ $(function () {
                     }
                 }
             },
+            grid:{
+                // top:0,
+                // bottom:150
+            },
             legend: {
                 data: [],
                 left:'38%'
@@ -37,7 +41,7 @@ $(function () {
                     axisTick: false
                 }
             ],
-            yAxis: [{ show: false, }],
+            yAxis: [{ show: true },{show:false}],
             series: [
                 {
                     name: '',
@@ -89,14 +93,15 @@ $(function () {
             var copyOption1 = jQuery.extend(true, {}, this.chartOptionA);
             chart1.setOption(copyOption1);
 
-            var chart2 = echarts.init($(zone).find('#indexRankingOverviewId2').get(0));
-            var copyOption2 = jQuery.extend(true, {}, this.chartOptionA);
-            copyOption2.color[0] = Tc.chartObj.myBgColor;
-            copyOption2.series[0].label.normal.textStyle.color = Tc.chartObj.myColor;
-            chart2.setOption(copyOption2);
+            // var chart2 = echarts.init($(zone).find('#indexRankingOverviewId2').get(0));
+            // var copyOption2 = jQuery.extend(true, {}, this.chartOptionA);
+            // copyOption2.color[0] = Tc.chartObj.myBgColor;
+            // copyOption2.series[0].label.normal.textStyle.color = Tc.chartObj.myColor;
+            // chart2.setOption(copyOption2);
 
 
-            this.getDataA(zone, params, chart1, chart2, btn);
+            // this.getDataA(zone, params, chart1, chart2, btn);
+            this.getDataA(zone, params, chart1, null, btn);
         },
         reanderLineA: function (zone, t) {
 

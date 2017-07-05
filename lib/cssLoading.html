@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>8 circle</title>
+  <link rel="stylesheet" href="cssLoading.css">
+  <script src="jquery-1.10.2.js"></script>
+  <script src="base.js"></script>
+  <style>
+    ._abc {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #c2c2c2;
+      /*background-color: red;*/
+      text-align: center;
+      line-height: 200px;
+    }
+    ._abd {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #c2c2c2;
+      /*background-color: red;*/
+      text-align: center;
+      line-height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div class="_abc"></div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div class="_abd">
+    <div>2222</div>
+  </div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+  <div>123123</div>
+
+  <button onclick="delLoad();">remove</button>
+
+  <script>
+    $(function () {
+      var setting = {
+        region: '._abc',
+      }
+      Tc.loading.showLoading(setting);
+      var setting = {
+        region: '._abd',
+      }
+      Tc.loading.showLoading(setting);
+    });
+
+    function delLoad() {
+      Tc.loading.hideLoading('._abd');
+    }
+  </script>
+</body>
+
+
+</html>

@@ -5,6 +5,12 @@ $(function () {
         query2: webRoot + '/json/敬满指数高低矩阵图2.json'
     }
     var exponentialMatrix = {
+        reanderStyleB: function (zone, btn) {
+            if (btn == "btn1") {
+                $(zone).find(".exponentialMatrix .contentPos2").css({ "width": "1500px", "left": "100px"});
+                $(zone).find(".exponentialMatrix .content2").css({ "width": "1500px" });
+            }
+        },
         //------------------------------------------------------------------------------- A
         chartOptionA: {
             x1: 40,
@@ -155,10 +161,12 @@ $(function () {
         //------------------------------------------------------------------------------- A
         //------------------------------------------------------------------------------- B
         chartOptionB: {
-            color: ['#A4BBEF', '#FFB79F'],
+            color: ['#4876E5', '#FFB79F'],
+            // color: ['rgba(128, 128, 128, 0.1)', '#FFB79F'],
             legend: {
                 data: ['低敬业度，低满意度人群', '高敬业度，高满意度人群'],
-                left: 'center'
+                left: 'center',
+                // backgroundColor:'rgba(128, 128, 128, 0.5)'
             },
             xAxis: [
                 {
@@ -199,14 +207,14 @@ $(function () {
                                 borderType: 'dashed'
                             }
                         },
-                        data: [[{
-                            name: '低敬业度，低满意度人群',
-                            xAxis: 'min',
-                            yAxis: 'min'
-                        }, {
-                            xAxis: 'max',
-                            yAxis: 'max'
-                        }]]
+                        // data: [[{
+                        //     name: '低敬业度，低满意度人群',
+                        //     xAxis: 'min',
+                        //     yAxis: 'min'
+                        // }, {
+                        //     xAxis: 'max',
+                        //     yAxis: 'max'
+                        // }]]
                     }
                 },
                 {
@@ -229,25 +237,34 @@ $(function () {
                                 borderType: 'dashed'
                             }
                         },
-                        data: [[{
-                            name: '高敬业度，高满意度人群',
-                            xAxis: 'min',
-                            yAxis: 'min'
-                        }, {
-                            xAxis: 'max',
-                            yAxis: 'max'
-                        }]]
+                        // data: [[{
+                        //     name: '高敬业度，高满意度人群',
+                        //     xAxis: 'min',
+                        //     yAxis: 'min'
+                        // }, {
+                        //     xAxis: 'max',
+                        //     yAxis: 'max'
+                        // }]]
                     }
 
                 }
             ]
         },
+        // <canvas id="exponentialMatrixId3" width="720" height="450" style="chart4"></canvas>
         templateB: function (zone) {
             $(zone).find('.exponentialMatrix').remove();
             var html = `
                 <div class="exponentialMatrix">
                     <div class="w800">
                         <div>
+                            <div class="contentPos2">
+                                <div class="content2">
+                                    <div class="col-sm-6"><h4></h4><ul class="list-unstyled"></ul></div>
+                                    <div class="col-sm-6"><h4>高满意度、高敬业度</h4><ul class="list-unstyled"></ul></div>
+                                    <div class="col-sm-6"><h4>低满意度、低敬业度</h4><ul class="list-unstyled"></ul></div>
+                                    <div class="col-sm-6"><h4></h4><ul class="list-unstyled"></ul></div>
+                                </div>
+                            </div>
                             <div id="exponentialMatrixId2" class="chart3"></div>
                         </div>
                     </div>
@@ -261,6 +278,14 @@ $(function () {
             chart3.showLoading();
             chart3.setOption(this.chartOptionB);
             this.getDataB(zone, chart3);
+            this.reanderBackground(zone);
+            this.reanderStyleB(zone, "btn1");
+        },
+        reanderBackground: function (zone) {
+            // var canvas = $(zone).find("#exponentialMatrixId3").get(0);
+            // var ctx = canvas.getContext("2d");
+            // ctx.fillStyle = "green";
+            // ctx.fillRect(10, 10, 100, 100);
         },
         getDataB: function (zone, chart3) {
             function fetchData(cb) {

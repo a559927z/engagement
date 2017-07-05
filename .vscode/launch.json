@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "LaunchChrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "file:///D:/MyXFiles/%E8%85%BE%E8%AE%AF/%E7%AE%A1%E7%94%A8%E5%B9%B3%E5%8F%B0-PC/%E6%95%AC%E6%BB%A1%E9%87%8D%E6%9E%84/engagement/engagement.html",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}",
+            "userDataDir": "${workspaceRoot}/.vscode/chrome"
+        },
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "D:/Program Files/Java/jdk/bin", // You need to set JAVA_HOME enviroment variable
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileDirname}", // The class you want to run
+            // "sourcePath": [
+            //     "${workspaceRoot}/src"
+            // ], // Indicates where your source (.java) files are
+            "options": []
+        },
+        {
+            "name": "Java2",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            // "preLaunchTask": "build", // Runs the task created above before running this configuration
+            "jdkPath": "D:/Program Files/Java/jdk/bin", // You need to set JAVA_HOME enviroment variable
+            "cwd": "${workspaceRoot}",
+            "startupClass": "my.package.MyMainClass", // The class you want to run
+            "sourcePath": [
+                "${workspaceRoot}/src"
+            ], // Indicates where your source (.java) files are
+            "options": [] // Additional options to pass to the java executable
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "D:/Program Files/Java/jdk/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasename}",
+            "options": [
+                "-classpath",
+                "\"${fileDirname};.\""
+            ],
+            "externalConsole": true
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-/*¹«¹²*/
+/*ï¿½ï¿½ï¿½ï¿½*/
 .zone table  > tr > th{
          border: 0;
 }
@@ -238,10 +238,10 @@
 .zone .double2 {
     background: #FBFCFE;
 }
-/*¹«¹²*/
+/*ï¿½ï¿½ï¿½ï¿½*/
 
 
-/*¾´ÂúÖ¸ÊıÅÅÃû×ÜÀÀ*/
+/*ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .indexRankingOverview .w800 {
     /*width: 720px;*/
     margin: auto;
@@ -255,7 +255,7 @@
 }
 
 .indexRankingOverview .chart1 {
-    height: 400px;
+    height: 600px;
 }
 
 .indexRankingOverview .linePos1 {
@@ -340,9 +340,9 @@
 .indexRankingOverview .chart3 {
     height: 500px;
 }
-/*¾´ÂúÖ¸ÊıÅÅÃû×ÜÀÀ*/
+/*ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 
-/*¾´ÂúÖ¸Êı¸ßµÍ¾ØÕóÍ¼*/
+/*ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ßµÍ¾ï¿½ï¿½ï¿½Í¼*/
 .exponentialMatrix .w800 {
     /*width: 750px;*/
     margin: auto;
@@ -355,8 +355,8 @@
 }
 
 .exponentialMatrix .content {
-    width: 620px;
     position: absolute;
+    width: 620px;
     top: 0px;
     left: 0px;
 }
@@ -402,16 +402,81 @@
     /*width: 750px;*/
     height: 500px;
 }
-/*¾´ÂúÖ¸Êı¸ßµÍ¾ØÕóÍ¼*/
+.exponentialMatrix .contentPos2 {
+    position: relative;
+    top: 100px;
+    left: 10px;
+}
 
-/*¾´ÂúÖ¸ÊıÀúÊ·Ç÷ÊÆ*/
+
+.exponentialMatrix .content2 {
+    width: 620px;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+
+    /*filter:alpha(opacity=50);  
+    -moz-opacity:0.5;  
+    -khtml-opacity: 0.5;  
+    opacity: 0.5;  */
+}
+
+    .exponentialMatrix .content2 div {
+        height: 170px;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+        .exponentialMatrix .content2 div h4 {
+            color: #444;
+        }
+         .exponentialMatrix .content2 div:nth-child(2) h4{
+            color: #fff;
+        }
+
+        .exponentialMatrix .content2 div:nth-child(1) {
+            background-color: #fff;
+            filter:alpha(opacity=50);  
+            -moz-opacity:0.5;  
+            -khtml-opacity: 0.5;  
+            opacity: 0.5; 
+        }
+
+        .exponentialMatrix .content2 div:nth-child(2) {
+            background-color: #698acf;
+        }
+
+        .exponentialMatrix .content2 div:nth-child(3) {
+            background-color: #edf1fc;
+        }
+
+        .exponentialMatrix .content2 div:nth-child(4) {
+            background-color: #fff;
+            filter:alpha(opacity=50);  
+            -moz-opacity:0.5;  
+            -khtml-opacity: 0.5;  
+            opacity: 0.5; 
+        }
+
+        .exponentialMatrix .content2 div ul li {
+            color: #444;
+        }
+        .exponentialMatrix .content2 div:nth-child(2) ul li{
+            color: #fff;
+        }
+
+
+
+/*ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ßµÍ¾ï¿½ï¿½ï¿½Í¼*/
+
+/*ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½ï¿½ï¿½*/
 .exponentialTrend .chart1 {
     /*width: 750px;*/
     height: 600px;
 }
-/*¾´ÂúÖ¸ÊıÀúÊ·Ç÷ÊÆ*/
+/*ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½ï¿½ï¿½*/
 
-/*ÓëÉÏÒ»ÄêÀúÊ·¶Ô±È£¨²¿ÃÅ£©*/
+/*ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê·ï¿½Ô±È£ï¿½ï¿½ï¿½ï¿½Å£ï¿½*/
 .comparedPreviousYear .w800 {
     width: 720px;
     margin: auto;
@@ -484,9 +549,9 @@
     margin-left: 40px;
 }
 
-/*ÓëÉÏÒ»ÄêÀúÊ·¶Ô±È£¨²¿ÃÅ£©*/
+/*ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê·ï¿½Ô±È£ï¿½ï¿½ï¿½ï¿½Å£ï¿½*/
 
-/*ÓëÉÏÒ»ÄêÀúÊ·¶Ô±È£¨ÖĞĞÄ£©*/
+/*ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê·ï¿½Ô±È£ï¿½ï¿½ï¿½ï¿½Ä£ï¿½*/
 .comparedPreviousYearCentre .w800 {
     /*width: 720px;*/
     margin: auto;
@@ -541,9 +606,9 @@
     overflow: auto;
     overflow-x: hidden;
 }
-/*ÓëÉÏÒ»ÄêÀúÊ·¶Ô±È£¨ÖĞĞÄ£©*/
+/*ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê·ï¿½Ô±È£ï¿½ï¿½ï¿½ï¿½Ä£ï¿½*/
 
-/*¾´Òµ¶È3S·ÖÎö*/
+/*ï¿½ï¿½Òµï¿½ï¿½3Sï¿½ï¿½ï¿½ï¿½*/
 .threeSAnalysis .w800 {
     margin: auto;
     overflow: scroll;
@@ -557,9 +622,9 @@
 .threeSAnalysis table .th1 {
     width: 150px;
 }
-/*¾´Òµ¶È3S·ÖÎö*/
+/*ï¿½ï¿½Òµï¿½ï¿½3Sï¿½ï¿½ï¿½ï¿½*/
 
-/*ÂúÒâ¶È4S·ÖÎö*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½4Sï¿½ï¿½ï¿½ï¿½*/
 .fourSAnalysis .w800 {
     /*width: 900px;*/
     margin: auto;
@@ -576,9 +641,9 @@
     background: #69cfb3;
     color: #fff;
 }
-/*ÂúÒâ¶È4S·ÖÎö*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½4Sï¿½ï¿½ï¿½ï¿½*/
 
-/*ÏÂÊôÍÅ¶Ó·ÖÎö*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Å¶Ó·ï¿½ï¿½ï¿½*/
 .underlingTeamAnalysis .w800 {
     /*width: 900px;*/
     margin: auto;
@@ -602,9 +667,9 @@
 .underlingTeamAnalysis ._tb2 .th1 {
     background-color: #69cfb3;
 }
-/*ÏÂÊôÍÅ¶Ó·ÖÎö*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Å¶Ó·ï¿½ï¿½ï¿½*/
 
-/*×Ô¶¨ÒåÎÊÌâ*/
+/*ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .bgQuestions .w800 {
     /*width: 900px;*/
     margin: auto;
@@ -612,17 +677,17 @@
     overflow-y: hidden;
 }
 
-/*×Ô¶¨ÒåÎÊÌâ*/
+/*ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 
-/*×éÖ¯¹Ø¼üÇı¶¯ÎÊÌâ*/
+/*ï¿½ï¿½Ö¯ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .keyFactor .w800 {
     margin: auto;
     overflow: auto;
     overflow-y: hidden;
 }
-/*×éÖ¯¹Ø¼üÇı¶¯ÎÊÌâ*/
+/*ï¿½ï¿½Ö¯ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 
-/*¾´Òµ¶ÈÖ¸Êı×ÜÀÀ*/
+/*ï¿½ï¿½Òµï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .indexEngagementOverview .w800 {
     margin: auto;
     overflow: auto;
@@ -664,9 +729,9 @@
     top: 0px;
     left: 170px;
 }
-/*¾´Òµ¶ÈÖ¸Êı×ÜÀÀ*/
+/*ï¿½ï¿½Òµï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 
-/*ÂúÒâ¶ÈÖ¸Êı×ÜÀÀ*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .indexSatisfactionOverview .w800 {
     margin: auto;
     overflow: auto;
@@ -712,9 +777,9 @@
     top: 0px;
     left: 180px;
 }
-/*ÂúÒâ¶ÈÖ¸Êı×ÜÀÀ*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 
-/*¾´Òµ¶È-ÓëÉÏÒ»ÄêÀúÊ·¶Ô±È*/
+/*ï¿½ï¿½Òµï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê·ï¿½Ô±ï¿½*/
 .comparedPreviousYearEng .w800 {
     /*width: 720px;*/
     margin: auto;
@@ -792,9 +857,9 @@
 .comparedPreviousYearEng .table > thead > tr > th {
     vertical-align: middle;
 }
-/*¾´Òµ¶È-ÓëÉÏÒ»ÄêÀúÊ·¶Ô±È*/
+/*ï¿½ï¿½Òµï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê·ï¿½Ô±ï¿½*/
 
-/*ÂúÒâ¶È-ÓëÉÏÒ»ÄêÀúÊ·¶Ô±È*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê·ï¿½Ô±ï¿½*/
 .comparedPreviousYearSat .w800 {
     /*width: 720px;*/
     margin: auto;
@@ -871,10 +936,10 @@
 .comparedPreviousYearSat .table > thead > tr > th {
     vertical-align: middle;
 }
-/*ÂúÒâ¶È-ÓëÉÏÒ»ÄêÀúÊ·¶Ô±È*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê·ï¿½Ô±ï¿½*/
 
 
-/*µÃ·Ö10µÀÌâ*/
+/*ï¿½Ã·ï¿½10ï¿½ï¿½ï¿½ï¿½*/
 .scoreTenQuestions .w800 {
     margin: auto;
     overflow: auto;
@@ -892,7 +957,7 @@
 .scoreTenQuestions ._tb2 .th1 {
     background-color: #69cfb3;
 }
-/*µÃ·Ö10µÀÌâ*/
+/*ï¿½Ã·ï¿½10ï¿½ï¿½ï¿½ï¿½*/
 
 
 
@@ -901,7 +966,7 @@
 
 
 
-/*µÃ·ÖÓëÉÏÄêÏà±ÈÉÏÉı£¨ÏÂ½µ£©×î¿ì10µÀÌâ*/
+/*ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½ï¿½ï¿½*/
 /*.comparedTenQuestions{
     position:absolute;
 }*/
@@ -979,7 +1044,7 @@
 
 
 
-/*µÃ·ÖÓëÉÏÄêÏà±ÈÉÏÉı£¨ÏÂ½µ£©×î¿ì10µÀÌâ*/
+/*ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½ï¿½ï¿½*/
 
 
 
@@ -991,7 +1056,7 @@
 
 
 
-/**¹Ø¼üÎÊÌâ·ÖÎö*/
+/**ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .keyProblemAnalysis {
     margin-bottom: 30px;
 }
@@ -1033,9 +1098,9 @@
     .keyProblemAnalysis .chart3, .keyProblemAnalysis .chart4 {
         height: 300px;
     }
-/**¹Ø¼üÎÊÌâ·ÖÎö*/
+/**ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 
-/**ĞĞ¶¯¼Æ»®*/
+/**ï¿½Ğ¶ï¿½ï¿½Æ»ï¿½*/
 .action-plan .calendar-select{
     width:130px;
 }
@@ -1080,10 +1145,10 @@
     display: inline-block;
     width: 300px;
     overflow: hidden;
-    /* ÄÚÈİ³¬³ö¿í¶ÈÊ±Òş²Ø³¬³ö²¿·ÖµÄÄÚÈİ */
+    /* ï¿½ï¿½ï¿½İ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ */
     text-overflow: ellipsis;
-    /* µ±¶ÔÏóÄÚÎÄ±¾Òç³öÊ±ÏÔÊ¾Ê¡ÂÔ±ê¼Ç(...) £»ĞèÓëoverflow:hidden;Ò»ÆğÊ¹ÓÃ¡£*/
-    white-space: nowrap; /* ²»»»ĞĞ */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ê¾Ê¡ï¿½Ô±ï¿½ï¿½(...) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½overflow:hidden;Ò»ï¿½ï¿½Ê¹ï¿½Ã¡ï¿½*/
+    white-space: nowrap; /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     font-size: 14px;
     vertical-align:middle;
 }
@@ -1114,8 +1179,8 @@
     .action-plan-files .action-plan-file-btn:hover {
         color: #448fe7;
     }
-/**ĞĞ¶¯¼Æ»®*/
-/**ÎÄ¼şÉÏ´«*/
+/**ï¿½Ğ¶ï¿½ï¿½Æ»ï¿½*/
+/**ï¿½Ä¼ï¿½ï¿½Ï´ï¿½*/
 /*.file-upload  .file-upload-file-icon{
   background-image: url("file.png");
 	display: -moz-inline-box;
@@ -1177,4 +1242,4 @@ a.add-pic:hover{
     .file-upload-files .file-upload-file-btn:hover {
         color: #448fe7;
     }
-/**ÎÄ¼şÉÏ´«*/
+/**ï¿½Ä¼ï¿½ï¿½Ï´ï¿½*/

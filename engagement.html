@@ -57,7 +57,7 @@
                     // Tc.ComparedPreviousYearCentre.reanderPageB(zone, params);
                     //// 敬满指数高低矩阵图
                     // Tc.ExponentialMatrix.reanderPageA(zone, params);
-                    // Tc.ExponentialMatrix.reanderPageB(zone, params);
+                    Tc.ExponentialMatrix.reanderPageB(zone, params);
                     // 敬满指数历史趋势
                     // Tc.ExponentialTrend.reanderPageA(zone, params);
                     // 敬满指数排名总览2
@@ -88,7 +88,7 @@
                     // 得分10道题
                     // Tc.ScoreTenQuestions.reanderPageA(zone, params);
                     // 得分与上年相比上升（下降）最快10道题
-                    Tc.ComparedTenQuestions.reanderPageA(zone, params);
+                    // Tc.ComparedTenQuestions.reanderPageA(zone, params);
                 }
             }
             main.exe();
@@ -96,11 +96,13 @@
             var zone = $('.zone');
             $(".ty1").click(function () {
                 zone.empty();
-                Tc.IndexRankingOverview.reanderPageA(zone, params);
+                // Tc.IndexRankingOverview.reanderPageA(zone, params);
+                Tc.ExponentialMatrix.reanderPageA(zone, params);
             });
             $(".ty2").click(function () {
                 zone.empty();
-                Tc.IndexRankingOverview.reanderPageB(zone, params);
+                // Tc.IndexRankingOverview.reanderPageB(zone, params);
+                Tc.ExponentialMatrix.reanderPageB(zone, params);
             });
         });
     </script>
